@@ -1,3 +1,64 @@
+/* headerのcss */
+.p-header {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  padding: 15px 24px;
+
+}
+
+/* headerのlayout(位置)を決めている */
+.l-header {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  height: 60px;
+}
+
+/* class名1つでも良いけど、2つあると分かりやすい l,pは使い方が決まっている */
+
+/* behore after 新人ハッカソンで出てきた文字の下にライン引くやつはこれでできる */
+
+
+.p-header_logo {
+  width: 148px;
+  
+}
+
+.POSSElogo {
+  max-width: 100%;
+  height: 60px;
+}
+
+.p-header_nav {
+  margin-left: auto;
+}
+
+.p-header_nav_list {
+  display: flex;
+  gap: 32px;
+}
+
+.p-header_nav_item_link {
+  color: #666;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
 /* main */
 /* postのcss */
 .post{
