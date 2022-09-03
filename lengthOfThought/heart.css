@@ -1,3 +1,9 @@
+/* main */
+/* postのcss */
+.post{
+  width: 80%;
+}
+
 /* footer */
 .footer_copyright{
   text-align: center;
