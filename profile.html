@@ -1,51 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プロフィール</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="heart.css">
+    <title>PLOFILE</title>
+    <link rel="stylesheet" href="profile.css">
 </head>
 
+<header class="l-header p-header">
+    <div class="posselogo">
+        <img class="POSSElogo" src="logo.svg" alt="POSSE">
+    </div>
+    <nav class="p-header_nav">
+        <ul class="p-header_nav_list">
+            <li class="p-header_nav_item">
+                <a href="./profile.html" class="p-header_nav_item_link">PROFILE</a>
+            </li>
+            <li class="p-header_nav_item">
+                <a href="./heart.html" class="p-header_nav_item_link">想いの丈を叫ぶ</a>
+            </li>
+            <li class="p-header_nav_item">
+                <a href="./speech.html" class="p-header_nav_item_link">100秒スピーチ</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
 <main>
-    <h1>プロフィール</h1>
-    <!-- ここから受け取る -->
-    <form action="thanks.html">
-        <table>
-            <tr>
-                <td><label for="university">大学名</label></td>
-                <td><input type="text" name="university" placeholder=""></td>
-            </tr>
-            <tr>
-                <td><label for="grade">学年</label></td>
-                <td>
-                <select name="grades">
-                    <option>1年</option>
-                    <option>2年</option>
-                    <option>3年</option>
-                    <option>4年</option>
-                    <option>院生</option>
-                    <option>それ以上</option>
-                </select>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="">学部・学科</label></td>
-                <td><input type="text" name="name" placeholder=""></td>
-            </tr>
-            <tr>
-                <td><label for="comment">名前</label></td>
-                <td><textarea name="comment" cols="30" rows="10"></textarea></td>
-            </tr>
-            <tr>
-                <td><label for="profile_comment">コメント</label></td>
-                <td><textarea name="comment" cols="30" rows="10"></textarea></td>
-            </tr>
-        </table>
-        <div class="text_center">
-            <input type="submit"する>
-        </div>
-    </form>
+    <div class="profile_input">
+        <h1>プロフィール</h1>
+        <!-- ここから受け取る -->
+        <form action="thanks.html">
+            <table>
+                <tr>
+                    <td><label for="university">大学名</label></td>
+                    <td><input type="text" name="university" placeholder=""></td>
+                </tr>
+                <tr>
+                    <td><label for="grade">学年</label></td>
+                    <td>
+                    <select name="grades">
+                        <option>1年</option>
+                        <option>2年</option>
+                        <option>3年</option>
+                        <option>4年</option>
+                        <option>院生</option>
+                        <option>それ以上</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">学部・学科</label></td>
+                    <td><input type="text" name="name" placeholder=""></td>
+                </tr>
+                <tr>
+                    <td><label for="comment">名前</label></td>
+                    <td><textarea name="comment" cols="30" rows="10"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="profile_comment">コメント</label></td>
+                    <td><textarea name="comment" cols="30" rows="10"></textarea></td>
+                </tr>
+            </table>
+            <div class="text_center">
+                <input type="submit"する>
+            </div>
+        </form>
+    </div>
 </main>
