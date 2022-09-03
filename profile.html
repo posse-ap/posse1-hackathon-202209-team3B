@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PLOFILE</title>
     <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="normalize.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 </head>
 
 <header class="l-header p-header">
@@ -28,44 +30,49 @@
 </header>
 
 <main>
-    <div class="profile_input">
-        <h1>プロフィール</h1>
-        <!-- ここから受け取る -->
-        <form action="thanks.html">
-            <table>
-                <tr>
-                    <td><label for="university">大学名</label></td>
-                    <td><input type="text" name="university" placeholder=""></td>
-                </tr>
-                <tr>
-                    <td><label for="grade">学年</label></td>
-                    <td>
-                    <select name="grades">
-                        <option>1年</option>
-                        <option>2年</option>
-                        <option>3年</option>
-                        <option>4年</option>
-                        <option>院生</option>
-                        <option>それ以上</option>
-                    </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="">学部・学科</label></td>
-                    <td><input type="text" name="name" placeholder=""></td>
-                </tr>
-                <tr>
-                    <td><label for="comment">名前</label></td>
-                    <td><textarea name="comment" cols="30" rows="10"></textarea></td>
-                </tr>
-                <tr>
-                    <td><label for="profile_comment">コメント</label></td>
-                    <td><textarea name="comment" cols="30" rows="10"></textarea></td>
-                </tr>
-            </table>
-            <div class="text_center">
-                <input type="submit"する>
-            </div>
-        </form>
+    <div class="profile_container">
+        あああああ
+        <div class="profile_inputContainer">
+            <div class="profile_introduction">プロフィール入力</div>
+            <!-- ここから受け取る -->
+            <form action="thanks.html">
+                <div class="profile_data_frame">
+                    <table class="profile_input_data">
+                        <tr>
+                            <td><label for="university">大学名</label></td>
+                            <td><input type="text" name="university" placeholder="POSSE大学" ></td>
+                        </tr>
+                        <tr>
+                            <td><label for="grade">学年</label></td>
+                            <td>
+                            <select name="grades">
+                                <option>1年</option>
+                                <option>2年</option>
+                                <option>3年</option>
+                                <option>4年</option>
+                                <option>院生</option>
+                                <option>それ以上</option>
+                            </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="">学部・学科</label></td>
+                            <td><input type="text" name="faculty" placeholder="IT学部・POSSE学科"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="comment">名前</label></td>
+                            <td><input type="text" name="name" placeholder="山田花子"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="profile_comment">コメント</label></td>
+                            <td><textarea name="comment" cols="50" rows="10"></textarea></td>
+                        </tr>
+                    </table>
+                    <div class="profile_submit">
+                        <input type="submit"する>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </main>
