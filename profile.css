@@ -95,33 +95,24 @@ label{
     min-width: 5em;
 }
 
+img {
+    width: 100%;
+    }
+
 /* 仮置きしてる */
 .box{
     height: 100px;
 }
 
-@media screen and (min-width: 721px) { /*ウィンドウ幅が720px以上の場合に適用*/
-    .p-header__inner {
-        background-color: #fff;
-        flex-direction: column;
-        inset: 0;
-        opacity: 0;
-        padding: 136px 16px 40px;
-        position: fixed;
-        transition: opacity 0.4s, visibility 0.4s;
-        visibility: hidden;
-    }
 
-    .p-header.is-open .p-header__inner {
-        opacity: 1;
-        visibility: visible;
+
+@media screen and (min-width: 900px) { /*ウィンドウ幅が720px以上の場合に適用*/
+    textarea{
+        width: 87%;
     }
 }
 
-@media screen and (min-width:481px) and (max-width: 720px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
-    img {
-        width: 100%;
-        }
+@media screen and (min-width:481px) and (max-width: 899px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
         textarea{
             max-width: 37em;
         }
@@ -133,9 +124,6 @@ label{
     }
 
 @media screen and (max-width: 480px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
-    img {
-    width: 100%;
-    }
     textarea{
         max-width: 20em;
     }
