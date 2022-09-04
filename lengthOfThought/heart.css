@@ -1,3 +1,29 @@
+/* レスポンシブデザイン */
+@media screen and (min-width: 481px) { /*ウィンドウ幅が720px以上の場合に適用*/
+  .p-header__inner {
+      background-color: #fff;
+      flex-direction: column;
+      inset: 0;
+      opacity: 0;
+      padding: 136px 16px 40px;
+      position: fixed;
+      transition: opacity 0.4s, visibility 0.4s;
+      visibility: hidden;
+  }
+
+  .p-header.is-open .p-header__inner {
+      opacity: 1;
+      visibility: visible;
+  }
+}
+  
+
+  @media screen and (max-width: 480px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
+      img {
+      width: 100%;
+      }
+      }
+
 /* headerのcss */
 .p-header {
   align-items: center;
@@ -63,6 +89,16 @@ a {
 /* postのcss */
 .post{
   width: 80%;
+}
+/* 入力フォームのcss */
+.date{
+  display: flex;
+}
+
+
+.heart_input{
+  margin-top: 100px;
+  margin-left: 30%;
 }
 
 /* footer */
