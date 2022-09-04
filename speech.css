@@ -70,13 +70,18 @@ a {
 }
 
 .speech_input{
+    width: 60%;
     margin: 0 auto;
+}
+
+input{
+    width: 100%;
 }
 
 
 @media screen and (min-width: 900px) { /*ウィンドウ幅が720px以上の場合に適用*/
     textarea{
-        width: 96%;
+        width: 175%;
     }
 }
 
@@ -84,7 +89,7 @@ a {
         textarea{
             max-width: 30em;
         }
-        .speech_inputContainer
+        .speech_input
         {
             width: auto;
             margin-left: 10px;
@@ -95,7 +100,7 @@ a {
     textarea{
         max-width: 20em;
     }
-    .profile_inputContainer
+    .speech_input
     {   width: auto;
         margin-left: 10px;
     }
