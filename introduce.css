@@ -96,10 +96,10 @@ dd {
 }
 
 #acMenu dt{
-  display: block;
-  text-align: center;
-  border:#666 1px solid;
-  cursor:pointer;
+  border-radius: 20px;
+   
+  height: 30px;
+  background-color: lightcyan;
 
 }
 #acMenu dd{
