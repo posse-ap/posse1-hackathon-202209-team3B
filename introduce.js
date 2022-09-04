@@ -18,11 +18,19 @@ const local=localStorage;
 
 submitButton.addEventListener('click',function(){
   
-  var myProfile={
+  var myProfile=[{
     name: nameInput.value,
     subname: subnameInput.value,
     faculty: facultyInput.value,
-  };
+  },
+  {
+    name: '',
+    subname: '',
+    faculty: '',
+
+  }];
+
+
 
 
   listContent.push(myProfile)
