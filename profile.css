@@ -1,34 +1,3 @@
-@media screen and (min-width: 720px) { /*ウィンドウ幅が720px以上の場合に適用*/
-    .p-header__inner {
-        background-color: #fff;
-        flex-direction: column;
-        inset: 0;
-        opacity: 0;
-        padding: 136px 16px 40px;
-        position: fixed;
-        transition: opacity 0.4s, visibility 0.4s;
-        visibility: hidden;
-    }
-
-    .p-header.is-open .p-header__inner {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    
-}
-    
-
-    @media screen and (max-width: 480px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
-        img {
-        width: 100%;
-        }
-
-        textarea{
-            max-width: 20em;
-        }
-        }
-
 /* headerの中身をどうするか、pは使いまわししない、nは使いまわす */
 .p-header {
     align-items: center;
@@ -97,8 +66,8 @@ a {
 
 /* 入力フォーム */
 .profile_inputContainer {
-    width: 50%;
-    margin: auto;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .profile_data_frame{
@@ -126,6 +95,52 @@ label{
     min-width: 5em;
 }
 
+/* 仮置きしてる */
 .box{
     height: 100px;
 }
+
+@media screen and (min-width: 721px) { /*ウィンドウ幅が720px以上の場合に適用*/
+    .p-header__inner {
+        background-color: #fff;
+        flex-direction: column;
+        inset: 0;
+        opacity: 0;
+        padding: 136px 16px 40px;
+        position: fixed;
+        transition: opacity 0.4s, visibility 0.4s;
+        visibility: hidden;
+    }
+
+    .p-header.is-open .p-header__inner {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width: 720px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
+    img {
+        width: 100%;
+        }
+        textarea{
+            max-width: 37em;
+        }
+        .profile_inputContainer
+        {
+            width: auto;
+            margin-left: 10px;
+        }
+    }
+
+@media screen and (max-width: 480px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
+    img {
+    width: 100%;
+    }
+    textarea{
+        max-width: 20em;
+    }
+    .profile_inputContainer
+    {   width: auto;
+        margin-left: 10px;
+    }
+    }
