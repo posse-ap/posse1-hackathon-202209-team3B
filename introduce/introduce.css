@@ -4,6 +4,7 @@ body{
 }
 li{
   list-style: none;
+  margin: 0;
 }
 @media screen and (min-width: 481px) { /*ウィンドウ幅が720px以上の場合に適用*/
   .p-header__inner {
@@ -84,7 +85,9 @@ a {
 
 /**アコーディオン＊*/
 #acMenu{
-  margin-top: 100px;
+  
+  width: 80%;
+  margin: 100px auto ;
 }
 
 dd {
@@ -93,10 +96,10 @@ dd {
 }
 
 #acMenu dt{
-  display: block;
-  text-align: center;
-  border:#666 1px solid;
-  cursor:pointer;
+  border-radius: 20px;
+   
+  height: 30px;
+  background-color: lightcyan;
 
 }
 #acMenu dd{
@@ -111,42 +114,156 @@ dd {
 }
 
 
-/**入力エリア**/
-.profile_inputContainer {
-  width: 50%;
-  margin: 100px auto;
+/**表示エリア**/
+
+.myinf_item{
+  display: block;
+  letter-spacing: 0.15em;
+  margin-left: 5%;
+}
+.myinf_list{
+  margin: 20px auto;
+  padding: 10px auto;
+  text-align: left;
+  border: 2px double lightblue;
+  width: 80%;
+
+}
+.myinf_list span{
+  margin: 5px;
 }
 
-.profile_data_frame{
+
+
+
+/* 全体 */
+.profile_container{
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+}
+
+/**アコーディオン＊*/
+.profile_acMenu_frame{
+  margin: 0 auto;
+  width: 85%;
+}
+
+#acMenu {
+  margin-top: 100px;
+}
+
+dd {
+  display: block;
+  margin-inline-start: 0px;
+}
+
+#acMenu dt {
+  display: block;
+  text-align: center;
+  border: black 1px solid;
+  cursor: pointer;
+}
+
+#acMenu dd {
+  display: none;
+  text-align: center;
+
+}
+
+.myprofile {
+  border: 1px solid black;
+  margin: 20px;
+
+}
+
+
+/* 入力フォーム */
+.profile_inputContainer {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.profile_data_frame {
   text-align: left;
 }
 
-.profile_introduction{
+.profile_introduction {
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.profile_input_data{
+.profile_input_data {
   width: 100%;
 }
 
-input{
+input {
   width: 70%;
 }
 
-.profile_submit{
+.profile_submit {
   text-align: center;
+}
+
+label {
+  display: inline-block;
+  min-width: 5em;
+}
+
+img {
+  width: 100%;
+}
+
+/* 仮置きしてる */
+.box {
+  height: 100px;
 }
 .submit_message{
   margin-top: -25px;
 }
 
 
-.introduce_page1{
-  display: flex;
-	flex-wrap: wrap;
+@media screen and (min-width: 900px) {
+
+  /*ウィンドウ幅が720px以上の場合に適用*/
+  textarea {
+      width: 87%;
+  }
+}
+
+@media screen and (min-width:481px) and (max-width: 899px) {
+
+  /*ウィンドウ幅が最大480pxまでの場合に適用*/
+  textarea {
+      max-width: 37em;
+  }
+
+  .profile_inputContainer {
+      width: auto;
+      margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  /*ウィンドウ幅が最大480pxまでの場合に適用*/
+  textarea {
+      max-width: 20em;
+  }
+
+  .profile_inputContainer {
+      width: auto;
+      margin-left: 10px;
+  }
+
+  .p-header_nav_item_link {
+      font-size: 10px;
+  }
 }
 
 /* footer */
+footer{
+  margin-top: 30px;
+}
 .footer_copyright{
   text-align: center;
   padding-top: 30px;
