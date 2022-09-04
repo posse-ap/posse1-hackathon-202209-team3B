@@ -16,111 +16,102 @@
     <nav class="p-header_nav">
         <ul class="p-header_nav_list">
             <li class="p-header_nav_item">
-                <a href="/hachathon-20220903/posse1-hackathon-202209-team3B/profile/profile.html" class="p-header_nav_item_link">PROFILE</a>
+              <a href="/hachathon-20220903/posse1-hackathon-202209-team3B/profile/profile.html" class="p-header_nav_item_link">PROFILE</a>
             </li>
             <li class="p-header_nav_item">
-                <a href="/hachathon-20220903/posse1-hackathon-202209-team3B/lengthOfThought/heart.html" class="p-header_nav_item_link">想いの丈を叫ぶ</a>
+              <a href="/hachathon-20220903/posse1-hackathon-202209-team3B/lengthOfThought/heart.html" class="p-header_nav_item_link">想いの丈を叫ぶ</a>
             </li>
             <li class="p-header_nav_item">
-                <a href="/hachathon-20220903/posse1-hackathon-202209-team3B/speech/speech.html" class="p-header_nav_item_link">100秒スピーチ</a>
+              <a href="/hachathon-20220903/posse1-hackathon-202209-team3B/speech/speech.html" class="p-header_nav_item_link">100秒スピーチ</a>
             </li>
         </ul>
     </nav>
-</header>
+  </header>
   <main>
     <section class="post">
-    <div class="post_form"></div>
-      <div class="post_profile_container">
-        <div class="post_profile_inputContainer">
-        <div class="post_profile_introduction">プロフィール入力</div>
-        <!-- ここから受け取る -->
-            <form action="thanks.html">
-            <div class="profile_data_frame">
-                <table class="profile_input_data">
-                  <!-- 投稿する年月日をここで入力してもらう -->
-                    <tr>
-                      <td><label for="age"></label></td>
-                        <td>
-                          <select name="year" id="">
-                            <option value="2022">2022年</option>
-                            <option value="2023">2023年</option>
-                            <option value="2024">2024年</option>
-                            <option value="2025">2025年</option>
-                            <option value="2026">2026年</option>
-                          </select>
-                        </td>
-                      <td><label for="month"></label></td>
-                        <td>
-                          <select name="months">
-                            <option >1月</option>
-                            <option >2月</option>
-                            <option >3月</option>
-                            <option >4月</option>
-                            <option >5月</option>
-                            <option >6月</option>
-                            <option >7月</option>
-                            <option >8月</option>
-                            <option >9月</option>
-                            <option >10月</option>
-                            <option >11月</option>
-                            <option >12月</option>                   
-                          </select>
-                        </td>
-                      <td><label for="day"></label></td>
-                        <td>
-                          <select name="days">
-                            <option>1日</option>
-                            <option>2日</option>
-                            <option>3日</option>
-                            <option>4日</option>
-                            <option>5日</option>
-                            <option>6日</option>
-                            <option>7日</option>
-                            <option>8日</option>
-                            <option>9日</option>
-                            <option>10日</option>
-                            <option>11日</option>
-                            <option>12日</option>
-                            <option>13日</option>
-                            <option>14日</option>
-                            <option>15日</option>
-                            <option>16日</option>
-                            <option>17日</option>
-                            <option>18日</option>
-                            <option>19日</option>
-                            <option>20日</option>
-                            <option>21日</option>
-                            <option>22日</option>
-                            <option>23日</option>
-                            <option>24日</option>
-                            <option>25日</option>
-                            <option>26日</option>
-                            <option>27日</option>
-                            <option>28日</option>
-                            <option>29日</option>
-                            <option>30日</option>
-                            <option>31日</option>
-                          </select>
-                        </td>
-                    </tr>
-                    <!-- ここで名前を選んでもらう -->
-                    <tr>
-                      <td><label for="comment">名前</label></td>
-                      <td><input type="text" name="name" placeholder="山田花子"></td>
-                    </tr>
-                    <!-- ここでコメントを書いてもらう。上限２５００文字 -->
-                    <tr>
-                      <td><label for="profile_comment">コメント</label></td>
-                      <td><textarea name="comment" cols="50" rows="50"></textarea></td>
-                    </tr>
-                </table>
-                <div class="profile_submit">
-                    <input type="submit"する>
-                </div>
-            </div>
-            </form>
-        </div>
-    </div>
+      <div class="box"></div>
+        <div class="heart_container">
+            <div class="heart_input">
+                <p class="heart_introduction">想いの丈</p>
+                <!-- ここから受け取る -->
+                <form action="thanks.html">
+                    <table class="data_table">
+                            <td class="date_data">
+                                <select name="age">
+                                    <option value="10">2020年</option>
+                                    <option value="20">2021年</option>
+                                    <option value="30">2022年</option>
+                                    <option value="40">2023年</option>
+                                    <option value="other">2024年</option>
+                                </select>
+                                <select name="months">
+                                    <option >1月</option>
+                                    <option >2月</option>
+                                    <option >3月</option>
+                                    <option >4月</option>
+                                    <option >5月</option>
+                                    <option >6月</option>
+                                    <option >7月</option>
+                                    <option >8月</option>
+                                    <option >9月</option>
+                                    <option >10月</option>
+                                    <option >11月</option>
+                                    <option >12月</option>                   
+                                </select>
+                                <select name="days">
+                                    <option>1日</option>
+                                    <option>2日</option>
+                                    <option>3日</option>
+                                    <option>4日</option>
+                                    <option>5日</option>
+                                    <option>6日</option>
+                                    <option>7日</option>
+                                    <option>8日</option>
+                                    <option>9日</option>
+                                    <option>10日</option>
+                                    <option>11日</option>
+                                    <option>12日</option>
+                                    <option>13日</option>
+                                    <option>14日</option>
+                                    <option>15日</option>
+                                    <option>16日</option>
+                                    <option>17日</option>
+                                    <option>18日</option>
+                                    <option>19日</option>
+                                    <option>20日</option>
+                                    <option>21日</option>
+                                    <option>22日</option>
+                                    <option>23日</option>
+                                    <option>24日</option>
+                                    <option>25日</option>
+                                    <option>26日</option>
+                                    <option>27日</option>
+                                    <option>28日</option>
+                                    <option>29日</option>
+                                    <option>30日</option>
+                                    <option>31日</option>
+                                </select>
+                            </td>
+                            </tr>
+                        </div>
+                            <tr>
+                                <td><label for="heart_subname">ふりがな</label></td>
+                                <td class="heart_subname_input"><input type="text" name="name" placeholder="やまだはなこ"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="heart_comment">名前</label></td>
+                                <td class="heart_name_input"><input type="text" name="name" placeholder="山田花子"></td>
+                            </tr>                  
+                    </table>
+                        <tr>
+                            <td><label for="heart_comment"></label></td>
+                            <td><textarea name="comment" cols="75" rows="30" placeholder="今思ってること"></textarea></td>
+                        </tr>
+                    <div class="heart_submit">
+                        <input name="heart_submit_btn" type="submit" value="送信する">
+                    </div>
+                </form>
+      </div>
     </section>
     <!-- <section class="container"></section>
     <section class="search">

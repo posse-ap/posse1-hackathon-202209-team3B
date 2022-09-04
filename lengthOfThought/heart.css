@@ -92,6 +92,78 @@ a {
   height: 100px;
   margin-top: 100px;
 }
+/* 仮置き */
+.box{
+  height: 100px;
+}
+
+.heart_input{ 
+  width: 60%;
+  margin:auto ;
+}
+
+.heart_name_input,
+.heart_subname_input{
+  width: 95%;
+  margin-left: -50%;
+} */
+
+input{
+  width: 100%;
+}
+
+@media screen and (min-width: 900px) { /*ウィンドウ幅が720px以上の場合に適用*/
+  textarea{
+      width: 96%;
+  }
+  .date_data{
+    display: flex;
+    margin-left: 0%;
+}
+.heart_name_input,
+.heart_subname_input{
+width: 95%;
+margin-left: -50%;
+} 
+}
+
+@media screen and (min-width:481px) and (max-width: 899px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
+      textarea{
+          max-width: 30em;
+      }
+      .profile_inputContainer
+      {
+          width: auto;
+          margin-left: 10px;
+      }
+
+      .date_data{
+          width: 50%;
+      }
+  }
+
+@media screen and (max-width: 480px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
+  textarea{
+      max-width: 20em;
+  }
+  .heart_inputContainer
+    {   
+        margin:0 13%;
+    }
+  .date_data{
+      width: 50%;
+      display: flex;
+  }
+
+  }
+    .heart_name,
+    .heart_subname{
+    width: 50%;
+    display: block;
+    }
+    .heart_submit{
+        width: 113%;
+    }
 /* 入力フォームのcss */
 .date{
   display: flex;
