@@ -1,4 +1,4 @@
-@media screen and (min-width: 481px) { /*ウィンドウ幅が720px以上の場合に適用*/
+@media screen and (min-width: 720px) { /*ウィンドウ幅が720px以上の場合に適用*/
     .p-header__inner {
         background-color: #fff;
         flex-direction: column;
@@ -14,12 +14,18 @@
         opacity: 1;
         visibility: visible;
     }
+
+    
 }
     
 
     @media screen and (max-width: 480px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
         img {
         width: 100%;
+        }
+
+        textarea{
+            max-width: 20em;
         }
         }
 
@@ -92,7 +98,7 @@ a {
 /* 入力フォーム */
 .profile_inputContainer {
     width: 50%;
-    margin: 100px auto;
+    margin: auto;
 }
 
 .profile_data_frame{
@@ -115,5 +121,11 @@ input{
     text-align: center;
 }
 
+label{
+    display: inline-block;
+    min-width: 5em;
+}
 
-
+.box{
+    height: 100px;
+}
