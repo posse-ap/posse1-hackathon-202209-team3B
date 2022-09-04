@@ -2,6 +2,9 @@ body{
   font-family: 'Noto Sans JP', sans-serif;
 
 }
+li{
+  list-style: none;
+}
 @media screen and (min-width: 481px) { /*ウィンドウ幅が720px以上の場合に適用*/
   .p-header__inner {
     background-color: #fff;

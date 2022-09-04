@@ -18,28 +18,54 @@ const local=localStorage;
 
 submitButton.addEventListener('click',function(){
   
-  var myProfile=[{
+  var myProfile={
     name: nameInput.value,
     subname: subnameInput.value,
     faculty: facultyInput.value,
-  },
-  {
-    name: '',
-    subname: '',
-    faculty: '',
+  }
 
-  }];
 
 
 
 
   listContent.push(myProfile);
   local.store=JSON.stringify(listContent);
-  console.log(local.store)
+
+  /**const litag=document.createElement('li');
+  const ptag=document.createElement('p');
+  const nameContent=nameInput.value;
+  const subnameContent=subnameInput.value;
+  const facultyContent=facultyInput.value;
+  
+  nameInput.value='';
+  subnameInput.value='';
+  facultyInput.value='';
+
+  ptag.textContent=nameContent+subnameContent+facultyContent;
+  litag.appendChild(ptag)**/
+  if(subnameInput.value[0]==='あ' || subnameInput.value[0]==='い' || subnameInput.value[0]==='う' ||subnameInput.value[0]==='え' ||subnameInput.value[0]==='お'){
+    const profileBox1=document.querySelector('.introduce_page1')
+    const litag=document.createElement('li');
+    const ptag=document.createElement('p');
+    const nameContent=nameInput.value;
+    const subnameContent=subnameInput.value;
+    const facultyContent=facultyInput.value;
+    
+    nameInput.value='';
+    subnameInput.value='';
+    facultyInput.value='';
+
+    ptag.textContent=nameContent+subnameContent+facultyContent;
+    litag.appendChild(ptag)
+    profileBox1.appendChild(litag)
+  }
+
+
+
+ 
   
   console.log(myProfile)
-  const profileBox1=document.querySelector('.introduce_page1')
-  const profileBox2=document.querySelector('.introduce_page2')
+  
   /**const profileBox3=document.querySelector('.introduce_page1')
   const profileBox4=document.querySelector('.introduce_page1')
   const profileBox5=document.querySelector('.introduce_page1')
@@ -51,7 +77,7 @@ submitButton.addEventListener('click',function(){
   
   
  
-  const profileContent=(profile,index) => {
+  /**const profileContent=(profile) => {
     return `<section class="myprofile">
     <div class="myfurigana">${profile.subname}</div>
     <div class="myname">${profile.name}</div>
@@ -59,30 +85,35 @@ submitButton.addEventListener('click',function(){
     </section>`
    
   }
-  if(myProfile!== undefined){
-    profileBox1.innerHTML=myProfile.map((profile,index) => {
-      console.log(profile.subname[0])
-      if( profile.subname[0] === 'あ' || profile.subname[0] === 'い' || profile.subname[0] === 'う' || profile.subname[0] === 'え' || profile.subname[0] === 'お'){
-        return profileContent(profile,index);
-      }
-      else{
-        return;
-      }
-    
-    }).join('')
-    
-    profileBox2.innerHTML=myProfile.map((profile,index) => {
-      console.log(profile.subname[0])
-      if( profile.subname[0] === 'か' || profile.subname[0] === 'き' || profile.subname[0] === 'く' || profile.subname[0] === 'け' || profile.subname[0] === 'こ'){
-        return profileContent(profile,index);
-      }
-      else{
-        return;
-      }
-    
-    }).join('')
+  
+  profileBox1.innerHTML=Object.keys(myProfile).forEach(function(key){
+    console.log(myProfile.subname)
+    const profile=myProfile;
+    if( profile.subname[0] === 'あ' || profile.subname[0] === 'い' || profile.subname[0] === 'う' || profile.subname[0] === 'え' || profile.subname[0] === 'お'){
+      return `<section class="myprofile">
+      <div class="myfurigana">${profile.subname}</div>
+      <div class="myname">${profile.name}</div>
+      <div class="myfaculty">${profile.faculty}</div>
+      </section>`
+    }
+    else{
+      return;
+    }
+  
+  })
+  
+  /**profileBox2.innerHTML=myProfile.map((profile,index) => {
+    console.log(profile.subname[0])
+    if( profile.subname[0] === 'か' || profile.subname[0] === 'き' || profile.subname[0] === 'く' || profile.subname[0] === 'け' || profile.subname[0] === 'こ'){
+      return profileContent(profile,index);
+    }
+    else{
+      return;
+    }
+  
+  }).join('')**/
 
-  }
+  
   
 
 })
@@ -134,4 +165,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 })
 
-delete local.store;
+/**delete local.store;**/
