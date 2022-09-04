@@ -5,21 +5,141 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>profile</title>
+  <link rel="stylesheet" href="./introduce.css">
+  <script src="./introduce.js" defer></script>
+  <script src="./jquery3.6.0.js"></script>
+  <link rel="stylesheet" href="./noramalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
-  <div>
-    <dl id="acMenu">
-      <dt>あ行</dt>
-      <dd>アコーディオンメニューが開く。</dd>
-      <dt>か行</dl>
-      <dd>アコーディオンメニューが開く。</dd>
-      <dt>さ行</dt>
-      <dd>アコーディオンメニューが開く。</dd>
-    </dl>
-      
+  <header class="l-header p-header">
+    <div class="posselogo">
+        <img class="POSSElogo" src="./img/logo.svg" alt="POSSE">
+    </div>
+    <nav class="p-header_nav">
+        <ul class="p-header_nav_list">
+            <li class="p-header_nav_item">
+                <a href="./profile.html" class="p-header_nav_item_link">PROFILE</a>
+            </li>
+            <li class="p-header_nav_item">
+                <a href="./heart.html" class="p-header_nav_item_link">想いの丈を叫ぶ</a>
+            </li>
+            <li class="p-header_nav_item">
+                <a href="./speech.html" class="p-header_nav_item_link">100秒スピーチ</a>
+            </li>
+        </ul>
+    </nav>
+  </header>
+  <main>
+    <div>
+      <dl id="acMenu">
+        <dt>あ行</dt>
+        <dd>
+          <div class="introduce_page1"></div>
+        </dd>
+        <dt>か行</dt>
+        <dd>
+          <div class="introduce_page2"></div>
+        </dd>
+        <dt>さ行</dt>
+        <dd>
+          <div class="introduce_page3"></div>
+        </dd>
+        <dt>た行</dt>
+        <dd>
+          <div class="introduce_page4"></div>
+        </dd>
+        <dt>な行</dt>
+        <dd>
+          <div class="introduce_page5"></div>
+        </dd>
+        <dt>は行</dt>
+        <dd>
+          <div class="introduce_page6"></div>
+        </dd>
+        <dt>ま行</dt>
+        <dd>
+          <div class="introduce_page7"></div>
+        </dd>
+        <dt>や行</dt>
+        <dd>
+          <div class="introduce_page8"></div>
+        </dd>
+        <dt>ら行</dt>
+        <dd>
+          <div class="introduce_page9"></div>
+        </dd>
+        <dt>わ行</dt>
+        <dd>
+          <div class="introduce_page10"></div>
+        </dd>
+        
+      </dl>
+    </div>
 
-    
-      
-  </div>
+
+    <div class="profile_container">
+
+      <div class="profile_inputContainer">
+        <div class="profile_introduction">プロフィール入力</div>
+          <!-- ここから受け取る -->
+        <form action="thanks.html">
+          <div class="profile_data_frame">
+            <table class="profile_input_data">
+              <tr>
+                <td><label for="university">大学名</label></td>
+                <td><input type="text" name="university" placeholder="POSSE大学" ></td>
+              </tr>
+              <tr>
+                <td><label for="grade">学年</label></td>
+                <td>
+                  <select name="grades">
+                    <option>1年</option>
+                    <option>2年</option>
+                    <option>3年</option>
+                    <option>4年</option>
+                    <option>院生</option>
+                    <option>それ以上</option>
+                  </select>
+
+                </td>
+              </tr>
+              <tr>
+                <td><label for="">学部・学科</label></td>
+                <td><input type="text" name="faculty" placeholder="IT学部・POSSE学科" class="faculty_input"></td>
+              </tr>
+              <tr>
+                <td><label for="comment">ふりがな</label></td>
+                <td><input type="text" name="name" placeholder="やまだはなこ" class="furigana
+                  _input"></td>
+              </tr>
+
+              <tr>
+                <td><label for="comment">名前</label></td>
+                <td><input type="text" name="name" placeholder="山田花子" class="name_input"></td>
+              </tr>
+
+              <tr>
+                <td><label for="profile_comment">コメント</label></td>
+                <td><textarea name="comment" cols="50" rows="10"></textarea></td>
+              </tr>
+
+            </table>
+            <div class="profile_submit">
+              <input type="button" class="submit_button">
+              <div class="submit_message">送信</div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer_copyright">
+      <small>©2022 POSSE</small>
+    </div>
+  </footer>
 </body>
 </html>

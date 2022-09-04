@@ -1,0 +1,147 @@
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+
+}
+@media screen and (min-width: 481px) { /*ウィンドウ幅が720px以上の場合に適用*/
+  .p-header__inner {
+    background-color: #fff;
+    flex-direction: column;
+    inset: 0;
+    opacity: 0;
+    padding: 136px 16px 40px;
+    position: fixed;
+    transition: opacity 0.4s, visibility 0.4s;
+    visibility: hidden;
+    
+  }
+
+  .p-header.is-open .p-header__inner {
+      opacity: 1;
+      visibility: visible;
+  }
+}
+@media screen and (max-width: 480px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
+  img {
+   width: 100%;
+  }
+}
+.p-header {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  padding: 15px 24px;
+
+}
+
+/* headerのlayout(位置)を決めている */
+.l-header {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+.p-header_logo {
+  width: 148px;
+}
+
+.POSSElogo {
+  max-width: 100%;
+}
+
+.p-header_nav {
+  margin-left: auto;
+}
+
+.p-header_nav_list {
+  display: flex;
+  gap: 32px;
+}
+
+.p-header_nav_item_link {
+  color: #666;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+
+/**アコーディオン＊*/
+#acMenu{
+  margin-top: 100px;
+}
+
+dd {
+  display: block;
+  margin-inline-start: 0px;
+}
+
+#acMenu dt{
+  display: block;
+  text-align: center;
+  border:#666 1px solid;
+  cursor:pointer;
+
+}
+#acMenu dd{
+  display: none;
+  text-align:center;
+  
+}
+.myprofile{
+  border: 1px solid black;
+  margin: 20px;
+
+}
+
+
+/**入力エリア**/
+.profile_inputContainer {
+  width: 50%;
+  margin: 100px auto;
+}
+
+.profile_data_frame{
+  text-align: left;
+}
+
+.profile_introduction{
+  text-align: center;
+}
+
+.profile_input_data{
+  width: 100%;
+}
+
+input{
+  width: 70%;
+}
+
+.profile_submit{
+  text-align: center;
+}
+.submit_message{
+  margin-top: -25px;
+}
+
+
+/* footer */
+.footer_copyright{
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  border-top: solid 2px #eee;
+}
