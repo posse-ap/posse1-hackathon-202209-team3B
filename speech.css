@@ -64,7 +64,39 @@ a {
     text-decoration: none;
 }
 
-.speech_input{
-    margin-top: 100px;
-    margin-left: 40%;
+/* 仮置き */
+.box{
+    height: 100px;
 }
+
+.speech_input{
+    margin: 0 auto;
+}
+
+
+@media screen and (min-width: 900px) { /*ウィンドウ幅が720px以上の場合に適用*/
+    textarea{
+        width: 96%;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width: 899px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
+        textarea{
+            max-width: 30em;
+        }
+        .speech_inputContainer
+        {
+            width: auto;
+            margin-left: 10px;
+        }
+    }
+
+@media screen and (max-width: 480px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
+    textarea{
+        max-width: 20em;
+    }
+    .profile_inputContainer
+    {   width: auto;
+        margin-left: 10px;
+    }
+    }

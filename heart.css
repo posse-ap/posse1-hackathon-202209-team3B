@@ -63,8 +63,10 @@ a {
     background-color: transparent;
     text-decoration: none;
 }
-.date{
-    display: flex;
+
+/* 入力フォーム */
+.date_data{
+    width: 50%;
 }
 
 /* 仮置き */
@@ -72,18 +74,21 @@ a {
     height: 100px;
 }
 
-.heart_input{
+.heart_input{ 
     width: 60%;
-    margin:auto  ;
+    margin:auto ;
 }
 
-.heart_submit{
-    text-align: left;
-}
+.heart_name_input,
+.heart_subname_input{
+    width: 95%;
+    margin-left: -50%;
+} */
 
 input{
-    width: 98%;
+    width: 100%;
 }
+
 @media screen and (min-width: 900px) { /*ウィンドウ幅が720px以上の場合に適用*/
     textarea{
         width: 96%;
@@ -99,6 +104,10 @@ input{
             width: auto;
             margin-left: 10px;
         }
+
+        .date_data{
+            width: 50%;
+        }
     }
 
 @media screen and (max-width: 480px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
@@ -108,5 +117,9 @@ input{
     .profile_inputContainer
     {   width: auto;
         margin-left: 10px;
+    }
+
+    .date_data{
+        width: 50%;
     }
     }

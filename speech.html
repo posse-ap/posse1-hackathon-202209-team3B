@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,22 +28,46 @@
 </header>
 
 <main>
-    <div class="speech_input">
-        <h2>100秒スピーチ入力フォーム</h2>
-        <!-- ここから受け取る -->
-        <form action="thanks.html">
-            <table>
-                <tr>
-                    <td><label for="name">名前</label></td>
-                    <td><input type="text" name="name" placeholder=""></td>
-                </tr>
-                    <td><label for="profile_comment">コメント</label></td>
-                    <td><textarea name="comment" cols="60" rows="15"></textarea></td>
-                </tr>
-            </table>
-            <div class="text_center">
-                <input type="submit"する>
-            </div>
-        </form>
+    <div class="speech_container">
+        <div class="speech_input">
+            <div class="box"></div>
+            <h2>100秒スピーチ入力フォーム</h2>
+            <!-- ここから受け取る -->
+            <form action="thanks.html">
+                <table>
+                    <tr>
+                        <td><label for="theme">お題</label></td>
+                        <td>
+                        <select name="themes">
+                            <option>仲間の居場所作らずして自分の居場所なし</option>
+                            <option>振り返り主義</option>
+                            <option>インサイドアウト</option>
+                            <option>理解してから理解される</option>
+                            <option>深堀力は人格力</option>
+                            <option>嘘をつかないごまかさない</option>
+                            <option>教えることは教わること</option>
+                            <option>「ベンチ行かない？」と言う勇気</option>
+                            <option>本音の対話無くして最高のチームなし</option>
+                            <option>自ら機会を創り出し、機会によって自らを変えよ</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="speech_subname">ふりがな</label></td>
+                        <td><input type="text" name="speech_subname_input" placeholder="やまだはなこ"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="name">名前</label></td>
+                        <td><input type="text" name="speech_subname_input" placeholder="山田花子"></td>
+                    </tr>
+                        <td><label for="speech_comment">コメント</label></td>
+                        <td><textarea name="speech_comment_input" cols="60" rows="15"></textarea></td>
+                    </tr>
+                </table>
+                <div class="text_center">
+                    <input type="submit"する>
+                </div>
+            </form>
+        </div>
     </div>
 </main>
