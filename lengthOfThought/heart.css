@@ -89,16 +89,27 @@ a {
 /* postのcss */
 .post{
   width: 80%;
+  height: 100px;
+  margin-top: 100px;
 }
 /* 入力フォームのcss */
 .date{
   display: flex;
 }
 
-
 .heart_input{
   margin-top: 100px;
   margin-left: 30%;
+}
+/* containerの css */
+.container{
+  height: 100px;
+  margin-top: 100px;
+}
+
+/* searchのcss */
+.search{
+  margin-top: 100px;
 }
 
 /* footer */

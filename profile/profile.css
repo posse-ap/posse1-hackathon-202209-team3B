@@ -90,6 +90,7 @@ a {
 /* postのcss */
 .post{
   width: 80%;
+  height: 100px;
 }
 /* 入力フォームのcss */
 .date{
