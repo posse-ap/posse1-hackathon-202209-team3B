@@ -37,7 +37,7 @@ submitButton.addEventListener('click',function(){
   listContent.push(myProfile);
   local.store=JSON.stringify(listContent);
 
-  console.log(subnameInput.value)
+  console.log(local.store)
   if(subnameInput.value[0]==='あ' || subnameInput.value[0]==='い' || subnameInput.value[0]==='う' ||subnameInput.value[0]==='え' ||subnameInput.value[0]==='お'){
     const profileBox1=document.querySelector('.introduce_page1')
     const litag=document.createElement('li');

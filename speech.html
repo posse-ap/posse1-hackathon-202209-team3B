@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100秒スピーチ</title>
+    <link rel="stylesheet" href="./speech.css">
+    <link rel="stylesheet" href="./noramalize.css">
+    <script src="./speech.js" defer></script>
+    <script src="./jquery3.6.0.js" ></script>
+</head>
+
+<header class="l-header p-header">
+    <div class="posselogo">
+        <img class="POSSElogo" src="./img/logo.svg" alt="POSSE">
+    </div>
+    <nav class="p-header_nav">
+        <ul class="p-header_nav_list">
+            <li class="p-header_nav_item">
+                <a href="./profile.html" class="p-header_nav_item_link">PROFILE</a>
+            </li>
+            <li class="p-header_nav_item">
+                <a href="./heart.html" class="p-header_nav_item_link">想いの丈を叫ぶ</a>
+            </li>
+            <li class="p-header_nav_item">
+                <a href="./speech.html" class="p-header_nav_item_link">100秒スピーチ</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <body>
+        <div class="speech_container">
+            <div class="speech_acMenu_frame">
+                <dl id="acMenu">
+                    <dt>仲間の居場所作らずして自分の居場所なし</dt>
+                    <dd>
+                        <div class="speech_theme_option1"></div>
+                    </dd>
+                    <dt>振り返り主義</dt>
+                    <dd>
+                        <div class="speech_theme_option2"></div>
+                    </dd>
+                    <dt>インサイドアウト</dt>
+                    <dd>
+                        <div class="speech_theme_option3"></div>
+                    </dd>
+                    <dt>理解してから理解される</dt>
+                    <dd>
+                        <div class="speech_theme_option4"></div>
+                    </dd>
+                    <dt>深掘力は人格力</dt>
+                    <dd>
+                        <div class="speech_theme_option5"></div>
+                    </dd>
+                    <dt>嘘をつかないごまかさない</dt>
+                    <dd>
+                        <div class="speech_theme_option6"></div>
+                    </dd>
+                    <dt>教えることは教わること</dt>
+                    <dd>
+                        <div class="speech_theme_option7"></div>
+                    </dd>
+                    <dt>「ベンチ行かない？」と言う勇気</dt>
+                    <dd>
+                        <div class="speech_theme_option8"></div>
+                    </dd>
+                    <dt>本音の対話無くして最高のチームなし</dt>
+                    <dd>
+                        <div class="speech_theme_option9"></div>
+                    </dd>
+                    <dt>自ら機会を創り出し、機会によって自らを変えよ</dt>
+                    <dd>
+                        <div class="speech_theme_option10"></div>
+                    </dd>
+
+                </dl>
+            </div>
+            <div class="speech_input">
+                <div class="box"></div>
+                <p class="speech_introduction">100秒スピーチ入力フォーム</p>
+                <!-- ここから受け取る -->
+                <form action="thanks.html">
+                    <table>
+                        <tr>
+                            <td><label for="theme">お題</label></td>
+                            <td>
+                                <select name="themes" class="themes_input">
+                                    <option>仲間の居場所作らずして自分の居場所なし</option>
+                                    <option>振り返り主義</option>
+                                    <option>インサイドアウト</option>
+                                    <option>理解してから理解される</option>
+                                    <option>深掘力は人格力</option>
+                                    <option>嘘をつかないごまかさない</option>
+                                    <option>教えることは教わること</option>
+                                    <option>「ベンチ行かない？」と言う勇気</option>
+                                    <option>本音の対話無くして最高のチームなし</option>
+                                    <option>自ら機会を創り出し、機会によって自らを変えよ</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="speech_subname">ふりがな</label></td>
+                            <td><input type="text" name="speech_subname_input" placeholder="やまだはなこ" class="subname_input"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="name">名前</label></td>
+                            <td><input type="text" name="speech_subname_input" placeholder="山田花子" class="name_input"></td>
+                        </tr>
+                        <td><label for="speech_comment">コメント</label></td>
+                        <td><textarea name="speech_comment_input" cols="60" rows="30" class='comment_input'></textarea ></td>
+                        </tr>
+                    </table>
+                    <div class="text_center">
+                        <input type="button" class="submit_button">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer_copyright">
+                <small>©2022 POSSE</small>
+            </div>
+        </footer>
+    </body>
+</html>
+</main>
