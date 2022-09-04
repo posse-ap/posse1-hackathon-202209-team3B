@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log(listContent)
   for (const item of listContent){
     console.log(item)
-    const profileBox1=document.querySelector('.introduce_page1')
+    /**const profileBox1=document.querySelector('.introduce_page1')
     const profileBox2=document.querySelector('.introduce_page2')
 
     const profileContent=(profile,index) => {
@@ -160,9 +160,27 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
     
-    }).join('')
+    }).join('')**/
+    console.log(item.subname)
+    const subnameInput=item.subname
+    if(subnameInput[0]==='あ' || subnameInput[0]==='い' || subnameInput[0]==='う' ||subnameInput[0]==='え' ||subnameInput[0]==='お'){
+      const profileBox1=document.querySelector('.introduce_page1')
+      const litag=document.createElement('li');
+      const ptag=document.createElement('p');
+      const nameContent=item.name;
+      const subnameContent=item.subname;
+      const facultyContent=item.faculty;
+      
+      /**nameInput.value='';
+      subnameInput.value='';
+      facultyInput.value='';**/
+  
+      ptag.textContent=nameContent+subnameContent+facultyContent;
+      litag.appendChild(ptag)
+      profileBox1.appendChild(litag)
+    }
     
   }
 })
 
-/**delete local.store;**/
+/*delete local.store**/
