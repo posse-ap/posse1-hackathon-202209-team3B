@@ -57,51 +57,106 @@ ul {
     padding: 0;
 }
 
-/* なぜtramsparent */
+
 
 a {
     background-color: transparent;
     text-decoration: none;
 }
 
-/* 仮置き */
-.box{
-    height: 100px;
+/* 全体 */
+.speech_container{
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.speech_input{
+/**アコーディオン＊*/
+.speech_acMenu_frame{
+    width: 85%;
+    margin: 0 auto;
+}
+
+#acMenu {
+    margin-top: 100px;
+}
+
+dd {
+    display: block;
+    margin-inline-start: 0px;
+}
+
+#acMenu dt {
+    display: block;
+    text-align: center;
+    border: #666 1px solid;
+    cursor: pointer;
+
+}
+
+#acMenu dd {
+    display: none;
+    text-align: center;
+
+}
+
+.myprofile {
+    border: 1px solid black;
+    margin: 20px;
+}
+
+/* 入力フォーム */
+
+.speech_input {
     width: 60%;
     margin: 0 auto;
 }
 
-input{
+input {
     width: 100%;
 }
 
 
-@media screen and (min-width: 900px) { /*ウィンドウ幅が720px以上の場合に適用*/
-    textarea{
+@media screen and (min-width: 900px) {
+
+    /*ウィンドウ幅が720px以上の場合に適用*/
+    textarea {
         width: 175%;
     }
 }
 
-@media screen and (min-width:481px) and (max-width: 899px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
-        textarea{
-            max-width: 30em;
-        }
-        .speech_input
-        {
-            width: auto;
-            margin-left: 10px;
-        }
+@media screen and (min-width:481px) and (max-width: 899px) {
+
+    /*ウィンドウ幅が最大480pxまでの場合に適用*/
+    textarea {
+        max-width: 30em;
     }
 
-@media screen and (max-width: 480px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
-    textarea{
-        max-width: 20em;
-    }
-    .speech_input
-    {   width: auto;
+    .speech_input {
+        width: auto;
         margin-left: 10px;
     }
+}
+
+@media screen and (max-width: 480px) {
+
+    /*ウィンドウ幅が最大480pxまでの場合に適用*/
+    textarea {
+        max-width: 20em;
     }
+
+    .speech_input {
+        width: auto;
+        margin-left: 10px;
+    }
+
+    .p-header_nav_item_link {
+        font-size: 10px;
+    }
+}
+
+/* footer */
+.footer_copyright {
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    border-top: solid 2px #eee;
+}

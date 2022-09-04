@@ -57,90 +57,112 @@ ul {
     padding: 0;
 }
 
-/* なぜtramsparent */
-
 a {
     background-color: transparent;
     text-decoration: none;
 }
 
+/* 全体 */
+.heart_container{
+    font-family: 'Courier New', Courier, monospace;
+}
+
 /* 入力フォーム */
-.date_data{
+.date_data {
     width: 100%;
 }
 
 /* 仮置き */
-.box{
+.box {
     height: 100px;
 }
 
-.heart_inputContainer{ 
+.heart_inputContainer {
     width: 60%;
-    margin:auto ;
+    margin: auto;
 }
 
 .heart_name_input,
-.heart_subname_input{
+.heart_subname_input {
     width: 90%;
     margin-left: -50%;
-} 
+}
 
-.heart_submit{
+.heart_submit {
     width: 100%;
 }
 
-@media screen and (min-width: 900px) { /*ウィンドウ幅が720px以上の場合に適用*/
-    textarea{
+@media screen and (min-width: 900px) {
+
+    /*ウィンドウ幅が720px以上の場合に適用*/
+    textarea {
         width: 96%;
     }
-    .date_data{
+
+    .date_data {
         display: flex;
         margin-left: 0%;
     }
 
     .heart_name_input,
-    .heart_subname_input{
-    width: 95%;
-    margin-left: -50%;
-} 
+    .heart_subname_input {
+        width: 95%;
+        margin-left: -50%;
+    }
 }
 
-@media screen and (min-width:481px) and (max-width: 899px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
-        textarea{
-            max-width: 30em;
-        }
-        .profile_inputContainer
-        {
-            width: auto;
-            margin-left: 10px;
-        }
+@media screen and (min-width:481px) and (max-width: 899px) {
 
-        .date_data{
-            width: 50%;
-        }
+    /*ウィンドウ幅が最大480pxまでの場合に適用*/
+    textarea {
+        max-width: 30em;
     }
 
-@media screen and (max-width: 480px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
-    textarea{
+    .profile_inputContainer {
+        width: auto;
+        margin-left: 10px;
+    }
+
+    .date_data {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /*ウィンドウ幅が最大480pxまでの場合に適用*/
+    textarea {
         max-width: 26em;
     }
-    .heart_inputContainer
-    {   
-        margin:0 13%;
+
+    .heart_inputContainer {
+        margin: 0 13%;
     }
 
-    .date_data{
+    .date_data {
         display: flex;
         width: 50%;
     }
 
     .heart_name,
-    .heart_subname{
-    width: 50%;
-    display: block;
+    .heart_subname {
+        width: 50%;
+        display: block;
     }
- 
-    .heart_submit{
+
+    .heart_submit {
         width: 113%;
     }
-} 
+
+    .p-header_nav_item_link {
+        font-size: 10px;
+    }
+}
+
+/* footer */
+.footer_copyright {
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    border-top: solid 2px #eee;
+}
