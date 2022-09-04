@@ -1,37 +1,35 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>想いの丈を叫ぶ</title>
-  <link rel="stylesheet" href="heart.css">
-  <link rel="stylesheet" href="">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>想いの丈</title>
+    <link rel="stylesheet" href="heart.css">
 </head>
-<body>
-  <header class="l-header p-header">
+
+<header class="l-header p-header">
     <div class="posselogo">
-        <img class="POSSElogo" src="IMG_0060.JPG" alt="POSSE">
+        <img class="POSSElogo" src="logo.svg" alt="POSSE">
     </div>
     <nav class="p-header_nav">
         <ul class="p-header_nav_list">
             <li class="p-header_nav_item">
-              <a href="/hachathon-20220903/posse1-hackathon-202209-team3B/profile/profile.html" class="p-header_nav_item_link">PROFILE</a>
+                <a href="./profile.html" class="p-header_nav_item_link">PROFILE</a>
             </li>
             <li class="p-header_nav_item">
-              <a href="/hachathon-20220903/posse1-hackathon-202209-team3B/lengthOfThought/heart.html" class="p-header_nav_item_link">想いの丈を叫ぶ</a>
+                <a href="./heart.html" class="p-header_nav_item_link">想いの丈を叫ぶ</a>
             </li>
             <li class="p-header_nav_item">
-              <a href="/hachathon-20220903/posse1-hackathon-202209-team3B/speech/speech.html" class="p-header_nav_item_link">100秒スピーチ</a>
+                <a href="./speech.html" class="p-header_nav_item_link">100秒スピーチ</a>
             </li>
         </ul>
     </nav>
-  </header>
-  <main>
-    <section class="post">
-      <div class="box"></div>
-        <div class="heart_container">
-            <div class="heart_input">
+</header>
+
+<body>
+    <div class="box"></div>
+            <div class="heart_inputContainer">
                 <p class="heart_introduction">想いの丈</p>
                 <!-- ここから受け取る -->
                 <form action="thanks.html">
@@ -95,12 +93,12 @@
                             </tr>
                         </div>
                             <tr>
-                                <td><label for="heart_subname">ふりがな</label></td>
-                                <td class="heart_subname_input"><input type="text" name="name" placeholder="やまだはなこ"></td>
+                                <td class="heart_subname"><label for="heart_subname">ふりがな</label></td>
+                                <td class="heart_subname_input"><input type="text" name="name" placeholder="ぽせたろう"></td>
                             </tr>
                             <tr>
-                                <td><label for="heart_comment">名前</label></td>
-                                <td class="heart_name_input"><input type="text" name="name" placeholder="山田花子"></td>
+                                <td class="heart_name"><label for="heart_name">名前</label></td>
+                                <td class="heart_name_input"><input type="text" name="name" placeholder="歩瀬多浪"></td>
                             </tr>                  
                     </table>
                         <tr>
@@ -108,28 +106,27 @@
                             <td><textarea name="comment" cols="75" rows="30" placeholder="今思ってること"></textarea></td>
                         </tr>
                     <div class="heart_submit">
-                        <input name="heart_submit_btn" type="submit" value="送信する">
+                        <input class="heart_submit" type="submit" value="送信する">
                     </div>
                 </form>
+            </div>
+    <section class="container">
+      <div class="container_content">
+        <li class="container_content_date"></li>
+        <li class="container_content_name"></li>
+        <div class="container_content_detail"></div>
+        <div class="container_content_reaction">
+          <div class="container_content_reaction_heart">
+            <button class="heart_count" ><i class="heart_icon"><span class="material-icons">favorite</span></i>
+            </button>
+            いいね!
+            <div class="count_number">
+              0
+            </div>
+          </div>
+          <div class="container_content_reaction_comment"></div>
+        </div>
       </div>
     </section>
-    <!-- <section class="container"></section>
-    <section class="search">
-      <div class="search_content">
-        <input type="submit" class="search_content_submit" placeholder="詳細検索">
-        <img src="" alt="search" class="search_content_img">
-      </div>
-      <div class="search_name">
-        <input type="submit" class="search_name_submit" placeholder="名前検索">
-        <img src="" alt="search" class="search_name_img">
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="footer_copyright">
-      <small>©2022 POSSE</small>
-    </div>
-  </footer> -->
 </body>
-</html>
 </html>
