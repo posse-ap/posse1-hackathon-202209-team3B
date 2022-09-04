@@ -148,4 +148,14 @@ a {
 /* containerのcss */
 .container{}
 .container_content{}
-.container
+.container{}
+.container_content_date{}
+.container_content_name{}
+.container_content_detail{}
+.container_content_reaction{}
+.container_content_reaction_heart{}
+.container_content_reaction_heart_count{}
+.container_content_reaction_heart_icon{}
+.container_content_reaction_heart_material-icons{}
+.container_content_reaction_heart_count_number{}
+.container_content_reaction_comment{}
