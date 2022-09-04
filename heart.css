@@ -139,4 +139,8 @@ a {
     width: 50%;
     display: block;
     }
+ 
+    .heart_submit{
+        width: 113%;
+    }
 } 
