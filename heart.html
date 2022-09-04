@@ -29,8 +29,7 @@
 
 <body>
     <div class="box"></div>
-        <div class="heart_container">
-            <div class="heart_input">
+            <div class="heart_inputContainer">
                 <p class="heart_introduction">想いの丈</p>
                 <!-- ここから受け取る -->
                 <form action="thanks.html">
@@ -94,11 +93,11 @@
                             </tr>
                         </div>
                             <tr>
-                                <td><label for="heart_subname">ふりがな</label></td>
+                                <td class="heart_subname"><label for="heart_subname">ふりがな</label></td>
                                 <td class="heart_subname_input"><input type="text" name="name" placeholder="やまだはなこ"></td>
                             </tr>
                             <tr>
-                                <td><label for="heart_comment">名前</label></td>
+                                <td class="heart_name"><label for="heart_name">名前</label></td>
                                 <td class="heart_name_input"><input type="text" name="name" placeholder="山田花子"></td>
                             </tr>                  
                     </table>
@@ -107,7 +106,7 @@
                             <td><textarea name="comment" cols="75" rows="30" placeholder="今思ってること"></textarea></td>
                         </tr>
                     <div class="heart_submit">
-                        <input name="heart_submit_btn" type="submit" する>
+                        <input class="heart_submit" type="submit" value="送信する">
                     </div>
                 </form>
             </div>
