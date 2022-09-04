@@ -33,7 +33,7 @@ submitButton.addEventListener('click',function(){
 
 
 
-  listContent.push(myProfile)
+  listContent.push(myProfile);
   local.store=JSON.stringify(listContent);
   console.log(local.store)
   
@@ -89,7 +89,7 @@ submitButton.addEventListener('click',function(){
 
 
 
-/**document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   
   const data=local.store;
   
@@ -121,8 +121,8 @@ submitButton.addEventListener('click',function(){
     }).join('')
     
     profileBox2.innerHTML=item.map((profile,index) => {
-      console.log(profile.furigana[0])
-      if( profile.furigana[0] === 'か' || profile.furigana[0] === 'き' || profile.furigana[0] === 'く' || profile.furigana[0] === 'け' || profile.furigana[0] === 'こ'){
+      console.log(profile.subname[0])
+      if( profile.subname[0] === 'か' || profile.subname[0] === 'き' || profile.subname[0] === 'く' || profile.subname[0] === 'け' || profile.subname[0] === 'こ'){
         return profileContent(profile,index);
       }
       else{
@@ -134,4 +134,4 @@ submitButton.addEventListener('click',function(){
   }
 })
 
-/**delete local.store;**/
+delete local.store;
