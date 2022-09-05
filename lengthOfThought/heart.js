@@ -14,8 +14,8 @@ const ageInput=document.querySelector('.age_input');
 const monthsInput=document.querySelector('.months_input');
 const daysInput=document.querySelector('.days_input');
 const subnameInput=document.querySelector('.heart_subname_input');
-const nameInput=document.querySelector('.heart_name_input');
-const commentInput=document.querySelector('.heart_comment_input');
+const nameInput=document.querySelectorAll('.heart_name_input');
+const commentInput = document.querySelector('.heart_comment_input');
 const submitButton=document.querySelector('.heart_submit_button');
 
 var heartContents = [];
@@ -31,7 +31,7 @@ submitButton.addEventListener('click', function(){
         comment: commentInput.value,
     }
     heartContents.push(myheart);
-    local.store=JSON.stringify(heartContents);
+    st.store=JSON.stringify(heartContents);
 
     const heartbox= document.querySelector('.container_content_date');
     const heartboxAge = document.querySelector('.container_content_date_age');
@@ -60,7 +60,7 @@ submitButton.addEventListener('click', function(){
     heartboxMonth.innerHTML = monthsContent + '月' + '<span></span>';
     heartboxDay.innerHTML = daysContent + '日' + '<span></span>';
     heartboxName.innerHTML = '名前：' + nameContent ;
-    heartboxContent.innerHTML = commentInput;
+    heartboxContent.innerHTML = commentInput ;
 
     heartboxContent.setAttribute('class', 'container_content_detail_ptag');
     // createElementで作った要素にclass名をつけた
