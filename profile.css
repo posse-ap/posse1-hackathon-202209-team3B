@@ -1,13 +1,10 @@
+/* 全体 */
+
 body {
     font-family: 'Noto Sans JP', sans-serif;
-
-
 }
 
 main {
-    /**background: -moz-linear-gradient(top, #FFC778, #FFF);
-    background: -webkit-linear-gradient(top, #FFC778, #FFF);
-    background: linear-gradient(to bottom, #FFC778, #FFF);**/
     background: linear-gradient(white, #CCCC);
     font-family: 'Courier New', Courier, monospace;
     box-sizing: border-box;
@@ -118,7 +115,6 @@ a {
 }
 
 /**アコーディオン＊*/
-
 #acMenu {
 
     width: 80%;
@@ -179,7 +175,6 @@ dd {
 .myprofile {
     border: 1px solid black;
     margin: 20px;
-
 }
 
 
@@ -245,7 +240,7 @@ img {
 
 @media screen and (min-width:481px) and (max-width: 899px) {
 
-    /*ウィンドウ幅が最大480pxまでの場合に適用*/
+    /*ウィンドウ幅が最大899pxまでの場合に適用*/
     textarea {
         max-width: 37em;
     }
@@ -286,7 +281,6 @@ img {
 }
 
 /* footer */
-
 .footer_copyright {
     text-align: center;
     padding-top: 30px;
