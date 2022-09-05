@@ -105,9 +105,10 @@ dd {
 
 
 /* 入力フォーム */
+
 .speech_input{
     width: 80%;
-    margin: 10%git  auto;
+    margin: 10% auto;
 }
 
 .personal_data{
@@ -152,6 +153,10 @@ img {
         width: 100%;
     }
 
+    .data_table{
+        margin-left: 14.3%;
+    }
+
 }
 
 @media screen and (min-width:481px) and (max-width: 899px) {
@@ -159,6 +164,10 @@ img {
     /*ウィンドウ幅が最大480pxまでの場合に適用*/
     textarea {
         max-width: 34em;
+    }
+
+    .data_table{
+        margin-left: 15%;
     }
 }
 
@@ -176,6 +185,10 @@ img {
 
     .p-header_nav_item_link {
         font-size: 10px;
+    }
+
+    .data_table{
+        margin-left: 20%;
     }
 }
 
