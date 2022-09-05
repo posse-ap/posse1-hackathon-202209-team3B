@@ -1,0 +1,231 @@
+/* header */
+body {
+  background: linear-gradient(white, #CCC);
+}
+
+.p-header {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  padding: 15px 24px;
+
+}
+
+.l-header {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.p-header_logo {
+  width: 148px;
+}
+
+.POSSElogo {
+  max-width: 100%;
+}
+
+.p-header_nav {
+  margin-left: auto;
+}
+
+.p-header_nav_list {
+  display: flex;
+  gap: 32px;
+}
+
+.p-header_nav_item_link {
+  color: #666;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* 全体 */
+.speech_container {
+  font-family: 'Courier New', Courier, monospace;
+  background: linear-gradient(white #cccc);
+}
+
+.box {
+  height: 3em;
+}
+
+.headline{
+  color: #666;
+  border-radius: 5%;
+}
+
+/**アコーディオン＊*/
+.speech_acMenu_frame {
+  width: 85%;
+  margin: -10% auto;
+}
+
+#acMenu {
+  margin-top: 17%;
+}
+
+dd {
+  display: block;
+  margin-inline-start: 0px;
+}
+
+#acMenu dt {
+  display: block;
+  text-align: center;
+  border: #666 1px solid;
+  cursor: pointer;
+  height: 50px;
+  color: #eee;
+  background: #d9827c;;
+}
+
+#acMenu dd {
+  display: none;
+  text-align: center;
+}
+
+.myprofile {
+  border: 1px solid black;
+  margin: 20px;
+}
+
+
+/* 入力フォーム */
+
+.speech_input {
+  width: 80%;
+  margin: 20% auto;
+
+}
+
+.personal_data {
+  width: 100%;
+}
+
+.speech_input_data {
+  width: 100%;
+}
+
+input {
+  width: 30%;
+}
+
+
+label {
+  display: inline-block;
+  min-width: 5em;
+}
+
+img {
+  width: 100%;
+}
+
+.speech_comment_container{
+  display: flex;
+}
+
+.speech_submit {
+  margin-top: -5%;
+  margin-bottom: 5%;
+}
+
+.submit_button{
+  margin-top: 10%;
+  width: 100%;
+}
+
+/* footer */
+.footer_copyright {
+  text-align: center;
+  padding-top: auto;
+  margin-top: -15%;
+  padding-top: 30px;
+  ;
+  margin-bottom: 30px;
+  border-top: solid 2px #eee;
+}
+
+/* ここからレスポンシブ対応 */
+@media screen and (min-width: 900px) {
+
+  /*ウィンドウ幅が720px以上の場合に適用*/
+  textarea {
+      width: 90%;
+  }
+
+  .speech_submit {
+      width: 100%;
+  }
+
+  .data_table {
+      margin-left: 14.3%;
+  }
+
+  .headline {
+      width: 20%;
+      margin: 2em auto 0em auto;
+      font-size: 1.6em;
+  }
+
+}
+
+@media screen and (min-width:481px) and (max-width: 899px) {
+
+  /*ウィンドウ幅が最大480pxまでの場合に適用*/
+  textarea {
+      max-width: 34em;
+  }
+
+  .data_table {
+      margin-left: 15%;
+  }
+
+  .headline {
+      width: 35%;
+      margin: 2em auto 0em auto;
+      font-size: 1.4em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  /*ウィンドウ幅が最大480pxまでの場合に適用*/
+  textarea {
+      max-width: 24em;
+  }
+
+  .speech_input {
+      width: auto;
+      margin-left: 10px;
+  }
+
+  .p-header_nav_item_link {
+      font-size: 10px;
+  }
+
+  .data_table {
+      margin-left: 20%;
+  }
+
+  .headline {
+      width: 43%;
+      margin: 2em auto 0em auto;
+      font-size: 1.2em;
+  }
+}
+
