@@ -1,0 +1,304 @@
+/* headerの中身をどうするか、pは使いまわししない、nは使いまわす */
+.p-header {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  padding: 15px 24px;
+
+}
+
+/* headerのlayout(位置)を決めている */
+.l-header {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.p-header_logo {
+  width: 148px;
+}
+
+.POSSElogo {
+  max-width: 100%;
+}
+
+.p-header_nav {
+  margin-left: auto;
+}
+
+.p-header_nav_list {
+  display: flex;
+  gap: 32px;
+}
+
+.p-header_nav_item_link {
+  color: #666;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* 全体 */
+.heart_container {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* 入力フォーム */
+.date_data {
+  width: 100%;
+}
+
+/* 仮置き */
+.box {
+  height: 100px;
+}
+
+.heart_inputContainer {
+  width: 60%;
+  margin: auto;
+}
+
+.heart_name_input,
+.heart_subname_input {
+  width: 90%;
+  margin-left: -50%;
+}
+
+.heart_submit {
+  width: 100%;
+}
+
+@media screen and (min-width: 900px) {
+
+  /*ウィンドウ幅が720px以上の場合に適用*/
+  .heart_input_comment {
+      width: 96%;
+  }
+
+  .date_data {
+      display: flex;
+      margin-left: 0%;
+  }
+
+  .heart_name_input,
+  .heart_subname_input {
+      width: 95%;
+      margin-left: -50%;
+  }
+}
+
+@media screen and (min-width:481px) and (max-width: 899px) {
+
+  /*ウィンドウ幅が最大480pxまでの場合に適用*/
+  .heart_input_comment {
+      max-width: 30em;
+  }
+
+  .profile_inputContainer {
+      width: auto;
+      margin-left: 10px;
+  }
+
+  .date_data {
+      width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  /*ウィンドウ幅が最大480pxまでの場合に適用*/
+  .heart_input_comment {
+      max-width: 26em;
+  }
+
+  .heart_inputContainer {
+      margin: 0 13%;
+  }
+
+  .date_data {
+      display: flex;
+      width: 50%;
+  }
+
+  .heart_name,
+  .heart_subname {
+      width: 50%;
+      display: block;
+  }
+
+  .heart_submit {
+      width: 113%;
+  }
+
+  .p-header_nav_item_link {
+      font-size: 10px;
+  }
+}
+
+/* 投稿表示 */
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.container {
+  margin: 10% auto;
+}
+
+.container_content {
+  border: solid;
+  margin: 0 5%;
+}
+
+.container_content_date {
+  border-bottom: 1px solid #666;
+}
+
+.container_content_name {}
+
+.container_content_detail {
+  border-bottom: solid;
+  height: 10em;
+}
+
+.container_content_btn{
+  display: flex;
+  /**margin-left: 72%;**/
+}
+
+/**.container_content_comment_btn a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10%;
+  padding: 0.1em 0.5em;
+  width: 6em;
+  color: #2285b1;
+  font-size: 1em;
+  font-weight: 300;
+  border: 3px solid #a0c4d3;
+  border-radius: 10px;
+  
+}
+
+.container_content_comment_btn a::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid #2285b1;
+  border-right: 3px solid #2285b1;
+  transform: rotate(45deg);
+}
+
+.container_content_comment_btn a:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #a0c4d3;
+}**/
+
+
+/* ♡ボタン */
+
+/**.container_content_heart_btn a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1em 0em 0.1em 0.5em;
+  width: 0.6em;
+  color: #b2b2b2;
+  font-size: 2em;
+  border-radius: 10px;
+  
+}
+
+.container_content_heart_btn a:hover {
+  color:red ;
+  text-decoration: none;
+}
+
+.container_content_reaction_heart_count_number {
+  padding-top: 5%;
+  padding-left: 0%;
+}
+
+/* コメント欄 */
+/**.container_content_comment_box{
+  border: 1px solid #333333;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#comment_reply{
+  padding: 1%;
+  width: 97.5%;
+}
+
+.container_content_comment_box,
+#comment_reply{
+  display: none;
+} **/
+#comment_reply{
+  display: none;
+}
+
+/**ハートボタン*/
+.heart_button{
+  border: 1.5px solid;
+  color: #afa9aa;
+  font-size: 18px;
+  border-radius: 20px;
+  padding: 3px 13px;
+  display: flex;
+  width: 150px;
+  gap: 5px;
+  align-items: center;
+  
+}
+.heart_button.clicked{
+  color: #ffffff;
+  background: #ed5d78;
+  border-color: #ed5d78;
+
+}
+.heart_icon{
+  font-family: 'Material Icons';
+  content: '\e87d';
+  color: red;
+  outline: none;
+}
+.heart_icon.clicked{
+  color: white;
+}
+.heart_count{
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.count_number{
+  margin-left: 10px;
+    
+}
+
+
+
+/* footer */
+.footer_copyright {
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  border-top: solid 2px #eee;
+}

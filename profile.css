@@ -1,35 +1,272 @@
-.heart_button{
-  border: 1.5px solid;
-  color: #afa9aa;
-  font-size: 18px;
-  border-radius: 20px;
-  padding: 3px 13px;
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+
+}
+li{
+  list-style: none;
+  margin: 0;
+}
+@media screen and (min-width: 481px) { /*ウィンドウ幅が720px以上の場合に適用*/
+  .p-header__inner {
+    background-color: #fff;
+    flex-direction: column;
+    inset: 0;
+    opacity: 0;
+    padding: 136px 16px 40px;
+    position: fixed;
+    transition: opacity 0.4s, visibility 0.4s;
+    visibility: hidden;
+    
+  }
+
+  .p-header.is-open .p-header__inner {
+      opacity: 1;
+      visibility: visible;
+  }
+}
+@media screen and (max-width: 480px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
+  img {
+   width: 100%;
+  }
+}
+.p-header {
+  align-items: center;
+  background-color: #fff;
   display: flex;
-  width: 150px;
-  gap: 5px;
-}
-.heart_button.clicked{
-  color: #ffffff;
-  background: #ed5d78;
-  border-color: #ed5d78;
+  padding: 15px 24px;
 
 }
-.heart_icon{
-  font-family: 'Material Icons';
-  content: '\e87d';
-  color: red;
-  outline: none;
+
+/* headerのlayout(位置)を決めている */
+.l-header {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
 }
-.heart_icon.clicked{
-  color: white;
-}
-.heart_count{
-  border: none;
-  background: transparent;
-  outline: none;
+.p-header_logo {
+  width: 148px;
 }
 
-.count_number{
-  margin-left: 10px;
+.POSSElogo {
+  max-width: 100%;
 }
 
+.p-header_nav {
+  margin-left: auto;
+}
+
+.p-header_nav_list {
+  display: flex;
+  gap: 32px;
+}
+
+.p-header_nav_item_link {
+  color: #666;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+
+/**アコーディオン＊*/
+#acMenu{
+  
+  width: 80%;
+  margin: 100px auto ;
+}
+
+dd {
+  display: block;
+  margin-inline-start: 0px;
+}
+
+#acMenu dt{
+  border-radius: 20px;
+   
+  height: 30px;
+  background-color: lightcyan;
+
+}
+#acMenu dd{
+  display: none;
+  text-align:center;
+  
+}
+.myprofile{
+  border: 1px solid black;
+  margin: 20px;
+
+}
+
+
+/**表示エリア**/
+
+.myinf_item{
+  display: block;
+  letter-spacing: 0.15em;
+  margin-left: 5%;
+}
+.myinf_list{
+  margin: 20px auto;
+  padding: 10px auto;
+  text-align: left;
+  border: 2px double lightblue;
+  width: 80%;
+
+}
+.myinf_list span{
+  margin: 5px;
+}
+
+
+
+
+/* 全体 */
+.profile_container{
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+}
+
+/**アコーディオン＊*/
+.profile_acMenu_frame{
+  margin: 0 auto;
+  width: 85%;
+}
+
+#acMenu {
+  margin-top: 100px;
+}
+
+dd {
+  display: block;
+  margin-inline-start: 0px;
+}
+
+#acMenu dt {
+  display: block;
+  text-align: center;
+  border: black 1px solid;
+  cursor: pointer;
+}
+
+#acMenu dd {
+  display: none;
+  text-align: center;
+
+}
+
+.myprofile {
+  border: 1px solid black;
+  margin: 20px;
+
+}
+
+
+/* 入力フォーム */
+.profile_inputContainer {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.profile_data_frame {
+  text-align: left;
+}
+
+.profile_introduction {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.profile_input_data {
+  width: 100%;
+}
+
+input {
+  width: 70%;
+}
+
+.profile_submit {
+  text-align: center;
+}
+
+label {
+  display: inline-block;
+  min-width: 5em;
+}
+
+img {
+  width: 100%;
+}
+
+/* 仮置きしてる */
+.box {
+  height: 100px;
+}
+.submit_message{
+  margin-top: -25px;
+}
+
+
+@media screen and (min-width: 900px) {
+
+  /*ウィンドウ幅が720px以上の場合に適用*/
+  textarea {
+      width: 87%;
+  }
+}
+
+@media screen and (min-width:481px) and (max-width: 899px) {
+
+  /*ウィンドウ幅が最大480pxまでの場合に適用*/
+  textarea {
+      max-width: 37em;
+  }
+
+  .profile_inputContainer {
+      width: auto;
+      margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  /*ウィンドウ幅が最大480pxまでの場合に適用*/
+  textarea {
+      max-width: 20em;
+  }
+
+  .profile_inputContainer {
+      width: auto;
+      margin-left: 10px;
+  }
+
+  .p-header_nav_item_link {
+      font-size: 10px;
+  }
+}
+
+/* footer */
+footer{
+  margin-top: 30px;
+}
+.footer_copyright{
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  border-top: solid 2px #eee;
+}
