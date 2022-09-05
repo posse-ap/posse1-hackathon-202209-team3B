@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>想いの丈</title>
-    <link rel="stylesheet" href="./heart.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./test.css">
     <link rel="stylesheet" href="./noramalize.css">
+    <script src="./test.js" defer></script>
     <script src="./jquery3.6.0.js"></script>
 </head>
 
 <header class="l-header p-header">
     <div class="posselogo">
-        <img class="POSSElogo" src="./img/logo.svg" alt="POSSE">
+        <img class="POSSElogo" src="logo.svg" alt="POSSE">
     </div>
     <nav class="p-header_nav">
         <ul class="p-header_nav_list">
@@ -40,14 +40,14 @@
             <form action="thanks.html">
                 <table class="data_table">
                     <td class="date_data">
-                        <select name="age">
+                        <select name="age" class="age_input">
                             <option value="10">2020年</option>
                             <option value="20">2021年</option>
                             <option value="30">2022年</option>
                             <option value="40">2023年</option>
                             <option value="other">2024年</option>
                         </select>
-                        <select name="months">
+                        <select name="months" class="months_input">
                             <option>1月</option>
                             <option>2月</option>
                             <option>3月</option>
@@ -61,7 +61,7 @@
                             <option>11月</option>
                             <option>12月</option>
                         </select>
-                        <select name="days">
+                        <select name="days" class="days_input">
                             <option>1日</option>
                             <option>2日</option>
                             <option>3日</option>
@@ -100,56 +100,51 @@
     </div>
     <tr>
         <td class="heart_subname"><label for="heart_subname">ふりがな</label></td>
-        <td class="heart_subname_input"><input type="text" name="name" placeholder="やまだはなこ"></td>
+        <td><input type="text" name="name" placeholder="やまだはなこ" class="heart_subname_input"></td>
     </tr>
     <tr>
         <td class="heart_name"><label for="heart_name">名前</label></td>
-        <td class="heart_name_input"><input type="text" name="name" placeholder="山田花子"></td>
+        <td><input type="text" name="name" placeholder="山田花子" class="heart_name_input"></td>
     </tr>
     </table>
     <tr>
-        <td><label for="heart_comment"></label></td>
-        <td><textarea class="heart_input_comment" cols="75" rows="30" placeholder="今思ってること"></textarea></td>
+        <td><label for="heart_comment">コメント</label></td>
+        <td>
+            <textarea cols="75" rows="30" placeholder="今思ってること" class="heart_comment_input"></textarea>
+        </td>
     </tr>
-    <div class="heart_submit">
-        <input class="heart_submit" type="button" value="送信する">
-    </div>
+    <input class="heart_submit_button" type="button" value="送信する">
+    <div class="heart_submit"></div>
     </form>
     </div>
 
     <section class="container">
         <div class="container_content">
             <ul class="container_content_date">
-                <li class="age">年</li>
-                <li class="month">月</li>
-                <li class="day">日</li>
+                <li class="container_content_date_age"></li>
+                <li class="container_content_date_month"></li>
+                <li class="container_content_date_day"></li>
+                <li class="container_content_date_name"></li>
+                <li class="container_content_subname"></li>
             </ul>
-                <div class="container_content_name"></div>
                     <div class="container_content_detail"></div>
                     <div class="container_content_btn">
                         <div class="container_content_comment_btn" id="comment_btn">
-                            コメント
+                            <a href="">コメント</a>
                         </div>
-                        <div class="heart_button">
-                            <button class="heart_count" ><i class="heart_icon"><span class="material-icons">favorite</span></i>
-                            </button>
-                            いいね!
-                            <div class="count_number">
-                              0
-                            </div>
+                        <div class="container_content_heart_btn" >
+                            <a href="">♥</a> 
+                        </div>
+                        <div class="container_content_reaction_heart_count_number">
+                            10
                         </div>
                     </div>
-                </div>
-                <div class="past_comment">
-
-                </div>
                 <div class="container_content_comment_box" id="comment_box">
                     <table>
                             <td class="container_content_comment_box_reply" id="comment_reply">
-                                <textarea class="comment_input" cols="150" rows="10" placeholder="返信する"></textarea>
+                                <textarea class="comment_reply" cols="150" rows="10" placeholder="返信する"></textarea>
                             </td>
                     </table>
-                    <input class="reply_button" type="button" value="返信する"></input>
                 </div>
         </div>
     </section>
@@ -160,7 +155,7 @@
         <small>©2022 POSSE</small>
     </div>
 </footer>
-<script src="test.js"> </script>
+
 </body>
 
 </html>

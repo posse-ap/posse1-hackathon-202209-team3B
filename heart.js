@@ -1,12 +1,14 @@
 /**コメントボックス */
-const button = document.getElementById('comment_button');
-const replyBox = document.getElementById('comment_reply');
+const button = document.getElementById('comment_btn');
+const replyBox = document.getElementById('comment_reply'); 
 const commentBox = document.getElementById('comment_box');
 
 button.addEventListener('click', () => {
     commentBox.style.display='block';
+    $('.container_content_comment_btn').addClass('clicked');
     
 })
+
 
 /**ハートボタン */
 const heartButton=document.querySelector('.heart_button');
@@ -96,5 +98,5 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 /*delete storage.store;*/
-/**delete keep.box**/
+/*delete keep.box*/
 
