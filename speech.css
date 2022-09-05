@@ -1,20 +1,15 @@
-main{
-  margin-top: -35px;
-  
-  background-color: aquamarine;
+/* header */
+body{
+  background: linear-gradient(white,#CCC);
 }
-
-
-/* headerの中身をどうするか、pは使いまわししない、nは使いまわす */
 .p-header {
   align-items: center;
-  background-color: #fff;
+  background-color: white;
   display: flex;
   padding: 15px 24px;
 
 }
 
-/* headerのlayout(位置)を決めている */
 .l-header {
   left: 0;
   position: fixed;
@@ -22,17 +17,6 @@ main{
   top: 0;
   z-index: 1000;
 }
-
-/* class名1つでも良いけど、2つあると分かりやすい l,pは使い方が決まっている */
-
-/* behore after 新人ハッカソンで出てきた文字の下にライン引くやつはこれでできる */
-/* *,
-::before,
-::after {
-  border-style: solid;
-  border-width: 0;
-  box-sizing: border-box;
-} */
 
 .p-header_logo {
   width: 148px;
@@ -64,8 +48,6 @@ ul {
   padding: 0;
 }
 
-
-
 a {
   background-color: transparent;
   text-decoration: none;
@@ -74,17 +56,21 @@ a {
 /* 全体 */
 .speech_container{
   font-family: 'Courier New', Courier, monospace;
+  background: linear-gradient(white #cccc);
+}
+
+.box{
+  height: 3em;
 }
 
 /**アコーディオン＊*/
 .speech_acMenu_frame{
   width: 85%;
-  margin: 0 auto;
+  margin: -10% auto;
 }
 
 #acMenu {
-  margin-top: 100px;
-  padding-top: 30px ;
+  margin-top: 17%;
 }
 
 dd {
@@ -95,15 +81,16 @@ dd {
 #acMenu dt {
   display: block;
   text-align: center;
-  border: #666 1px solid;
+  border:#666 1px solid;
   cursor: pointer;
-
+  height: 50px;
+  color: black;
+  background-color: aliceblue;
 }
 
 #acMenu dd {
   display: none;
   text-align: center;
-
 }
 
 .myprofile {
@@ -111,36 +98,85 @@ dd {
   margin: 20px;
 }
 
+
 /* 入力フォーム */
 
-.speech_input {
-  width: 60%;
-  margin: 0 auto;
+.speech_input{
+  width: 80%;
+  margin: 20% auto;
+
+}
+
+.personal_data{
+  width: 100%;
+}
+
+.speech_input_data {
+  width: 100%;
 }
 
 input {
+  width: 30%;
+}
+
+/* .speech_submit {
+  text-align: center;
+  width: 100%;
+} */
+
+label {
+  display: inline-block;
+  min-width: 5em;
+}
+
+img {
   width: 100%;
 }
+
+  .speech_submit{
+      width: 100%;
+      margin-bottom: 10%;
+  }
 
 
 @media screen and (min-width: 900px) {
 
   /*ウィンドウ幅が720px以上の場合に適用*/
   textarea {
-      width: 175%;
+      width: 99%;
   }
+
+  .speech_submit{
+      width: 100%;
+  }
+
+  .data_table{
+      margin-left: 14.3%;
+  }
+
+  .headline{
+      width: 20%;
+      margin: 2em auto 0em auto;
+      font-size: 1.6em;
+  }
+
 }
 
 @media screen and (min-width:481px) and (max-width: 899px) {
 
   /*ウィンドウ幅が最大480pxまでの場合に適用*/
   textarea {
-      max-width: 30em;
+      max-width: 34em;
   }
 
-  .speech_input {
-      width: auto;
-      margin-left: 10px;
+  .data_table{
+      margin-left: 15%;
+  }
+
+  .headline{
+      width: 38%;
+      margin: 2em auto 0em auto;
+      font-size: 1.4em;
   }
 }
 
@@ -148,7 +184,7 @@ input {
 
   /*ウィンドウ幅が最大480pxまでの場合に適用*/
   textarea {
-      max-width: 20em;
+      max-width: 24em;
   }
 
   .speech_input {
@@ -159,33 +195,24 @@ input {
   .p-header_nav_item_link {
       font-size: 10px;
   }
+
+  .data_table{
+      margin-left: 20%;
+  }
+
+  .headline{
+      width: 45%;
+      margin: 2em auto 0em auto;
+      font-size: 1.2em;
+  }
 }
 
 /* footer */
 .footer_copyright {
   text-align: center;
-  padding-top: 30px;
-  margin-bottom: 30px;
+  padding-top: auto;
+  margin-top: -15%;
+  padding-top: 30px; ;
+  margin-bottom:30px;
   border-top: solid 2px #eee;
-}
-
-/*表示エリア*/
-li{
-  list-style: none;
-}
-.myspeech_item{
-  display: block;
-  letter-spacing: 0.15em;
-  margin-left: 5%;
-}
-.myspeech_list{
-  margin: 20px auto;
-  padding: 10px auto;
-  text-align: left;
-  border: 2px double lightblue;
-  width: 80%;
-
-}
-.myspeech_list span{
-  margin: 5px;
 }
