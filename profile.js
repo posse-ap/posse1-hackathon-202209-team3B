@@ -35,9 +35,10 @@ submitButton.addEventListener('click',function(){
 
 
   listContent.push(myProfile);
-  local.store=JSON.stringify(listContent);
+  local.stor=JSON.stringify(listContent);
 
-  console.log(local.store)
+  console.log(local.stor)
+
   if(subnameInput.value[0]==='あ' || subnameInput.value[0]==='い' || subnameInput.value[0]==='う' ||subnameInput.value[0]==='え' ||subnameInput.value[0]==='お'){
     const profileBox1=document.querySelector('.introduce_page1')
     const litag=document.createElement('li');
@@ -316,7 +317,7 @@ submitButton.addEventListener('click',function(){
 
 document.addEventListener("DOMContentLoaded", () => {
   
-  const data=local.store;
+  const data=local.stor;
   
   listContent=JSON.parse(data);
   console.log(data)
@@ -589,5 +590,4 @@ document.addEventListener("DOMContentLoaded", () => {
     
   }
 })
-
-/*:delete local.store;**/
+/**delete local.stor;**/

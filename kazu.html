@@ -8,15 +8,15 @@
     <title>想いの丈</title>
     
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="./noramalize.css">
-    <link rel="stylesheet" href="./test.css">
-    <script src="./test.js" defer></script>
-    <script src="./jquery3.6.0.js"></script>
+    <link rel="stylesheet" href="noramalize.css">
+    <link rel="stylesheet" href="./kazu.css">
+    <script src="./kazu.js" defer></script>
+    <script src="jquery3.6.0.js"></script>
 </head>
 
 <header class="l-header p-header">
     <div class="posselogo">
-        <img class="POSSElogo" src="./img/logo.svg" alt="POSSE">
+        <img class="POSSElogo" src="logo.svg" alt="POSSE">
     </div>
     <nav class="p-header_nav">
         <ul class="p-header_nav_list">
@@ -44,11 +44,11 @@
                 
                   <td class="date_data">
                       <select name="age" class="age_input">
-                          <option >2020年</option>
-                          <option >2021年</option>
-                          <option >2022年</option>
-                          <option >2023年</option>
-                          <option >2024年</option>
+                          <option value="10">2020年</option>
+                          <option value="20">2021年</option>
+                          <option value="30">2022年</option>
+                          <option value="40">2023年</option>
+                          <option value="other">2024年</option>
                       </select>
                       <select name="months" class="months_input">
                           <option>1月</option>
@@ -129,29 +129,27 @@
 
     <section class="container">
         <div class="container_content">
-            <!--<ul class="container_content_date">
-              <li class="container_content_date_age"></li>
-              <li class="container_content_date_month"></li>
-              <li class="container_content_date_day"></li>
-              <li class="container_content_date_name"></li>
-              <li class="container_content_subname"></li>
+            <ul class="container_content_date">
+                <li class="container_content_date_age"></li>
+                <li class="container_content_date_month"></li>
+                <li class="container_content_date_day"></li>
+                <li class="container_content_date_name"></li>
+                <li class="container_content_subname"></li>
             </ul>
-
-            <div class="container_content_name"></div>
-                <div class="container_content_detail"></div>
-                <div class="container_content_btn">
-                    <div class="container_content_comment_btn" id="comment_btn">
+            <div class="container_content_detail"></div>
+            <div class="container_content_btn">
+                <div class="container_content_comment_btn" id="comment_btn">
                         コメント
-                    </div>
-                    <div class="heart_button">
-                        <button class="heart_count" ><i class="heart_icon"><span class="material-icons">favorite</span></i>
-                        </button>
+                </div>
+                <div class="heart_button">
+                    <button class="heart_count" ><i class="heart_icon"><span class="material-icons">favorite</span></i>
+                    </button>
                         いいね!
-                        <div class="count_number">
+                    <div class="count_number">
                         0
-                        </div>
                     </div>
                 </div>
+            </div>
             </div>
             <div class="past_comment">
 
@@ -163,7 +161,7 @@
                         </td>
                 </table>
                 <input class="reply_button" type="button" value="返信する"></input>
-            </div> -->
+            </div>
         </div>
     </section>
 </body>

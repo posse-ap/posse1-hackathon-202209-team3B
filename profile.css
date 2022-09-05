@@ -1,7 +1,22 @@
 body{
   font-family: 'Noto Sans JP', sans-serif;
+  
 
 }
+main{
+  /**background: -moz-linear-gradient(top, #FFC778, #FFF);
+  background: -webkit-linear-gradient(top, #FFC778, #FFF);
+  background: linear-gradient(to bottom, #FFC778, #FFF);**/
+  background: linear-gradient(white,#CCCC);
+  font-family: 'Courier New', Courier, monospace;
+  box-sizing: border-box;
+  background-color: lightblue;
+  padding-bottom: 30px;
+  margin-top: -55px;
+  padding-top: 50px;
+  z-index: 100;
+}
+
 li{
   list-style: none;
   margin: 0;
@@ -82,8 +97,22 @@ a {
 }
 
 
+/*ページタイトル*/
+
+
+.profile_box{
+  height: 4em;
+  background-color: white;
+  
+}
+.page_title{
+  padding-top: 10%;
+  
+}
+
 
 /**アコーディオン＊*/
+
 #acMenu{
   
   width: 80%;
@@ -96,10 +125,12 @@ dd {
 }
 
 #acMenu dt{
-  border-radius: 20px;
-   
+  border-radius: 5px;
   height: 30px;
-  background-color: lightcyan;
+  background-color: white;
+  color: black;
+  
+
 
 }
 #acMenu dd{
@@ -112,6 +143,8 @@ dd {
   margin: 20px;
 
 }
+
+
 
 
 /**表示エリア**/
@@ -261,9 +294,7 @@ img {
 }
 
 /* footer */
-footer{
-  margin-top: 30px;
-}
+
 .footer_copyright{
   text-align: center;
   padding-top: 30px;
