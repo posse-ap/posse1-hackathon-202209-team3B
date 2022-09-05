@@ -1,11 +1,11 @@
-/**const button = document.getElementById('comment_btn');
+const button = document.getElementById('comment_btn');
 const replyBox = document.getElementById('comment_reply');
 const commentBox = document.getElementById('comment_box')
 
 button.addEventListener('click', () => {
     replyBox.classList.add('is-clicked');
     commentBox.classList.add('is-clicked');
-})**/
+})
 
 
 // ここから送信ボタンを押したら、下に出てくるものを作っていきたい
@@ -35,13 +35,13 @@ submitButton.addEventListener('click', function(){
     st.store=JSON.stringify(heartContents);
     
     
-    /**const heartbox= document.querySelector('.container_content_date');
+    const heartbox= document.querySelector('.container_content_date');
     const heartboxAge = document.querySelector('.container_content_date_age');
     const heartboxMonth = document.querySelector('.container_content_date_month');
     const heartboxDay = document.querySelector('.container_content_date_day');
     const heartboxName = document.querySelector('.container_content_date_name');
     const heartboxDetail = document.querySelector('.container_content_detail');
-    const heartboxContent = document.createElement('p');**/
+    const heartboxContent = document.createElement('p');
     const contentContainer=document.querySelector('.container_content');
 
     const ageContent = ageInput.value;
@@ -58,7 +58,7 @@ submitButton.addEventListener('click', function(){
     nameInput.value='';
     commentInput.value='';
 
-    const inputHtml=(input,inputNumber) => {
+    /*const inputHtml=(input,inputNumber) => {
       return`<ul class="container_content_date">
       <li class="container_content_date_age">${ageContent}</li>
       <li class="container_content_date_month">${monthsContent}</li>
@@ -75,9 +75,9 @@ submitButton.addEventListener('click', function(){
     contentContainer.innerHTML=myheart.map((heart,heartIndex) => {
       return inputHtml(heart,heartIndex)
     }).join('')
-    // 入力した後にこれで空にする
+    // 入力した後にこれで空にする*/
 
-    /**heartboxAge.innerHTML = ageContent + '年' + '<span></span>';
+    heartboxAge.innerHTML = ageContent + '年' + '<span></span>';
     heartboxMonth.innerHTML = monthsContent + '月' + '<span></span>';
     heartboxDay.innerHTML = daysContent + '日' + '<span></span>';
     heartboxName.innerHTML = '名前：' + nameContent ;
@@ -86,7 +86,7 @@ submitButton.addEventListener('click', function(){
     heartboxContent.setAttribute('class', 'container_content_detail_ptag');
     // createElementで作った要素にclass名をつけた
 
-    heartboxDetail.appendChild(heartboxContent);**/
+    heartboxDetail.appendChild(heartboxContent);
     console.log(heartContents)
 })
 
@@ -95,15 +95,15 @@ submitButton.addEventListener('click', function(){
 
 /**コメントボックス */
 
-/**button.addEventListener('click', () => {
+button.addEventListener('click', () => {
     commentBox.style.display='block';
     $('.container_content_comment_btn').addClass('clicked');
     
-})**/
+})
 
 
 /**ハートボタン */
-/*:const heartButton=document.querySelector('.heart_button');
+const heartButton=document.querySelector('.heart_button');
 var numberSum=[];
 const storage=localStorage;
 heartButton.addEventListener('click',() => {
@@ -133,12 +133,12 @@ document.addEventListener("DOMContentLoaded", () => {
   /**for(const item of numberSum ){
     console.log(Number(item.currentNumber))
   }**/
- /**const lastNumber=(Number(numberSum[(numberSum.length)-1].currentNumber))
+  const lastNumber=(Number(numberSum[(numberSum.length)-1].currentNumber))
   $('.count_number').html(lastNumber);
   
-})**/
+})
 
-/**過去のコメント表示 
+/**過去のコメント表示 */
 const commentInput2=document.querySelector('.comment_input');
 const replyBtn=document.querySelector('.reply_button');
 
@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },{'once':true})
     
 
-})*/
+})
 
 /*delete storage.store;*/
 /*delete keep.box*/

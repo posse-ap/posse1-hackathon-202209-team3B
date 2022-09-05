@@ -102,11 +102,16 @@ a {
 
 .profile_box{
   height: 4em;
+  
   background-color: white;
   
 }
 .page_title{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
   padding-top: 10%;
+  padding-left: 33%;
   
 }
 
