@@ -150,7 +150,7 @@ submitButton.addEventListener('click',function(){
     profileBox4.appendChild(litag)
   }
   else if(subnameInput.value[0]==='な' || subnameInput.value[0]==='に' || subnameInput.value[0]==='ぬ' ||subnameInput.value[0]==='ね' ||subnameInput.value[0]==='の'){
-    const profileBox3=document.querySelector('.introduce_page5')
+    const profileBox5=document.querySelector('.introduce_page5')
     const litag=document.createElement('li');
     const ptag=document.createElement('p');
     
@@ -455,7 +455,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ptag.setAttribute('class','myinf_item')
       litag.setAttribute('class','myinf_list')
       litag.appendChild(ptag)
-      profileBox5.appendChild(litag)
+      profileBox5s.appendChild(litag)
     }
     else if(subnameContent[0]==='は' || subnameContent[0]==='ひ' || subnameContent[0]==='ふ' ||subnameContent[0]==='へ' ||subnameContent[0]==='ほ'){
       const profileBox6=document.querySelector('.introduce_page6')
