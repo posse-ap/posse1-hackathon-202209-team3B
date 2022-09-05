@@ -1,13 +1,12 @@
-/* headerの中身をどうするか、pは使いまわししない、nは使いまわす */
+/* header */
 .p-header {
     align-items: center;
-    background-color: #fff;
+    background-color: white;
     display: flex;
     padding: 15px 24px;
 
 }
 
-/* headerのlayout(位置)を決めている */
 .l-header {
     left: 0;
     position: fixed;
@@ -15,17 +14,6 @@
     top: 0;
     z-index: 1000;
 }
-
-/* class名1つでも良いけど、2つあると分かりやすい l,pは使い方が決まっている */
-
-/* behore after 新人ハッカソンで出てきた文字の下にライン引くやつはこれでできる */
-/* *,
-  ::before,
-  ::after {
-    border-style: solid;
-    border-width: 0;
-    box-sizing: border-box;
-  } */
 
 .p-header_logo {
     width: 148px;
@@ -45,7 +33,7 @@
 }
 
 .p-header_nav_item_link {
-    color: #666;
+    color: black;
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 0.1em;
@@ -67,16 +55,24 @@ a {
 /* 全体 */
 .speech_container{
     font-family: 'Courier New', Courier, monospace;
+    /* background: linear-gradient(#051637, #1c2c52 ,#5c658b); */
 }
+
+.box{
+    height: 3em;
+}
+
+
+
 
 /**アコーディオン＊*/
 .speech_acMenu_frame{
     width: 85%;
-    margin: 0 auto;
+    margin: -10% auto;
 }
 
 #acMenu {
-    margin-top: 100px;
+    margin-top: 17%;
 }
 
 dd {
@@ -87,15 +83,16 @@ dd {
 #acMenu dt {
     display: block;
     text-align: center;
-    border: #666 1px solid;
+    border:black 1px solid;
     cursor: pointer;
-
+    height: 50px;
+    color: black;
 }
 
 #acMenu dd {
     display: none;
     text-align: center;
-
+    
 }
 
 .myprofile {
@@ -108,7 +105,7 @@ dd {
 
 .speech_input{
     width: 80%;
-    margin: 10% auto;
+    margin: 20% auto;
 }
 
 .personal_data{
@@ -139,6 +136,7 @@ img {
 
     .speech_submit{
         width: 100%;
+        margin-bottom: 10%;
     }
 
 
@@ -157,6 +155,12 @@ img {
         margin-left: 14.3%;
     }
 
+    .headline{
+        width: 20%;
+        margin: 2em auto 0em auto;
+        font-size: 1.6em;
+    }
+
 }
 
 @media screen and (min-width:481px) and (max-width: 899px) {
@@ -168,6 +172,12 @@ img {
 
     .data_table{
         margin-left: 15%;
+    }
+
+    .headline{
+        width: 38%;
+        margin: 2em auto 0em auto;
+        font-size: 1.4em;
     }
 }
 
@@ -190,12 +200,20 @@ img {
     .data_table{
         margin-left: 20%;
     }
+
+    .headline{
+        width: 45%;
+        margin: 2em auto 0em auto;
+        font-size: 1.2em;
+    }
 }
 
 /* footer */
 .footer_copyright {
     text-align: center;
-    padding-top: 30px;
-    margin-bottom: 30px;
+    padding-top: auto;
+    margin-top: -15%;
+    padding-top: 30px; ;
+    margin-bottom:30px;
     border-top: solid 2px #eee;
 }

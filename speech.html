@@ -9,181 +9,183 @@
     <link rel="stylesheet" href="speech.css">
 </head>
 
-<header class="l-header p-header">
-    <div class="posselogo">
-        <img class="POSSElogo" src="logo.svg" alt="POSSE">
-    </div>
-    <nav class="p-header_nav">
-        <ul class="p-header_nav_list">
-            <li class="p-header_nav_item">
-                <a href="./profile.html" class="p-header_nav_item_link">PROFILE</a>
-            </li>
-            <li class="p-header_nav_item">
-                <a href="./heart.html" class="p-header_nav_item_link">想いの丈を叫ぶ</a>
-            </li>
-            <li class="p-header_nav_item">
-                <a href="./speech.html" class="p-header_nav_item_link">100秒スピーチ</a>
-            </li>
-        </ul>
-    </nav>
-</header>
-
-<main>
-    <body>
-        <div class="speech_container">
-            <div class="speech_acMenu_frame">
-                <dl id="acMenu">
-                    <dt>仲間の居場所作らずして自分の居場所なし</dt>
-                    <dd>
-                        <div class="speech_theme_option1"></div>
-                    </dd>
-                    <dt>振り返り主義</dt>
-                    <dd>
-                        <div class="speech_theme_option2"></div>
-                    </dd>
-                    <dt>インサイドアウト</dt>
-                    <dd>
-                        <div class="speech_theme_option3"></div>
-                    </dd>
-                    <dt>理解してから理解される</dt>
-                    <dd>
-                        <div class="speech_theme_option4"></div>
-                    </dd>
-                    <dt>深堀力は人格力</dt>
-                    <dd>
-                        <div class="speech_theme_option5"></div>
-                    </dd>
-                    <dt>嘘をつかないごまかさない</dt>
-                    <dd>
-                        <div class="speech_theme_option6"></div>
-                    </dd>
-                    <dt>教えることは教わること</dt>
-                    <dd>
-                        <div class="speech_theme_option7"></div>
-                    </dd>
-                    <dt>「ベンチ行かない？」と言う勇気</dt>
-                    <dd>
-                        <div class="speech_theme_option8"></div>
-                    </dd>
-                    <dt>本音の対話無くして最高のチームなし</dt>
-                    <dd>
-                        <div class="speech_theme_option9"></div>
-                    </dd>
-                    <dt>自ら機会を創り出し、機会によって自らを変えよ</dt>
-                    <dd>
-                        <div class="speech_theme_option10"></div>
-                    </dd>
-
-                </dl>
-            </div>
-            <div class="speech_input">
-                <div class="box"></div>
-                <p class="speech_introduction">100秒スピーチ入力フォーム</p>
-                <!-- ここから受け取る -->
-                <form action="thanks.html">
-                    <table>
-                        <tr>
-                            <td><label for="theme">お題</label></td>
-                            <td>
-                                <select name="themes">
-                                    <option>仲間の居場所作らずして自分の居場所なし</option>
-                                    <option>振り返り主義</option>
-                                    <option>インサイドアウト</option>
-                                    <option>理解してから理解される</option>
-                                    <option>深堀力は人格力</option>
-                                    <option>嘘をつかないごまかさない</option>
-                                    <option>教えることは教わること</option>
-                                    <option>「ベンチ行かない？」と言う勇気</option>
-                                    <option>本音の対話無くして最高のチームなし</option>
-                                    <option>自ら機会を創り出し、機会によって自らを変えよ</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <table class="data_table">
-                            <td class="date_data">
-                                <select name="age">
-                                    <option value="10">2020年</option>
-                                    <option value="20">2021年</option>
-                                    <option value="30">2022年</option>
-                                    <option value="40">2023年</option>
-                                    <option value="other">2024年</option>
-                                </select>
-                                <select name="months">
-                                    <option>1月</option>
-                                    <option>2月</option>
-                                    <option>3月</option>
-                                    <option>4月</option>
-                                    <option>5月</option>
-                                    <option>6月</option>
-                                    <option>7月</option>
-                                    <option>8月</option>
-                                    <option>9月</option>
-                                    <option>10月</option>
-                                    <option>11月</option>
-                                    <option>12月</option>
-                                </select>
-                                <select name="days">
-                                    <option>1日</option>
-                                    <option>2日</option>
-                                    <option>3日</option>
-                                    <option>4日</option>
-                                    <option>5日</option>
-                                    <option>6日</option>
-                                    <option>7日</option>
-                                    <option>8日</option>
-                                    <option>9日</option>
-                                    <option>10日</option>
-                                    <option>11日</option>
-                                    <option>12日</option>
-                                    <option>13日</option>
-                                    <option>14日</option>
-                                    <option>15日</option>
-                                    <option>16日</option>
-                                    <option>17日</option>
-                                    <option>18日</option>
-                                    <option>19日</option>
-                                    <option>20日</option>
-                                    <option>21日</option>
-                                    <option>22日</option>
-                                    <option>23日</option>
-                                    <option>24日</option>
-                                    <option>25日</option>
-                                    <option>26日</option>
-                                    <option>27日</option>
-                                    <option>28日</option>
-                                    <option>29日</option>
-                                    <option>30日</option>
-                                    <option>31日</option>
-                                </select>
-                            </td>
-                        </table>
-                        <table class="personal_data">
-                        <tr>
-                            <td><label for="comment">ふりがな</label></td>
-                            <td><input type="text" name="name" placeholder="やまだはなこ"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="comment">名前</label></td>
-                            <td><input type="text" name="name" placeholder="山田花子"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="speech_comment">コメント</label></td>
-                            <td><textarea name="comment" cols="70" rows="10" placeholder="入力"></textarea>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="speech_submit">
-                        <input class="speech_submit" type="submit" する>
-                    </div>
-                </form>
-            </div>
+<body>
+    <header class="l-header p-header">
+        <div class="posselogo">
+            <img class="POSSElogo" src="logo.svg" alt="POSSE">
         </div>
+        <nav class="p-header_nav">
+            <ul class="p-header_nav_list">
+                <li class="p-header_nav_item">
+                    <a href="./profile.html" class="p-header_nav_item_link">PROFILE</a>
+                </li>
+                <li class="p-header_nav_item">
+                    <a href="./heart.html" class="p-header_nav_item_link">想いの丈を叫ぶ</a>
+                </li>
+                <li class="p-header_nav_item">
+                    <a href="./speech.html" class="p-header_nav_item_link">100秒スピーチ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-        <footer>
-            <div class="footer_copyright">
-                <small>©2022 POSSE</small>
+
+    <main>
+            <div class="speech_container">
+                <div class="box"></div>
+                <div class="headline">100秒スピーチお題一覧</div>
+                <div class="speech_acMenu_frame">
+                    <dl id="acMenu">
+                        <dt>仲間の居場所作らずして自分の居場所なし</dt>
+                        <dd>
+                            <div class="speech_theme_option1"></div>
+                        </dd>
+                        <dt>振り返り主義</dt>
+                        <dd>
+                            <div class="speech_theme_option2"></div>
+                        </dd>
+                        <dt>インサイドアウト</dt>
+                        <dd>
+                            <div class="speech_theme_option3"></div>
+                        </dd>
+                        <dt>理解してから理解される</dt>
+                        <dd>
+                            <div class="speech_theme_option4"></div>
+                        </dd>
+                        <dt>深堀力は人格力</dt>
+                        <dd>
+                            <div class="speech_theme_option5"></div>
+                        </dd>
+                        <dt>嘘をつかないごまかさない</dt>
+                        <dd>
+                            <div class="speech_theme_option6"></div>
+                        </dd>
+                        <dt>教えることは教わること</dt>
+                        <dd>
+                            <div class="speech_theme_option7"></div>
+                        </dd>
+                        <dt>「ベンチ行かない？」と言う勇気</dt>
+                        <dd>
+                            <div class="speech_theme_option8"></div>
+                        </dd>
+                        <dt>本音の対話無くして最高のチームなし</dt>
+                        <dd>
+                            <div class="speech_theme_option9"></div>
+                        </dd>
+                        <dt>自ら機会を創り出し、機会によって自らを変えよ</dt>
+                        <dd>
+                            <div class="speech_theme_option10"></div>
+                        </dd>
+    
+                    </dl>
+                </div>
+                <div class="speech_input">
+                    <p class="speech_introduction">100秒スピーチ入力フォーム</p>
+                    <!-- ここから受け取る -->
+                    <form action="thanks.html">
+                        <table>
+                            <tr>
+                                <td><label for="theme">お題</label></td>
+                                <td>
+                                    <select name="themes">
+                                        <option>仲間の居場所作らずして自分の居場所なし</option>
+                                        <option>振り返り主義</option>
+                                        <option>インサイドアウト</option>
+                                        <option>理解してから理解される</option>
+                                        <option>深堀力は人格力</option>
+                                        <option>嘘をつかないごまかさない</option>
+                                        <option>教えることは教わること</option>
+                                        <option>「ベンチ行かない？」と言う勇気</option>
+                                        <option>本音の対話無くして最高のチームなし</option>
+                                        <option>自ら機会を創り出し、機会によって自らを変えよ</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <table class="data_table">
+                                <td class="date_data">
+                                    <select name="age">
+                                        <option value="10">2020年</option>
+                                        <option value="20">2021年</option>
+                                        <option value="30">2022年</option>
+                                        <option value="40">2023年</option>
+                                        <option value="other">2024年</option>
+                                    </select>
+                                    <select name="months">
+                                        <option>1月</option>
+                                        <option>2月</option>
+                                        <option>3月</option>
+                                        <option>4月</option>
+                                        <option>5月</option>
+                                        <option>6月</option>
+                                        <option>7月</option>
+                                        <option>8月</option>
+                                        <option>9月</option>
+                                        <option>10月</option>
+                                        <option>11月</option>
+                                        <option>12月</option>
+                                    </select>
+                                    <select name="days">
+                                        <option>1日</option>
+                                        <option>2日</option>
+                                        <option>3日</option>
+                                        <option>4日</option>
+                                        <option>5日</option>
+                                        <option>6日</option>
+                                        <option>7日</option>
+                                        <option>8日</option>
+                                        <option>9日</option>
+                                        <option>10日</option>
+                                        <option>11日</option>
+                                        <option>12日</option>
+                                        <option>13日</option>
+                                        <option>14日</option>
+                                        <option>15日</option>
+                                        <option>16日</option>
+                                        <option>17日</option>
+                                        <option>18日</option>
+                                        <option>19日</option>
+                                        <option>20日</option>
+                                        <option>21日</option>
+                                        <option>22日</option>
+                                        <option>23日</option>
+                                        <option>24日</option>
+                                        <option>25日</option>
+                                        <option>26日</option>
+                                        <option>27日</option>
+                                        <option>28日</option>
+                                        <option>29日</option>
+                                        <option>30日</option>
+                                        <option>31日</option>
+                                    </select>
+                                </td>
+                            </table>
+                            <table class="personal_data">
+                            <tr>
+                                <td><label for="comment">ふりがな</label></td>
+                                <td><input type="text" name="name" placeholder="やまだはなこ"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="comment">名前</label></td>
+                                <td><input type="text" name="name" placeholder="山田花子"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="speech_comment">コメント</label></td>
+                                <td><textarea name="comment" cols="70" rows="10" placeholder="入力"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="speech_submit">
+                            <input class="speech_submit" type="submit" する>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </footer>
-    </body>
+    </main>
+    <footer>
+        <div class="footer_copyright">
+            <small>©2022 POSSE</small>
+        </div>
+    </footer>
+</body>
+
 </html>
-</main>

@@ -1,4 +1,4 @@
-/* headerの中身をどうするか、pは使いまわししない、nは使いまわす */
+/* header */
 .p-header {
     align-items: center;
     background-color: #fff;
@@ -7,7 +7,6 @@
 
 }
 
-/* headerのlayout(位置)を決めている */
 .l-header {
     left: 0;
     position: fixed;

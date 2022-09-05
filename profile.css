@@ -1,13 +1,16 @@
+/* 全体 */
 body {
     font-family: 'Noto Sans JP', sans-serif;
-
+}
+.profile_container{
+background : linear-gradient(white,#CCCC);
 }
 
 li {
     list-style: none;
 }
 
-/* headerの中身をどうするか、pは使いまわししない、nは使いまわす */
+/* header */
 .p-header {
     align-items: center;
     background-color: #fff;
@@ -16,7 +19,6 @@ li {
 
 }
 
-/* headerのlayout(位置)を決めている */
 .l-header {
     left: 0;
     position: fixed;
@@ -24,17 +26,6 @@ li {
     top: 0;
     z-index: 1000;
 }
-
-/* class名1つでも良いけど、2つあると分かりやすい l,pは使い方が決まっている */
-
-/* behore after 新人ハッカソンで出てきた文字の下にライン引くやつはこれでできる */
-/* *,
-  ::before,
-  ::after {
-    border-style: solid;
-    border-width: 0;
-    box-sizing: border-box;
-  } */
 
 .p-header_logo {
     width: 148px;
