@@ -6,9 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>想いの丈</title>
-    <link rel="stylesheet" href="./heart.css">
-    <link rel="stylesheet" href="./noramalize.css">
-    <script src="./jquery3.6.0.js"></script>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="heart.css">
+    <script src="./heart.js" defer></script>
+    <script src="jquery3.6.0.js"></script>
 </head>
 
 <header class="l-header p-header">
@@ -33,70 +36,71 @@
 <body>
     <div class="box"></div>
     <div class="heart_container">
-        <div class="heart_inputContainer">
-            <p class="heart_introduction">想いの丈</p>
-            <!-- ここから受け取る -->
-            <form action="thanks.html">
-                <table class="data_table">
-                    <td class="date_data">
-                        <select name="age" class="age_input">
-                            <option value="10">2020年</option>
-                            <option value="20">2021年</option>
-                            <option value="30">2022年</option>
-                            <option value="40">2023年</option>
-                            <option value="other">2024年</option>
-                        </select>
-                        <select name="months" class="months_input">
-                            <option>1月</option>
-                            <option>2月</option>
-                            <option>3月</option>
-                            <option>4月</option>
-                            <option>5月</option>
-                            <option>6月</option>
-                            <option>7月</option>
-                            <option>8月</option>
-                            <option>9月</option>
-                            <option>10月</option>
-                            <option>11月</option>
-                            <option>12月</option>
-                        </select>
-                        <select name="days" class="days_input">
-                            <option>1日</option>
-                            <option>2日</option>
-                            <option>3日</option>
-                            <option>4日</option>
-                            <option>5日</option>
-                            <option>6日</option>
-                            <option>7日</option>
-                            <option>8日</option>
-                            <option>9日</option>
-                            <option>10日</option>
-                            <option>11日</option>
-                            <option>12日</option>
-                            <option>13日</option>
-                            <option>14日</option>
-                            <option>15日</option>
-                            <option>16日</option>
-                            <option>17日</option>
-                            <option>18日</option>
-                            <option>19日</option>
-                            <option>20日</option>
-                            <option>21日</option>
-                            <option>22日</option>
-                            <option>23日</option>
-                            <option>24日</option>
-                            <option>25日</option>
-                            <option>26日</option>
-                            <option>27日</option>
-                            <option>28日</option>
-                            <option>29日</option>
-                            <option>30日</option>
-                            <option>31日</option>
-                        </select>
-                    </td>
-                </table>
-            </form>
-        </div>
+      <div class="heart_inputContainer">
+          <p class="heart_introduction">想いの丈</p>
+          <!-- ここから受け取る -->
+          <form action="thanks.html">
+              <table class="data_table">
+                
+                  <td class="date_data">
+                      <select name="age" class="age_input">
+                          <option value="10">2020年</option>
+                          <option value="20">2021年</option>
+                          <option value="30">2022年</option>
+                          <option value="40">2023年</option>
+                          <option value="other">2024年</option>
+                      </select>
+                      <select name="months" class="months_input">
+                          <option>1月</option>
+                          <option>2月</option>
+                          <option>3月</option>
+                          <option>4月</option>
+                          <option>5月</option>
+                          <option>6月</option>
+                          <option>7月</option>
+                          <option>8月</option>
+                          <option>9月</option>
+                          <option>10月</option>
+                          <option>11月</option>
+                          <option>12月</option>
+                      </select>
+                      <select name="days" class="days_input">
+                          <option>1日</option>
+                          <option>2日</option>
+                          <option>3日</option>
+                          <option>4日</option>
+                          <option>5日</option>
+                          <option>6日</option>
+                          <option>7日</option>
+                          <option>8日</option>
+                          <option>9日</option>
+                          <option>10日</option>
+                          <option>11日</option>
+                          <option>12日</option>
+                          <option>13日</option>
+                          <option>14日</option>
+                          <option>15日</option>
+                          <option>16日</option>
+                          <option>17日</option>
+                          <option>18日</option>
+                          <option>19日</option>
+                          <option>20日</option>
+                          <option>21日</option>
+                          <option>22日</option>
+                          <option>23日</option>
+                          <option>24日</option>
+                          <option>25日</option>
+                          <option>26日</option>
+                          <option>27日</option>
+                          <option>28日</option>
+                          <option>29日</option>
+                          <option>30日</option>
+                          <option>31日</option>
+                      </select>
+                  </td>
+              </table>
+          </form>
+      </div>
     </div>
     <table>
         <tr>
@@ -107,17 +111,21 @@
             <td class="heart_name"><label for="heart_name">名前</label></td>
             <td><input type="text" name="name" placeholder="山田花子" class="heart_name_input"></td>
         </tr>
+
         <tr>
             <td><label for="heart_comment">コメント</label></td>
             <td>
                 <textarea cols="75" rows="30" placeholder="今思ってること" class="heart_comment_input"></textarea>
             </td>
         </tr>
-    </table>
-    <input class="heart_submit_button" type="button" value="送信する">
-    <div class="heart_submit"></div>
     
+    </table> 
+    <input class="heart_submit_button" type="button" value="送信する">   
+
+    <div class="heart_submit"></div>
+
     </div>
+
 
     <section class="container">
         <div class="container_content">
@@ -128,25 +136,32 @@
                 <li class="container_content_date_name"></li>
                 <li class="container_content_subname"></li>
             </ul>
-                    <div class="container_content_detail"></div>
-                    <div class="container_content_btn">
-                        <div class="container_content_comment_btn" id="comment_btn">
-                            <a href="">コメント</a>
-                        </div>
-                        <div class="container_content_heart_btn" >
-                            <a href="">♥</a> 
-                        </div>
-                        <div class="container_content_reaction_heart_count_number">
-                            10
-                        </div>
-                    </div>
-                <div class="container_content_comment_box" id="comment_box">
-                    <table>
-                            <td class="container_content_comment_box_reply" id="comment_reply">
-                                <textarea class="comment_reply" cols="150" rows="10" placeholder="返信する"></textarea>
-                            </td>
-                    </table>
+            <div class="container_content_detail"></div>
+            <div class="container_content_btn">
+                <div class="container_content_comment_btn" id="comment_btn">
+                        コメント
                 </div>
+                <div class="heart_button">
+                    <button class="heart_count" ><i class="heart_icon"><span class="material-icons">favorite</span></i>
+                    </button>
+                        いいね!
+                    <div class="count_number">
+                        0
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="past_comment">
+
+            </div>
+            <div class="container_content_comment_box" id="comment_box">
+                <table>
+                        <td class="container_content_comment_box_reply" id="comment_reply">
+                            <textarea class="comment_input" cols="150" rows="10" placeholder="返信する"></textarea>
+                        </td>
+                </table>
+                <input class="reply_button" type="button" value="返信する"></input>
+            </div>
         </div>
     </section>
 </body>
@@ -158,5 +173,5 @@
 </footer>
 
 </body>
-<script src="./heart.js" defer></script>
+
 </html>
