@@ -106,7 +106,7 @@
     </table>
     <tr>
         <td><label for="heart_comment"></label></td>
-        <td><textarea name="comment" cols="75" rows="30" placeholder="今思ってること"></textarea></td>
+        <td><textarea class="heart_input_comment" cols="75" rows="30" placeholder="今思ってること"></textarea></td>
     </tr>
     <div class="heart_submit">
         <input class="heart_submit" type="submit" value="送信する">
@@ -124,16 +124,23 @@
                 <div class="container_content_name"></div>
                     <div class="container_content_detail"></div>
                     <div class="container_content_btn">
-                        <div class="container_content_comment_btn">
+                        <div class="container_content_comment_btn" id="comment_btn">
                             <a href="">コメント</a>
                         </div>
-                        <div class="container_content_heart_btn">
-                            <a href="">♥</a>
+                        <div class="container_content_heart_btn" >
+                            <a href="">♥</a> 
                         </div>
                         <div class="container_content_reaction_heart_count_number">
                             10
                         </div>
                     </div>
+                </div>
+                <div class="container_content_comment_box" id="comment_box">
+                    <table>
+                            <td class="container_content_comment_box_reply" id="comment_reply">
+                                <textarea class="comment_reply" cols="150" rows="10" placeholder="返信する"></textarea>
+                            </td>
+                    </table>
                 </div>
         </div>
     </section>
@@ -144,6 +151,7 @@
         <small>©2022 POSSE</small>
     </div>
 </footer>
+<script src="heart.js"> </script>
 </body>
 
 </html>

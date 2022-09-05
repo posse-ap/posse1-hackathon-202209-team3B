@@ -84,7 +84,7 @@ a {
 @media screen and (min-width: 900px) {
 
     /*ウィンドウ幅が720px以上の場合に適用*/
-    textarea {
+    .heart_input_comment {
         width: 96%;
     }
 
@@ -103,7 +103,7 @@ a {
 @media screen and (min-width:481px) and (max-width: 899px) {
 
     /*ウィンドウ幅が最大480pxまでの場合に適用*/
-    textarea {
+    .heart_input_comment {
         max-width: 30em;
     }
 
@@ -120,7 +120,7 @@ a {
 @media screen and (max-width: 480px) {
 
     /*ウィンドウ幅が最大480pxまでの場合に適用*/
-    textarea {
+    .heart_input_comment {
         max-width: 26em;
     }
 
@@ -233,6 +233,29 @@ ul {
     padding-top: 5%;
     padding-left: 0%;
 }
+
+/* コメント欄 */
+.container_content_comment_box{
+    border: 1px solid #333333;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.comment_reply{
+    padding: 1%;
+    width: 97.5%;
+}
+
+.container_content_comment_box,
+.comment_reply{
+    display: none;
+}
+
+#comment_reply .is-clicked,
+#comment_box .is-clicked{
+    display: block;
+}
+
 
 /* footer */
 .footer_copyright {
