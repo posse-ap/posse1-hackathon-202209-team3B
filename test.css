@@ -51,6 +51,10 @@ a {
 }
 
 /* 全体 */
+body{
+    background: linear-gradient(white,gray);
+}
+
 .heart_container {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.2em;
