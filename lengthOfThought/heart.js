@@ -144,7 +144,6 @@ submitButton.addEventListener('click', function(){
     const heartboxCommentHeart = document.querySelector('.heart_btn');
     const heartboxPastComment = document.querySelector('past_comment');
     
-    console.log(heartboxPastComment);
 
     const ageContent = ageInput.value;
     const monthsContent = monthsInput.value;
@@ -182,7 +181,7 @@ submitButton.addEventListener('click', function(){
     // heartbox.appendChild(heartboxName);
     // heartboxBtn.appendChild(heartboxCommentBtn);
     // heartboxBtn.appendChild(heartboxCommentHeart);
-    heartContainer.insertBefore(heartdiv);
+    heartContainer.insertBefore(heartdiv, heartboxPastComment);
 })
 
 
