@@ -199,7 +199,7 @@ img {
 
     /*ウィンドウ幅が最大480pxまでの場合に適用*/
     textarea {
-        max-width: 24em;
+        max-width: 22em;
     }
 
     .speech_input {
