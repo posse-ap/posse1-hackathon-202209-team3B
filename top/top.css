@@ -1,0 +1,246 @@
+/* 全体 */
+.top_container{
+  font-family: 'Courier New', Courier, monospace;
+  background : linear-gradient(white,#CCCC)
+}
+
+a{
+  color: inherit;
+}
+
+/* header */
+.p-header {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  padding: 15px 24px;
+}
+
+.l-header {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.p-header_logo {
+  width: 148px;
+}
+
+.POSSElogo {
+  max-width: 100%;
+}
+
+.p-header_nav {
+  margin-left: auto;
+}
+
+.p-header_nav_list {
+  display: flex;
+  gap: 32px;
+}
+
+.p-header_nav_item_link {
+  color: #666;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* タイトル */
+.title_img{
+  width: 100%;
+}
+
+
+
+.title_container{
+  overflow: hidden;
+  position: relative;
+}
+
+.title_container::before{
+  content: '';
+  background-color: rgba(153,153,153,.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -5px;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* 下の3つ */
+
+.page1_text,
+.page2_text,
+.page3_text{
+  width: 70%;
+}
+
+.page2_text{
+  margin-left: 5%;
+}
+
+.page1,
+.page2,
+.page3{
+  display: flex;
+  width: 70%;
+  border: 1px solid black;
+  margin: 10% auto;
+  border-radius: 5%;
+}
+
+.page1{
+  background-color: #9CEC8B;
+}
+
+.page2{
+  background-color: #C2D69E;
+}
+
+.page3{
+  background-color: 	#d9827c;
+}
+
+
+
+.headline{
+  margin-left: 5%;
+}
+
+.page1_content,
+.page3_content,
+.page2_content{
+  margin-left: 10%;
+}
+
+.seeding_img,
+.tree_img,
+.apple_img{
+  width: 40%;
+}
+
+.tree_img{
+  margin-right:0px;
+}
+
+/* footer */
+.footer_copyright {
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  border-top: solid 2px #eee;
+}
+
+
+@media screen and (min-width: 900px) {
+  /*ウィンドウ幅が900px以上の場合に適用*/
+  .title_slogan{
+      position: absolute;
+      top: 70%;
+      left: 54%;
+      border: 1px solid #fff;
+      border-radius: 5%;
+      color: #fff;
+      width: 43%;
+      height: 22%;
+  }
+
+  .aboutposse{
+      font-size: 3em;
+      padding-left: 5%;
+  }
+  
+  .aboutposse_text{
+      font-size: 2em;
+      margin-top: -5%;
+      padding-left: 5%;
+  }
+
+  .headline,
+  .page2_headline{
+  font-size: 4em;
+  }
+
+  .page1_content,
+  .page3_content,
+  .page2_content{
+  font-size: 2em;
+  }
+
+  .headline {
+      width: 35%;
+      margin: 2em auto 0em auto;
+      font-size: 1.4em;
+  }
+}
+
+@media screen and (min-width:481px) and (max-width: 899px) {
+  /*ウィンドウ幅が最大480pxまでの場合に適用*/
+  .title_slogan{
+      position: absolute;
+      top: 24em;
+      left: 52%;
+      border: 2px solid white;
+      border-radius: 5%;
+      color: white;
+      width: 45%;
+      height: 22%;
+  }
+
+  .aboutposse{
+      font-size: 1.5em;
+      padding-left: 8%;
+  }
+  
+  .aboutposse_text{
+      margin-top: -5%;
+      padding-left: 8%;
+  }
+
+  .headline,
+  .page2_headline{
+  font-size: 2em;
+}
+
+}
+
+@media screen and (max-width: 480px) {
+  .title_slogan{
+      position: absolute;
+      top: 70%;
+      left: 45%;
+      border: 1px solid #fff;
+      border-radius: 5%;
+      color: #fff;
+      width: 50%;
+
+  }
+
+  .aboutposse{
+      font-size: 1em;
+      padding-left: 8%;
+  }
+  
+  .aboutposse_text{
+      font-size: 0.8em;
+      margin-top: -5%;
+      padding-left: 8%;
+  }
+}

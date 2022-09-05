@@ -66,15 +66,14 @@ replyBtn.addEventListener('click',function(){
     console.log(commentContent)
     const ptag=document.createElement('p');
     ptag.setAttribute('class','comment_ptag')
-    commentInput.value='';
+    commentInput2.value='';
 
     ptag.textContent= commentContent;
-    commentResult.appendChild(ptag);
-
+    commentResult.prepend(ptag);
+    // これで追加したコメントが一番上にくるようにした。
+    // つまり一番上にあるコメントが一番新しいやつ
 })
-
 document.addEventListener("DOMContentLoaded", () => {
-
     const keepBox=keep.box;
     heartContents=JSON.parse(keepBox);
 
@@ -84,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const replyContent =item.comment;
             const ptag=document.createElement('p');
             ptag.setAttribute('class','comment_ptag')
-            commentInput.value='';
+            commentInput2.value='';
     
             ptag.textContent= replyContent;
             const  commentResult=document.querySelector('.past_comment');
@@ -92,10 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
             commentResult.appendChild(ptag);
     
         }
-
     },{'once':true})
-    
-
+    return
 })
 
 
@@ -183,79 +180,78 @@ submitButton.addEventListener('click', function(){
 
 document.addEventListener("DOMContentLoaded", () => {
     const data = st.store;
-
     heartContents=JSON.parse(data);
     for(const item of heartContents){
-        console.log(item.name)
-        submitButton.addEventListener('click', function(){
-            var myheart = {
-                age: ageInput.value,
-                month: monthsInput.value,
-                day: daysInput.value,
-                // subname: subnameInput.value,
-                name: nameInput.value,
-                comment: commentInput.value,
-            }
-            heartContents.push(myheart);
-            // myheartに入ってるものをheartContents内に入れる
-            st.store=JSON.stringify(heartContents);
-            
-            const heartContainer = document.querySelector('.container');
-            const heartdiv= document.createElement('div');
-            const heartbox= document.querySelector('.container_content_date');
-            const heartboxAge = document.querySelector('.container_content_date_age');
-            const heartboxMonth = document.querySelector('.container_content_date_month');
-            const heartboxDay = document.querySelector('.container_content_date_day');
-            const heartboxName = document.querySelector('.container_content_date_name');
-            const heartboxDetail = document.querySelector('.container_content_detail');
-            const heartboxBtn = document.querySelector('.container_content_btn');
-            const heartboxCommentBtn = document.querySelector('container_content_comment_btn');
-            const heartboxCommentHeart = document.querySelector('.heart_btn');
-            const heartboxPastComment = document.querySelector('past_comment');
-            
+        console.log(item.age)
+        var myheart = {
+            age: ageInput.value,
+            month: monthsInput.value,
+            day: daysInput.value,
+            // subname: subnameInput.value,
+            name: nameInput.value,
+            comment: commentInput.value,
+        }
+    
+        heartContents.push(myheart);
+        // myheartに入ってるものをheartContents内に入れる
+        st.store=JSON.stringify(heartContents);
         
-            const ageContent = ageInput.value;
-            const monthsContent = monthsInput.value;
-            const daysContent =  daysInput.value;
-            // const subnameContent = subnameInput.value;
-            const nameContent = nameInput.value;
-            const commentContent = commentInput.value;
-            
-            ageInput.value='';
-            monthsInput.value='';
-            daysInput.value='';
-            // subnameInput.value='';
-            nameInput.value='';
-            commentInput.value='';
-            // 入力した後にこれで空にする
+        const heartContainer = document.querySelector('.container');
+        const heartdiv= document.createElement('div');
+        const heartbox= document.querySelector('.container_content_date');
+        const heartboxAge = document.querySelector('.container_content_date_age');
+        const heartboxMonth = document.querySelector('.container_content_date_month');
+        const heartboxDay = document.querySelector('.container_content_date_day');
+        const heartboxName = document.querySelector('.container_content_date_name');
+        const heartboxDetail = document.querySelector('.container_content_detail');
+        const heartboxBtn = document.querySelector('.container_content_btn');
+        const heartboxCommentBtn = document.querySelector('container_content_comment_btn');
+        const heartboxCommentHeart = document.querySelector('.heart_btn');
+        const heartboxPastComment = document.querySelector('past_comment');
         
-            // ここで入力した要素がどの要素に入るかを記述
-            // heartboxAge.innerHTML = ageContent + '<span></span>';
-            // heartboxMonth.innerHTML = monthsContent + '<span></span>';
-            // heartboxDay.innerHTML = daysContent + '<span></span>';
-            // heartboxName.innerHTML = '名前：' + nameContent ;
-            // heartboxDetail.innerHTML = commentContent;
-            heartdiv.setAttribute('class', 'container_content_new')
-            heartboxDetail.innerHTML = ageContent + '<span></span>' + monthsContent + '<span></span>' + daysContent + '<span></span>' + '<br>' + '名前：' + '<span></span>' + nameContent + '<br>' + commentContent;
+    
+        const ageContent = item.age;
+        const monthsContent = item.month;
+        const daysContent =  item.day;
+        // const subnameContent = subnameInput.value;
+        const nameContent = item.name;
+        const commentContent = item.comment;
         
-            // ここにどの要素がどの要素の子要素、親要素なのかを記述
-            // heartdiv.appendChild(heartbox);
-            heartdiv.appendChild(heartboxDetail);
-            heartdiv.appendChild(heartboxBtn);
-            // heartdiv[0].appendChild(heartboxPastComment);
-            // heartdiv.appendChild(heartboxBtn);
-            // heartbox.appendChild(heartboxAge);
-            // heartbox.appendChild(heartboxMonth);
-            // heartbox.appendChild(heartboxDay);
-            // heartbox.appendChild(heartboxName);
-            // heartboxBtn.appendChild(heartboxCommentBtn);
-            // heartboxBtn.appendChild(heartboxCommentHeart);
-            heartContainer.insertBefore(heartdiv, heartboxPastComment);
-        })
+        ageInput.value='';
+        monthsInput.value='';
+        daysInput.value='';
+        // subnameInput.value='';
+        nameInput.value='';
+        commentInput.value='';
+        // 入力した後にこれで空にする
+    
+        // ここで入力した要素がどの要素に入るかを記述
+        // heartboxAge.innerHTML = ageContent + '<span></span>';
+        // heartboxMonth.innerHTML = monthsContent + '<span></span>';
+        // heartboxDay.innerHTML = daysContent + '<span></span>';
+        // heartboxName.innerHTML = '名前：' + nameContent ;
+        // heartboxDetail.innerHTML = commentContent;
+        heartdiv.setAttribute('class', 'container_content_new')
+        heartboxDetail.innerHTML = ageContent + '<span></span>' + monthsContent +'<span></span>' + daysContent + '<span></span>' + '<br>' + '名前：' + '<span><span>' + nameContent + '<br>' + commentContent;
+    
+        // ここにどの要素がどの要素の子要素、親要素なのかを記述
+        // heartdiv.appendChild(heartbox);
+        heartdiv.appendChild(heartboxDetail);
+        heartdiv.appendChild(heartboxBtn);
+        // heartdiv[0].appendChild(heartboxPastComment);
+        // heartdiv.appendChild(heartboxBtn);
+        // heartbox.appendChild(heartboxAge);
+        // heartbox.appendChild(heartboxMonth);
+        // heartbox.appendChild(heartboxDay);
+        // heartbox.appendChild(heartboxName);
+        // heartboxBtn.appendChild(heartboxCommentBtn);
+        // heartboxBtn.appendChild(heartboxCommentHeart);
+        heartContainer.insertBefore(heartdiv, heartboxPastComment);
+    return
     }
 })
 
-localStorage.clear();
+// localStorage.clear();
 
 
 /*delete storage.store;*/
