@@ -20,7 +20,6 @@ const submitButton=document.querySelector('.heart_submit_button');
 
 var heartContents = [];
 const st = localStorage;
-
 submitButton.addEventListener('click', function(){
     var myheart = [{
         age: ageInput.value,
@@ -33,7 +32,6 @@ submitButton.addEventListener('click', function(){
     
     heartContents.push(myheart);
     st.store=JSON.stringify(heartContents);
-    
     
     const heartbox= document.querySelector('.container_content_date');
     const heartboxAge = document.querySelector('.container_content_date_age');
@@ -58,81 +56,44 @@ submitButton.addEventListener('click', function(){
     nameInput.value='';
     commentInput.value='';
 
-    /*const inputHtml=(input,inputNumber) => {
-        return`<ul class="container_content_date">
-        <li class="container_content_date_age">${ageContent}</li>
-        <li class="container_content_date_month">${monthsContent}</li>
-        <li class="container_content_date_day">${daysContent}</li>
-        <li class="container_content_date_name">${nameContent}</li>
-        </ul>
-        <div class="container_content_name"></div>
-        <div class="container_content_detail">${commentContent}</div>
-        </div>`
-    }
-
-
-
-    contentContainer.innerHTML=myheart.map((heart,heartIndex) => {
-        return inputHtml(heart,heartIndex)
-    }).join('')
-    // 入力した後にこれで空にする*/
-
     heartboxAge.innerHTML = ageContent +'<span></span>';
     heartboxMonth.innerHTML = monthsContent + '<span></span>';
     heartboxDay.innerHTML = daysContent  + '<span></span>';
     heartboxName.innerHTML = '名前：' + nameContent ;
     heartboxContent.innerHTML = commentContent;
-
     heartboxContent.setAttribute('class', 'container_content_detail_ptag');
-    // createElementで作った要素にclass名をつけた
-
     heartboxDetail.appendChild(heartboxContent);
     console.log(heartContents)
 })
-
-
-
 
 /**コメントボックス */
 
 button.addEventListener('click', () => {
     commentBox.style.display='block';
     $('.container_content_comment_btn').addClass('clicked');
-    
 })
-
 
 /**ハートボタン */
 const heartButton=document.querySelector('.heart_button');
 var numberSum=[];
 const storage=localStorage;
 heartButton.addEventListener('click',() => {
-    
     var thisCount=$('.count_number').html();
     thisCount=Number(thisCount);
     thisCount=thisCount + 1;
     $('.count_number').html(thisCount);
-
     $('.heart_button,.heart_icon').addClass('clicked');
-
-
     const number = {
         currentNumber: thisCount
     }
     numberSum.push(number);
     storage.store = JSON.stringify(numberSum); 
     console.log(storage.store)
-
 },{'once':true})
 
 document.addEventListener("DOMContentLoaded", () => {
     const json = storage.store;
     numberSum = JSON.parse(json);
-    
-    
-    /**for(const item of numberSum ){
-        console.log(Number(item.currentNumber))
-    }**/
     const lastNumber=(Number(numberSum[(numberSum.length)-1].currentNumber))
     $('.count_number').html(lastNumber);
     
@@ -153,7 +114,6 @@ replyBtn.addEventListener('click',function(){
     heartContents.push(pastComment);
     keep.box=JSON.stringify(heartContents);
     const  commentResult=document.querySelector('.past_comment');
-
     const commentContent=commentInput2.value;
     console.log(commentContent)
     const ptag=document.createElement('p');
@@ -165,6 +125,7 @@ replyBtn.addEventListener('click',function(){
 
 })
 
+// ここでリロードしても情報保持をやろうとしたが、時間的に厳しく、断念
 document.addEventListener("DOMContentLoaded", () => {
 
     const keepBox=keep.box;
@@ -182,7 +143,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const  commentResult=document.querySelector('.past_comment');
     
             commentResult.appendChild(ptag);
-    
         }
 
     },{'once':true})
@@ -193,5 +153,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // localStorage.clear();  
 //↑これのコメントを解除して、リロードをかければ保存されてるデータが消える
 
-/*delete storage.store;
-delete keep.box*/
+// delete storage.store;
+// delete keep.box
+// これで返信の中身が解除される

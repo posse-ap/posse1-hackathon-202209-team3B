@@ -1,4 +1,5 @@
 /**introduce */
+// ここでアコーディオンを作成
 $(function(){
   $("#acMenu dt").on("click", function() {
     $(this).next().slideToggle();
@@ -6,9 +7,8 @@ $(function(){
   })
 });
 
-
-
 /**input内容 */
+// 要素を取得
 const universityInput=document.querySelector('.university_input')
 const nameInput=document.querySelector('.name_input');
 const submitButton=document.querySelector('.submit_button');
@@ -30,14 +30,8 @@ submitButton.addEventListener('click',function(){
     faculty: facultyInput.value,
     comment: commentInput.value,
   }
-
-
-
-
-
   listContent.push(myProfile);
   local.stor=JSON.stringify(listContent);
-
   console.log(local.stor)
 
   if(subnameInput.value[0]==='あ' || subnameInput.value[0]==='い' || subnameInput.value[0]==='う' ||subnameInput.value[0]==='え' ||subnameInput.value[0]==='お'){
@@ -472,7 +466,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
       
       ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
-     
+    
       ptag.setAttribute('class','myinf_item')
       litag.setAttribute('class','myinf_list')
       litag.appendChild(ptag)
@@ -498,7 +492,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
       
       ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
-     
+    
       ptag.setAttribute('class','myinf_item')
       litag.setAttribute('class','myinf_list')
       litag.appendChild(ptag)
@@ -524,7 +518,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
       
       ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
-     
+    
       ptag.setAttribute('class','myinf_item')
       litag.setAttribute('class','myinf_list')
       litag.appendChild(ptag)
@@ -573,14 +567,11 @@ document.addEventListener("DOMContentLoaded", () => {
       commentInput.value='';
       
       ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
-
       ptag.setAttribute('class','myinf_item')
       litag.setAttribute('class','myinf_list')
       litag.appendChild(ptag)
       profileBox10.appendChild(litag)
     }
-
-    
   }
 })
 

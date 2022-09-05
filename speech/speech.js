@@ -4,15 +4,18 @@ $(function(){
     $(this).next().slideToggle();
   });
 });
+// ここで要素の名前を取得
 const themesInput=document.querySelector('.themes_input');
 const nameInput=document.querySelector('.name_input');
 const submitButton=document.querySelector('.submit_button');
 const commentInput=document.querySelector('.comment_input');
 const subnameInput=document.querySelector('.subname_input');
 
+// var で宣言して、ここに情報を格納する
 var speechContents=[ ];
 const st=localStorage;
 
+// １０の宣言を記載
 const allspeech=[
   {
     id:1,
@@ -66,14 +69,16 @@ const allspeech=[
   },
 ]
 
+// 以下、ボタンを押したときの処理
 submitButton.addEventListener('click',function(){
-  
   var mySpeech={
     themes: themesInput.value,
     name: nameInput.value,
     subname: subnameInput.value,
     comment: commentInput.value,
   }
+  // それぞれのInputに格納されている値をとってきている
+
   speechContents.push(mySpeech);
   st.json=JSON.stringify(speechContents);
   
@@ -94,7 +99,8 @@ submitButton.addEventListener('click',function(){
       themesInput.value='';
       ptag.innerHTML= 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
       ptag.setAttribute('class','myspeech_item')
-      litag.setAttribute('class','myspeech_list')     
+      litag.setAttribute('class','myspeech_list')
+      // 作成したものにclass名をつけた
       litag.appendChild(ptag);
       themeBox.appendChild(litag)
     }
@@ -105,82 +111,38 @@ submitButton.addEventListener('click',function(){
 document.addEventListener("DOMContentLoaded", () => {
   
   const data=st.json;
-  // ここまでは確認した　9/5,08:58
   speechContents=JSON.parse(data);
-  // ここでlistにjson~を代入しているけど、これじゃなくて、最初にvarで宣言したspeechcontentsな気がする。別のファイルで確かめてみる。9/5,9:01
-
-  // 143,150をspeechContentsに変更したらいい感じになった気がする。これpushしとこから確認して欲しい　9/5, 9:33
-  
   console.log(data)
   console.log(speechContents)
   for (const item of speechContents){
     console.log(item.themes)
-
     const themesContent=item.themes;
-    
-    /**if(themesContent === '仲間の居場所作らずして自分の居場所なし'){
-      const themeBox1=document.querySelector('.speech_theme_option1')
-      const litag=document.createElement('li');
-      const ptag=document.createElement('p');
-
-      const nameContent=item.name;
-      const subnameContent=item.subname;
-      const commentContent=item.comment;
-      
-
-
-      /**nameInput.value='';
-      subnameInput.value='';
-      commentInput.value='';
-  
-      
-      
-
-      themesInput.value='';
-
-      ptag.innerHTML= 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
-
-      ptag.setAttribute('class','myspeech_item')
-      litag.setAttribute('class','myspeech_list')
-      
-      litag.appendChild(ptag);
-      themeBox1.appendChild(litag)**/
       for(let i=0; i<10; i++){
         const themesContent=item.themes;
-        
-
         if(themesContent === allspeech[i].theme){
           console.log(allspeech[i].box)
           const themeBox=document.querySelector(allspeech[i].box)
           const litag=document.createElement('li');
           const ptag=document.createElement('p');
-    
+          
           const nameContent=item.name;
           const subnameContent=item.subname;
           const commentContent=item.comment;
-          
 
-    
           nameInput.value='';
           subnameInput.value='';
           commentInput.value='';
           themesInput.value='';
-    
+
           ptag.innerHTML= 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
           
-    
           ptag.setAttribute('class','myspeech_item')
           litag.setAttribute('class','myspeech_list')
-          
+          // 作成したものにclass名をつけた
           litag.appendChild(ptag);
           themeBox.appendChild(litag)
-        
         }
       }
-    
-
-    
-      
   }
 })
 
