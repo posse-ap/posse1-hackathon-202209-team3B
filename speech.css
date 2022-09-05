@@ -103,36 +103,62 @@ dd {
     margin: 20px;
 }
 
-/* 入力フォーム */
 
-.speech_input {
-    width: 60%;
+/* 入力フォーム */
+.speech_input{
+    width: 80%;
     margin: 0 auto;
 }
 
-input {
+.personal_data{
     width: 100%;
 }
+
+.speech_input_data {
+    width: 100%;
+}
+
+input {
+    width: 30%;
+}
+
+/* .speech_submit {
+    text-align: center;
+    width: 100%;
+} */
+
+label {
+    display: inline-block;
+    min-width: 5em;
+}
+
+img {
+    width: 100%;
+}
+
+    .speech_submit{
+        width: 100%;
+    }
 
 
 @media screen and (min-width: 900px) {
 
     /*ウィンドウ幅が720px以上の場合に適用*/
     textarea {
-        width: 175%;
+        width: 99%;
     }
+
+    .speech_submit{
+        width: 100%;
+    }
+
 }
 
 @media screen and (min-width:481px) and (max-width: 899px) {
 
     /*ウィンドウ幅が最大480pxまでの場合に適用*/
     textarea {
-        max-width: 30em;
-    }
-
-    .speech_input {
-        width: auto;
-        margin-left: 10px;
+        max-width: 34em;
     }
 }
 
@@ -140,7 +166,7 @@ input {
 
     /*ウィンドウ幅が最大480pxまでの場合に適用*/
     textarea {
-        max-width: 20em;
+        max-width: 24em;
     }
 
     .speech_input {
