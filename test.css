@@ -60,18 +60,10 @@ a {
 /*table{
   font-size: 1.3em;
 }*/
-.page_theme {
-    font-size: 1.8em;
-    font-weight: 700;
-    width: 50%;
+.headline {
+    color: white;
     text-align: center;
     background: #C2D69E;
-    ;
-    margin: 5%;
-}
-
-.page_theme p {
-    color: white;
 }
 
 .date_data {
@@ -79,28 +71,21 @@ a {
 
 }
 
+
+
 /* 仮置き */
 .box {
     height: 100px;
 }
 
 .input_table {
-    margin-left: -5%;
+    margin:0 auto ;
+    width: 80%;
 }
 
-.heart_inputContainer {
-    width: 60%;
-    margin: auto;
-}
-
-.heart_name_input,
-.heart_subname_input {
-    width: 90%;
-
-}
-
-.heart_submit {
-    width: 100%;
+.heart_submit_button {
+    width: 80%;
+    margin-left: 10%;
 }
 
 
@@ -128,7 +113,7 @@ ul {
 
 .container_content_detail {
     border-bottom: solid;
-    height: 10em;
+    height: 30em;
 }
 
 /**コメントボタン*/
@@ -204,7 +189,7 @@ ul {
 
 /**返信エリア**/
 .comment_input {
-    width: 80%;
+    width: 90%;
     font-size: 1.2em;
 }
 
@@ -285,20 +270,60 @@ ul {
 
 @media screen and (min-width: 900px) {
 
-    /*ウィンドウ幅が720px以上の場合に適用*/
+    /*ウィンドウ幅が900px以上の場合に適用*/
+
+    .headline{
+        width: 50%;
+        margin: 5% auto;
+        font-size:2em;
+    }
+
     .heart_comment_input {
         width: 96%;
     }
 
+
     .date_data {
-        display: flex;
-        margin-left: -28%;
+        width: 50%;
+        margin-left:100%;
     }
 
     .heart_name_input,
     .heart_subname_input {
         width: 95%;
+    }
 
+    .heart_input_comment {
+        max-width: 30em;
+    }
+    
+    .headline{
+        width: 50%;
+        margin: 5% auto;
+        font-size:2em;
+    }
+
+    .date_data {
+        width: 50%;
+        margin-left:100%;
+    }
+
+    .heart_subname,
+    .heart_name{
+    width: 15%;
+    }
+    .heart_name_input,
+    .heart_subname_input {
+    width: 50%;
+    }
+    textarea{
+        width: 95%;
+    }
+
+    .heart_inputContainer {
+        width: 60%;
+        margin-left: 22%;
+        margin-bottom: 2%;
     }
 }
 
@@ -308,14 +333,37 @@ ul {
     .heart_input_comment {
         max-width: 30em;
     }
-
-    /* .profile_inputContainer {
-        width: auto;
-        margin-left: 10px;
-    } */
+    
+    .headline{
+        width: 50%;
+        margin: 5% auto;
+        font-size:2em;
+    }
 
     .date_data {
         width: 50%;
+        margin-left:100%;
+    }
+
+    .heart_subname,
+    .heart_name{
+    width: 15%;
+    }
+    .heart_name_input,
+    .heart_subname_input {
+    width: 50%;
+    }
+    textarea{
+        width: 95%;
+    }
+
+    .heart_comment_input{
+    }
+
+    .heart_inputContainer {
+        width: 60%;
+        margin-left: 22%;
+        margin-bottom: 2%;
     }
 }
 
@@ -345,7 +393,44 @@ ul {
         width: 113%;
     }
 
-    /* .p-header_nav_item_link {
-        font-size: 10px;
-    } */
+    .heart_input_comment {
+        max-width: 30em;
+    }
+    
+    .headline{
+        width: 50%;
+        margin: 5% auto;
+        font-size:2em;
+    }
+
+    .date_data {
+        width: 50%;
+        margin-left:0% ;
+    }
+
+    .heart_subname,
+    .heart_name{
+    width: 100%;
+    }
+
+    .heart_comment{
+        width: 25%;
+        font-size: 1em;
+    }
+
+    .heart_name_input,
+    .heart_subname_input {
+    width: 45%;
+    margin-left:0%;
+    }
+
+    textarea{
+        width: 90%;
+    }
+
+    .heart_inputContainer {
+        width: 60%;
+        margin-left: 22%;
+        margin-bottom: 2%;
+    }
 }
