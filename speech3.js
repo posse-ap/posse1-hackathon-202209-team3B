@@ -48,6 +48,7 @@ const allspeech=[
     theme:'教えることは教わること',
     box:'.speech_theme_option7'
   },
+
   {
     id:8,
     theme:'「ベンチ行かない？」と言う勇気',
@@ -74,8 +75,12 @@ submitButton.addEventListener('click',function(){
     subname: subnameInput.value,
     comment: commentInput.value,
   }
+
+
   speechContents.push(mySpeech);
   st.json=JSON.stringify(speechContents);
+
+
   
   
   /*:if(themesInput.value === '仲間の居場所作らずして自分の居場所なし'){
@@ -106,11 +111,11 @@ submitButton.addEventListener('click',function(){
   
   for(let i=0; i<10; i++){
     if(themesInput.value === allspeech[i].theme){
-      console.log(allspeech[i].box)  
-      // ここで取り出されたのは、themeのクラス名
+      console.log(allspeech[i].box)
       const themeBox=document.querySelector(allspeech[i].box)
       const litag=document.createElement('li');
       const ptag=document.createElement('p');
+
       const nameContent=nameInput.value;
       const subnameContent=subnameInput.value;
       const commentContent=commentInput.value;
@@ -139,15 +144,11 @@ submitButton.addEventListener('click',function(){
 document.addEventListener("DOMContentLoaded", () => {
   
   const data=st.json;
-  // ここまでは確認した　9/5,08:58
-  speechContents=JSON.parse(data);
-  // ここでlistにjson~を代入しているけど、これじゃなくて、最初にvarで宣言したspeechcontentsな気がする。別のファイルで確かめてみる。9/5,9:01
-
-  // 143,150をspeechContentsに変更したらいい感じになった気がする。これpushしとこから確認して欲しい　9/5, 9:33
   
+  lists=JSON.parse(data);
   console.log(data)
-  console.log(speechContents)
-  for (const item of speechContents){
+  console.log(lists)
+  for (const item of lists){
     console.log(item.themes)
 
     const themesContent=item.themes;
@@ -209,6 +210,8 @@ document.addEventListener("DOMContentLoaded", () => {
           litag.appendChild(ptag);
           themeBox.appendChild(litag)
         
+    
+    
         }
       }
     
@@ -217,7 +220,4 @@ document.addEventListener("DOMContentLoaded", () => {
       
   }
 })
-
-// localStorage.clear();  
-//↑これのコメントを解除すれば保存されてるデータが消える
 /**delete st.store;**/
