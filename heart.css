@@ -53,6 +53,7 @@ a {
 /* 全体 */
 .heart_container {
     font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(white,#ccc);
 }
 
 /* 入力フォーム */

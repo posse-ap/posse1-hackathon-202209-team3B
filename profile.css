@@ -1,14 +1,28 @@
-/* 全体 */
 body {
     font-family: 'Noto Sans JP', sans-serif;
+
+
 }
-.profile_container{
-background : linear-gradient(white,#CCCC);
+
+main {
+    /**background: -moz-linear-gradient(top, #FFC778, #FFF);
+    background: -webkit-linear-gradient(top, #FFC778, #FFF);
+    background: linear-gradient(to bottom, #FFC778, #FFF);**/
+    background: linear-gradient(white, #CCCC);
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    background-color: lightblue;
+    padding-bottom: 30px;
+    margin-top: -55px;
+    padding-top: 50px;
+    z-index: 100;
 }
 
 li {
     list-style: none;
+    margin: 0;
 }
+
 
 /* header */
 .p-header {
@@ -57,25 +71,90 @@ ul {
     padding: 0;
 }
 
+
 a {
     background-color: transparent;
     text-decoration: none;
 }
 
+/**表示エリア**/
+
+.myinf_item {
+    display: block;
+    letter-spacing: 0.15em;
+    margin-left: 5%;
+}
+
+.myinf_list {
+    margin: 20px auto;
+    padding: 10px auto;
+    text-align: left;
+    border: 2px double lightblue;
+    width: 80%;
+    background-color: white;
+}
+
+.myinf_list span {
+    margin: 5px;
+}
+
+
+
+
 /* 全体 */
-.profile_container{
+.profile_container {
     font-family: 'Courier New', Courier, monospace;
     color: black;
 }
 
+/*ページタイトル*/
+.profile_box {
+    height: 4em;
+    background-color: white;
+}
+
+.headline{
+    color: #666;
+}
+
 /**アコーディオン＊*/
-.profile_acMenu_frame{
+
+#acMenu {
+
+    width: 80%;
+    margin: 100px auto;
+}
+
+dd {
+    display: block;
+    margin-inline-start: 0px;
+}
+
+#acMenu dt {
+    border-radius: 5px;
+    height: 30px;
+    background-color: white;
+    color: #666;
+}
+
+#acMenu dd {
+    display: none;
+    text-align: center;
+
+}
+
+.myprofile {
+    border: 1px solid black;
+    margin: 20px;
+
+}
+.profile_acMenu_frame {
     margin: 0 auto;
     width: 85%;
 }
 
 #acMenu {
-    margin-top: 100px;
+    margin-top: 4em;
 }
 
 dd {
@@ -86,8 +165,9 @@ dd {
 #acMenu dt {
     display: block;
     text-align: center;
-    border: black 1px solid;
+    border: #CCCC 1px solid;
     cursor: pointer;
+    background-color:  #9CEC8B
 }
 
 #acMenu dd {
@@ -106,7 +186,7 @@ dd {
 /* 入力フォーム */
 .profile_inputContainer {
     width: 60%;
-    margin: 10% auto;
+    margin: 0 auto;
 }
 
 .profile_data_frame {
@@ -144,6 +224,9 @@ img {
     height: 100px;
 }
 
+.submit_message {
+    margin-top: -25px;
+}
 
 
 @media screen and (min-width: 900px) {
@@ -151,6 +234,12 @@ img {
     /*ウィンドウ幅が720px以上の場合に適用*/
     textarea {
         width: 87%;
+    }
+
+    .headline {
+        width: 25%;
+        margin: 2em auto 0em auto;
+        font-size: 1.6em;
     }
 }
 
@@ -164,6 +253,12 @@ img {
     .profile_inputContainer {
         width: auto;
         margin-left: 10px;
+    }
+
+    .headline {
+        width: 43%;
+        margin: 2em auto 0em auto;
+        font-size: 1.4em;
     }
 }
 
@@ -182,15 +277,19 @@ img {
     .p-header_nav_item_link {
         font-size: 10px;
     }
+
+    .headline {
+        width: 55%;
+        margin: 2em auto 0em auto;
+        font-size: 1.2em;
+    }
 }
 
 /* footer */
-.footer_copyright{
+
+.footer_copyright {
     text-align: center;
     padding-top: 30px;
     margin-bottom: 30px;
     border-top: solid 2px #eee;
-  }
-
-
-  /* 置いてる */
+}
