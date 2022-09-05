@@ -2,11 +2,10 @@
 $(function(){
   $("#acMenu dt").on("click", function() {
     $(this).next().slideToggle();
-  });
+    
+  })
 });
 
-// ヒアヌーへ
-// いい感じだと思う。あとはひらがなの処理を最後までお願いしたい。これをfeature/kazukiにコピーしとくから、それを自分のfeature/hinanoにコピーして作業して欲しい。お願いします！！！
 
 
 /**input内容 */
@@ -22,6 +21,7 @@ var listContent=[ ];
 const local=localStorage;
 
 submitButton.addEventListener('click',function(){
+  
   var myProfile={
     university: universityInput.value,
     grades: gradesInput.value,
@@ -31,13 +31,18 @@ submitButton.addEventListener('click',function(){
     comment: commentInput.value,
   }
 
-  listContent.push(myProfile);
-  local.store=JSON.stringify(listContent);
 
-  console.log(subnameInput.value)
+
+
+
+  listContent.push(myProfile);
+  local.stor=JSON.stringify(listContent);
+
+  console.log(local.stor)
+
   if(subnameInput.value[0]==='あ' || subnameInput.value[0]==='い' || subnameInput.value[0]==='う' ||subnameInput.value[0]==='え' ||subnameInput.value[0]==='お'){
     const profileBox1=document.querySelector('.introduce_page1')
-    const litag=document.createElement('li');
+    const litag=document.createElement('div');
     const ptag=document.createElement('p');
     
     const nameContent=nameInput.value;
@@ -53,9 +58,9 @@ submitButton.addEventListener('click',function(){
     universityInput.value='';
     gradesInput.value='';
     commentInput.value='';
-    // 入力した後にこれで空にする
 
     ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
+    
     ptag.setAttribute('class','myinf_item')
     litag.setAttribute('class','myinf_list')
     
@@ -83,6 +88,7 @@ submitButton.addEventListener('click',function(){
     commentInput.value='';
 
     ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
+    
     ptag.setAttribute('class','myinf_item')
     litag.setAttribute('class','myinf_list')
     
@@ -109,6 +115,7 @@ submitButton.addEventListener('click',function(){
     commentInput.value='';
 
     ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
+    
     ptag.setAttribute('class','myinf_item')
     litag.setAttribute('class','myinf_list')
     
@@ -135,11 +142,174 @@ submitButton.addEventListener('click',function(){
     commentInput.value='';
 
     ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
+    
     ptag.setAttribute('class','myinf_item')
     litag.setAttribute('class','myinf_list')
     
     litag.appendChild(ptag);
     profileBox4.appendChild(litag)
+  }
+  else if(subnameInput.value[0]==='な' || subnameInput.value[0]==='に' || subnameInput.value[0]==='ぬ' ||subnameInput.value[0]==='ね' ||subnameInput.value[0]==='の'){
+    const profileBox5=document.querySelector('.introduce_page5')
+    const litag=document.createElement('li');
+    const ptag=document.createElement('p');
+    
+    const nameContent=nameInput.value;
+    const subnameContent=subnameInput.value;
+    const facultyContent=facultyInput.value;
+    const universityContent=universityInput.value;
+    const commentContent=commentInput.value;
+    const gradesContent=gradesInput.value;
+    
+    nameInput.value='';
+    subnameInput.value='';
+    facultyInput.value='';
+    universityInput.value='';
+    gradesInput.value='';
+    commentInput.value='';
+
+    ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
+    
+    ptag.setAttribute('class','myinf_item')
+    litag.setAttribute('class','myinf_list')
+    
+    litag.appendChild(ptag);
+    profileBox5.appendChild(litag)
+  }
+  else if(subnameInput.value[0]==='は' || subnameInput.value[0]==='ひ' || subnameInput.value[0]==='ふ' ||subnameInput.value[0]==='へ' ||subnameInput.value[0]==='ほ'){
+    const profileBox6=document.querySelector('.introduce_page3')
+    const litag=document.createElement('li');
+    const ptag=document.createElement('p');
+    
+    const nameContent=nameInput.value;
+    const subnameContent=subnameInput.value;
+    const facultyContent=facultyInput.value;
+    const universityContent=universityInput.value;
+    const commentContent=commentInput.value;
+    const gradesContent=gradesInput.value;
+    
+    nameInput.value='';
+    subnameInput.value='';
+    facultyInput.value='';
+    universityInput.value='';
+    gradesInput.value='';
+    commentInput.value='';
+
+    ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
+    
+    ptag.setAttribute('class','myinf_item')
+    litag.setAttribute('class','myinf_list')
+    
+    litag.appendChild(ptag);
+    profileBox6.appendChild(litag)
+  }
+  else if(subnameInput.value[0]==='ま' || subnameInput.value[0]==='み' || subnameInput.value[0]==='む' ||subnameInput.value[0]==='め' ||subnameInput.value[0]==='も'){
+    const profileBox7=document.querySelector('.introduce_page7')
+    const litag=document.createElement('li');
+    const ptag=document.createElement('p');
+    
+    const nameContent=nameInput.value;
+    const subnameContent=subnameInput.value;
+    const facultyContent=facultyInput.value;
+    const universityContent=universityInput.value;
+    const commentContent=commentInput.value;
+    const gradesContent=gradesInput.value;
+    
+    nameInput.value='';
+    subnameInput.value='';
+    facultyInput.value='';
+    universityInput.value='';
+    gradesInput.value='';
+    commentInput.value='';
+
+    ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
+    
+    ptag.setAttribute('class','myinf_item')
+    litag.setAttribute('class','myinf_list')
+    
+    litag.appendChild(ptag);
+    profileBox7.appendChild(litag)
+  }
+  else if(subnameInput.value[0]==='や' || subnameInput.value[0]==='ゆ' || subnameInput.value[0]==='よ' ){
+    const profileBox8=document.querySelector('.introduce_page8')
+    const litag=document.createElement('li');
+    const ptag=document.createElement('p');
+    
+    const nameContent=nameInput.value;
+    const subnameContent=subnameInput.value;
+    const facultyContent=facultyInput.value;
+    const universityContent=universityInput.value;
+    const commentContent=commentInput.value;
+    const gradesContent=gradesInput.value;
+    
+    nameInput.value='';
+    subnameInput.value='';
+    facultyInput.value='';
+    universityInput.value='';
+    gradesInput.value='';
+    commentInput.value='';
+
+    ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
+    
+    ptag.setAttribute('class','myinf_item')
+    litag.setAttribute('class','myinf_list')
+    
+    litag.appendChild(ptag);
+    profileBox8.appendChild(litag)
+  }
+  else if(subnameInput.value[0]==='ら' || subnameInput.value[0]==='り' || subnameInput.value[0]==='る' ||subnameInput.value[0]==='れ' ||subnameInput.value[0]==='ろ'){
+    const profileBox9=document.querySelector('.introduce_page9')
+    const litag=document.createElement('li');
+    const ptag=document.createElement('p');
+    
+    const nameContent=nameInput.value;
+    const subnameContent=subnameInput.value;
+    const facultyContent=facultyInput.value;
+    const universityContent=universityInput.value;
+    const commentContent=commentInput.value;
+    const gradesContent=gradesInput.value;
+    
+    nameInput.value='';
+    subnameInput.value='';
+    facultyInput.value='';
+    universityInput.value='';
+    gradesInput.value='';
+    commentInput.value='';
+
+    ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
+    
+    ptag.setAttribute('class','myinf_item')
+    litag.setAttribute('class','myinf_list')
+    
+    litag.appendChild(ptag);
+    profileBox9.appendChild(litag)
+  }
+  else if(subnameInput.value[0]==='わ' || subnameInput.value[0]==='を' || subnameInput.value[0]==='ん'){
+    const profileBox10=document.querySelector('.introduce_page10')
+    const litag=document.createElement('li');
+    const ptag=document.createElement('p');
+    
+    const nameContent=nameInput.value;
+    const subnameContent=subnameInput.value;
+    const facultyContent=facultyInput.value;
+    const universityContent=universityInput.value;
+    const commentContent=commentInput.value;
+    const gradesContent=gradesInput.value;
+    
+    nameInput.value='';
+    subnameInput.value='';
+    facultyInput.value='';
+    universityInput.value='';
+    gradesInput.value='';
+    commentInput.value='';
+
+    ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
+    
+    ptag.setAttribute('class','myinf_item')
+    litag.setAttribute('class','myinf_list')
+    
+    litag.appendChild(ptag);
+    profileBox10.appendChild(litag)
   }
   
 })
@@ -148,7 +318,7 @@ submitButton.addEventListener('click',function(){
 
 document.addEventListener("DOMContentLoaded", () => {
   
-  const data=local.store;
+  const data=local.stor;
   
   listContent=JSON.parse(data);
   console.log(data)
@@ -175,8 +345,8 @@ document.addEventListener("DOMContentLoaded", () => {
       gradesInput.value='';
       commentInput.value='';
       
+      ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
       
-      ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' + commentContent;
       ptag.setAttribute('class','myinf_item')
       litag.setAttribute('class','myinf_list')
       litag.appendChild(ptag)
@@ -200,8 +370,8 @@ document.addEventListener("DOMContentLoaded", () => {
       gradesInput.value='';
       commentInput.value='';
       
-      
       ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
+      
       ptag.setAttribute('class','myinf_item')
       litag.setAttribute('class','myinf_list')
       litag.appendChild(ptag)
@@ -211,6 +381,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const profileBox3=document.querySelector('.introduce_page3')
       const litag=document.createElement('li');
       const ptag=document.createElement('p');
+      
       const facultyContent=item.faculty;
       const universityContent=item.university;
       const nameContent=item.name;
@@ -223,8 +394,8 @@ document.addEventListener("DOMContentLoaded", () => {
       gradesInput.value='';
       commentInput.value='';
       
-      
       ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
+    
       ptag.setAttribute('class','myinf_item')
       litag.setAttribute('class','myinf_list')
       litag.appendChild(ptag)
@@ -246,18 +417,172 @@ document.addEventListener("DOMContentLoaded", () => {
       facultyInput.value='';
       universityInput.value='';
       gradesInput.value='';
-      commentInput.value='';     
+      commentInput.value='';
+      
       ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
+    
       ptag.setAttribute('class','myinf_item')
       litag.setAttribute('class','myinf_list')
       litag.appendChild(ptag)
       profileBox4.appendChild(litag)
     }
-  
+    else if(subnameContent[0]==='な' || subnameContent[0]==='に' || subnameContent[0]==='ぬ' ||subnameContent[0]==='ね' ||subnameContent[0]==='の'){
+      const profileBox5=document.querySelector('.introduce_page5')
+      const litag=document.createElement('li');
+      const ptag=document.createElement('p');
+      
+      console.log(item.name);      
+      const facultyContent=item.faculty;
+      const universityContent=item.university;
+      const nameContent=item.name;
+      const gradesContent=item.grades;
+      const commentContent=item.comment;
+      nameInput.value='';
+      subnameInput.value='';
+      facultyInput.value='';
+      universityInput.value='';
+      gradesInput.value='';
+      commentInput.value='';
+      
+      
+      ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
     
+      ptag.setAttribute('class','myinf_item')
+      litag.setAttribute('class','myinf_list')
+      litag.appendChild(ptag)
+      profileBox5.appendChild(litag)
+    }
+    else if(subnameContent[0]==='は' || subnameContent[0]==='ひ' || subnameContent[0]==='ふ' ||subnameContent[0]==='へ' ||subnameContent[0]==='ほ'){
+      const profileBox6=document.querySelector('.introduce_page6')
+      const litag=document.createElement('li');
+      const ptag=document.createElement('p');
+      
+      console.log(item.name);      
+      const facultyContent=item.faculty;
+      const universityContent=item.university;
+      const nameContent=item.name;
+      const gradesContent=item.grades;
+      const commentContent=item.comment;
+      nameInput.value='';
+      subnameInput.value='';
+      facultyInput.value='';
+      universityInput.value='';
+      gradesInput.value='';
+      commentInput.value='';
+      
+      
+      ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
+     
+      ptag.setAttribute('class','myinf_item')
+      litag.setAttribute('class','myinf_list')
+      litag.appendChild(ptag)
+      profileBox6.appendChild(litag)
+    }
+    else if(subnameContent[0]==='ま' || subnameContent[0]==='み' || subnameContent[0]==='む' ||subnameContent[0]==='め' ||subnameContent[0]==='も'){
+      const profileBox7=document.querySelector('.introduce_page7')
+      const litag=document.createElement('li');
+      const ptag=document.createElement('p');
+      
+      console.log(item.name);      
+      const facultyContent=item.faculty;
+      const universityContent=item.university;
+      const nameContent=item.name;
+      const gradesContent=item.grades;
+      const commentContent=item.comment;
+      nameInput.value='';
+      subnameInput.value='';
+      facultyInput.value='';
+      universityInput.value='';
+      gradesInput.value='';
+      commentInput.value='';
+      
+      
+      ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
+     
+      ptag.setAttribute('class','myinf_item')
+      litag.setAttribute('class','myinf_list')
+      litag.appendChild(ptag)
+      profileBox7.appendChild(litag)
+    }
+    else if(subnameContent[0]==='や' || subnameContent[0]==='ゆ' || subnameContent[0]==='よ'){
+      const profileBox8=document.querySelector('.introduce_page8')
+      const litag=document.createElement('li');
+      const ptag=document.createElement('p');
+      
+      console.log(item.name);      
+      const facultyContent=item.faculty;
+      const universityContent=item.university;
+      const nameContent=item.name;
+      const gradesContent=item.grades;
+      const commentContent=item.comment;
+      nameInput.value='';
+      subnameInput.value='';
+      facultyInput.value='';
+      universityInput.value='';
+      gradesInput.value='';
+      commentInput.value='';
+      
+      
+      ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
+     
+      ptag.setAttribute('class','myinf_item')
+      litag.setAttribute('class','myinf_list')
+      litag.appendChild(ptag)
+      profileBox8.appendChild(litag)
+    }
+    else if(subnameContent[0]==='ら' || subnameContent[0]==='り' || subnameContent[0]==='る' ||subnameContent[0]==='れ' ||subnameContent[0]==='ろ'){
+      const profileBox9=document.querySelector('.introduce_page9')
+      const litag=document.createElement('li');
+      const ptag=document.createElement('p');
+      
+      console.log(item.name);      
+      const facultyContent=item.faculty;
+      const universityContent=item.university;
+      const nameContent=item.name;
+      const gradesContent=item.grades;
+      const commentContent=item.comment;
+      nameInput.value='';
+      subnameInput.value='';
+      facultyInput.value='';
+      universityInput.value='';
+      gradesInput.value='';
+      commentInput.value='';
+      
+      ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
+      ptag.setAttribute('class','myinf_item')
+      litag.setAttribute('class','myinf_list')
+      litag.appendChild(ptag)
+      profileBox9.appendChild(litag)
+    }
+    else if(subnameContent[0]==='わ' || subnameContent[0]==='を' || subnameContent[0]==='ん'){
+      const profileBox10=document.querySelector('.introduce_page10')
+      const litag=document.createElement('li');
+      const ptag=document.createElement('p');
+      
+      console.log(item.name);      
+      const facultyContent=item.faculty;
+      const universityContent=item.university;
+      const nameContent=item.name;
+      const gradesContent=item.grades;
+      const commentContent=item.comment;
+      nameInput.value='';
+      subnameInput.value='';
+      facultyInput.value='';
+      universityInput.value='';
+      gradesInput.value='';
+      commentInput.value='';
+      
+      ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
+
+      ptag.setAttribute('class','myinf_item')
+      litag.setAttribute('class','myinf_list')
+      litag.appendChild(ptag)
+      profileBox10.appendChild(litag)
+    }
+
     
   }
 })
-// localStorage.clear();  
-//↑これのコメントを解除すれば保存されてるデータが消える
-/*:delete local.store;**/
+
+// localStorage.clear();
+//↑これのコメントを解除して、リロードをかければ保存されてるデータが消える

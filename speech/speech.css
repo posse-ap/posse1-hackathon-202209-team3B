@@ -149,6 +149,17 @@ img {
   width: 100%;
 }
 
+/* footer */
+.footer_copyright {
+  text-align: center;
+  padding-top: auto;
+  margin-top: -15%;
+  padding-top: 30px;
+  ;
+  margin-bottom: 30px;
+  border-top: solid 2px #eee;
+}
+
 /* ここからレスポンシブ対応 */
 @media screen and (min-width: 900px) {
 
@@ -218,13 +229,3 @@ img {
   }
 }
 
-/* footer */
-.footer_copyright {
-  text-align: center;
-  padding-top: auto;
-  margin-top: -15%;
-  padding-top: 30px;
-  ;
-  margin-bottom: 30px;
-  border-top: solid 2px #eee;
-}

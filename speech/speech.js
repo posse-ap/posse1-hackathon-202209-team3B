@@ -185,4 +185,4 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 // localStorage.clear();  
-//↑これのコメントを解除して、リロードをかければ保存されてるデータが消える
+// ↑これのコメントを解除して、リロードをかければ保存されてるデータが消える

@@ -1,34 +1,26 @@
 body{
   font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.2em;
+  
+  
 
 }
+main{
+  background: linear-gradient(white,#CCCC);
+  font-family: 'Courier New', Courier, monospace;
+  box-sizing: border-box;
+  background-color: lightblue;
+  padding-bottom: 30px;
+  margin-top: -55px;
+  padding-top: 50px;
+  z-index: 100;
+}
+
 li{
   list-style: none;
   margin: 0;
 }
-@media screen and (min-width: 481px) { /*ウィンドウ幅が720px以上の場合に適用*/
-  .p-header__inner {
-    background-color: #fff;
-    flex-direction: column;
-    inset: 0;
-    opacity: 0;
-    padding: 136px 16px 40px;
-    position: fixed;
-    transition: opacity 0.4s, visibility 0.4s;
-    visibility: hidden;
-    
-  }
-
-  .p-header.is-open .p-header__inner {
-      opacity: 1;
-      visibility: visible;
-  }
-}
-@media screen and (max-width: 480px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
-  img {
-   width: 100%;
-  }
-}
+/* レスポンシブ対応 */
 .p-header {
   align-items: center;
   background-color: #fff;
@@ -82,10 +74,27 @@ a {
 }
 
 
+/*ページタイトル*/
+.profile_box{
+  height: 4em;
+  
+  background-color: white;
+  
+}
+.headline{
+  color: #666;
+}
+.headline p{
+  white-space: nowrap;
+}
 
 /**アコーディオン＊*/
+
 #acMenu{
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 80%;
   margin: 100px auto ;
 }
@@ -96,45 +105,57 @@ dd {
 }
 
 #acMenu dt{
-  border-radius: 20px;
-   
+  width: 80%;
+  padding-top: 2.5%;
+  border-radius: 5px;
   height: 30px;
-  background-color: lightcyan;
-
+  background-color: white;
+  color:#666;
 }
 #acMenu dd{
   display: none;
   text-align:center;
-  
 }
 .myprofile{
   border: 1px solid black;
   margin: 20px;
-
 }
-
 
 /**表示エリア**/
 
 .myinf_item{
   display: block;
-  letter-spacing: 0.15em;
-  margin-left: 5%;
+  margin-left: 10%;
 }
 .myinf_list{
-  margin: 20px auto;
-  padding: 10px auto;
+  color: #666;
+  width: 100%;
+  margin: 5% 0 5% 0;
+  font-size: 1.2em;
   text-align: left;
-  border: 2px double lightblue;
-  width: 80%;
-
+  border: 2px double #9CEC8B;
+  background-color: white;
 }
 .myinf_list span{
   margin: 5px;
 }
 
-
-
+.introduce_page1,
+.introduce_page2,
+.introduce_page3,
+.introduce_page4,
+.introduce_page5,
+.introduce_page6,
+.introduce_page7,
+.introduce_page8,
+.introduce_page9,
+.introduce_page10{
+  width: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
 
 /* 全体 */
 .profile_container{
@@ -149,7 +170,7 @@ dd {
 }
 
 #acMenu {
-  margin-top: 100px;
+  margin-top: 4em;
 }
 
 dd {
@@ -160,22 +181,20 @@ dd {
 #acMenu dt {
   display: block;
   text-align: center;
-  border: black 1px solid;
+  border: #CCCC 1px solid;
   cursor: pointer;
+  background-color:  #9CEC8B;
 }
 
 #acMenu dd {
   display: none;
   text-align: center;
-
 }
 
 .myprofile {
   border: 1px solid black;
   margin: 20px;
-
 }
-
 
 /* 入力フォーム */
 .profile_inputContainer {
@@ -218,15 +237,29 @@ img {
   height: 100px;
 }
 .submit_message{
-  margin-top: -25px;
+  margin-top: -30px;
 }
 
+/* footer */
 
+.footer_copyright{
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  border-top: solid 2px #eee;
+}
+
+/* レスポンシブ対応 */
 @media screen and (min-width: 900px) {
 
   /*ウィンドウ幅が720px以上の場合に適用*/
   textarea {
       width: 87%;
+  }
+  .headline {
+    width: 25%;
+    margin: 2em auto 0em auto;
+    font-size: 1.6em;
   }
 }
 
@@ -240,6 +273,11 @@ img {
   .profile_inputContainer {
       width: auto;
       margin-left: 10px;
+  }
+  .headline {
+    width: 43%;
+    margin: 2em auto 0em auto;
+    font-size: 1.4em;
   }
 }
 
@@ -258,15 +296,34 @@ img {
   .p-header_nav_item_link {
       font-size: 10px;
   }
+  .headline {
+    width: 55%;
+    margin: 2em auto 0em auto;
+    font-size: 1.2em;
+  }
 }
 
-/* footer */
-footer{
-  margin-top: 30px;
+/* レスポンシブ対応 */
+@media screen and (min-width: 481px) { /*ウィンドウ幅が720px以上の場合に適用*/
+  .p-header__inner {
+    background-color: #fff;
+    flex-direction: column;
+    inset: 0;
+    opacity: 0;
+    padding: 136px 16px 40px;
+    position: fixed;
+    transition: opacity 0.4s, visibility 0.4s;
+    visibility: hidden;
+    
+  }
+
+  .p-header.is-open .p-header__inner {
+      opacity: 1;
+      visibility: visible;
+  }
 }
-.footer_copyright{
-  text-align: center;
-  padding-top: 30px;
-  margin-bottom: 30px;
-  border-top: solid 2px #eee;
+@media screen and (max-width: 480px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
+  img {
+  width: 100%;
+  }
 }
