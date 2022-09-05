@@ -14,7 +14,7 @@ const ageInput=document.querySelector('.age_input');
 const monthsInput=document.querySelector('.months_input');
 const daysInput=document.querySelector('.days_input');
 const subnameInput=document.querySelector('.heart_subname_input');
-const nameInput=document.querySelectorAll('.heart_name_input');
+const nameInput=document.querySelector('.heart_name_input');
 const commentInput = document.querySelector('.heart_comment_input');
 const submitButton=document.querySelector('.heart_submit_button');
 
@@ -38,7 +38,7 @@ submitButton.addEventListener('click', function(){
     const heartboxMonth = document.querySelector('.container_content_date_month');
     const heartboxDay = document.querySelector('.container_content_date_day');
     const heartboxName = document.querySelector('.container_content_date_name');
-    const heartboxDetail = document.querySelector('container_content_detail');
+    const heartboxDetail = document.querySelector('.container_content_detail');
     const heartboxContent = document.createElement('p');
 
     const ageContent = ageInput.value;
@@ -60,11 +60,12 @@ submitButton.addEventListener('click', function(){
     heartboxMonth.innerHTML = monthsContent + '月' + '<span></span>';
     heartboxDay.innerHTML = daysContent + '日' + '<span></span>';
     heartboxName.innerHTML = '名前：' + nameContent ;
-    heartboxContent.innerHTML = commentInput ;
+    heartboxContent.innerHTML = commentContent;
+    console.log(heartboxContent.innerHTML)
+    console.log(nameContent)
 
     heartboxContent.setAttribute('class', 'container_content_detail_ptag');
     // createElementで作った要素にclass名をつけた
 
-    heartboxDetail.appendChild(heartboxContent)
+    heartboxDetail.appendChild(heartboxContent);
 })
-

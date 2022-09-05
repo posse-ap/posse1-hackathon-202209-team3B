@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
       commentInput.value='';
       
       
-      ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
+      ptag.innerHTML = '大学名:'+ '<span></span>' +universityContent + '<br>' + '学年:'+ '<span></span>'+ gradesContent +'<br>' +'学部・学科:' + '<span></span>' +facultyContent + '<br>'+ 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' + commentContent;
       ptag.setAttribute('class','myinf_item')
       litag.setAttribute('class','myinf_list')
       litag.appendChild(ptag)
