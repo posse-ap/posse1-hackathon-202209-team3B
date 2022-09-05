@@ -4,7 +4,7 @@ const replyBox = document.getElementById('comment_reply');
 const commentBox = document.getElementById('comment_box');
 
 button.addEventListener('click', () => {
-    replyBox.style.display='block';
+    commentBox.style.display='block';
     
 })
 
@@ -43,7 +43,58 @@ document.addEventListener("DOMContentLoaded", () => {
   $('.count_number').html(lastNumber);
   
 })
-delete storage.store;
 
+/**過去のコメント表示 */
+const commentInput=document.querySelector('.comment_input');
+const replyBtn=document.querySelector('.reply_button');
 
+var heartContents=[ ];
+const keep=localStorage;
+
+replyBtn.addEventListener('click',function(){
+  
+    var pastComment={
+      comment: commentInput.value,
+    }
+    heartContents.push(pastComment);
+    keep.box=JSON.stringify(heartContents);
+    const  commentResult=document.querySelector('.past_comment');
+
+    const commentContent=commentInput.value;
+    const ptag=document.createElement('p');
+    ptag.setAttribute('class','comment_ptag')
+    commentInput.value='';
+
+    ptag.textContent= commentContent;
+    commentResult.appendChild(ptag);
+
+})
+
+document.addEventListener("DOMContentLoaded", () => {
+  
+    const keepBox=keep.box;
+    heartContents=JSON.parse(keepBox);
+
+    button.addEventListener('click',function (){
+        for (const item of heartContents){
+    
+            const replyContent =item.comment;
+            const ptag=document.createElement('p');
+            ptag.setAttribute('class','comment_ptag')
+            commentInput.value='';
+    
+            ptag.textContent= replyContent;
+            const  commentResult=document.querySelector('.past_comment');
+    
+            commentResult.appendChild(ptag);
+    
+        }
+
+    },{'once':true})
+    
+
+})
+
+/*delete storage.store;*/
+/**delete keep.box**/
 
