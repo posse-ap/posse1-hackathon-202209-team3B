@@ -344,6 +344,18 @@ ul {
 
 }
 
+
+
+/*送信内容表示*/
+.container{
+  width: 80%;
+  gap: 5%;
+}
+.ptag_inner{
+  border: 1px solid;
+
+
+}
 /* footer */
 .footer_copyright {
   text-align: center;
