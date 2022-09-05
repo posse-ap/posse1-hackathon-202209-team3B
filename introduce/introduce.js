@@ -22,7 +22,6 @@ var listContent=[ ];
 const local=localStorage;
 
 submitButton.addEventListener('click',function(){
-  
   var myProfile={
     university: universityInput.value,
     grades: gradesInput.value,
@@ -31,10 +30,6 @@ submitButton.addEventListener('click',function(){
     faculty: facultyInput.value,
     comment: commentInput.value,
   }
-
-
-
-
 
   listContent.push(myProfile);
   local.store=JSON.stringify(listContent);
