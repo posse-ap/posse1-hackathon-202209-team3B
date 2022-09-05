@@ -2,6 +2,9 @@
 body{
   background: linear-gradient(white,#CCC);
 }
+li{
+  list-style: none;
+}
 .p-header {
   align-items: center;
   background-color: white;
@@ -132,11 +135,18 @@ label {
 img {
   width: 100%;
 }
+.profile_submit {
+  text-align: center;
+}
 
-  .speech_submit{
-      width: 100%;
-      margin-bottom: 10%;
-  }
+.speech_submit{
+  width: 100%;
+  margin-bottom: 10%;
+}
+/**submit_button**/
+.submit_message{
+  margin-top: -25px;
+}
 
 
 @media screen and (min-width: 900px) {
@@ -205,6 +215,27 @@ img {
       margin: 2em auto 0em auto;
       font-size: 1.2em;
   }
+}
+
+
+/*表示エリア*/
+.myspeech_item{
+  display: block;
+  letter-spacing: 0.15em;
+  margin-left: 5%;
+
+}
+.myspeech_list{
+  margin: 20px auto;
+  padding: 10px auto;
+  text-align: left;
+  border: 2px double lightblue;
+  width: 80%;
+  background-color: white;
+
+}
+.myspeech_list span{
+  margin: 5px;
 }
 
 /* footer */
