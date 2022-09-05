@@ -33,7 +33,7 @@ heartButton.addEventListener('click',() => {
         currentNumber: thisCount
     }
     numberSum.push(number);
-    storage.store = JSON.stringify(numberSum); 
+    storage.store = JSON.stringify(numberSum);
     console.log(storage.store)
 
 },{'once':true})
@@ -41,9 +41,6 @@ heartButton.addEventListener('click',() => {
 document.addEventListener("DOMContentLoaded", () => {
     const json = storage.store;
     numberSum = JSON.parse(json);
-    
-    
-    
     const lastNumber=(Number(numberSum[(numberSum.length)-1].currentNumber))
     $('.count_number').html(lastNumber);
     
@@ -184,7 +181,81 @@ submitButton.addEventListener('click', function(){
     heartContainer.insertBefore(heartdiv, heartboxPastComment);
 })
 
+document.addEventListener("DOMContentLoaded", () => {
+    const data = st.store;
 
+    heartContents=JSON.parse(data);
+    for(const item of heartContents){
+        console.log(item.name)
+        submitButton.addEventListener('click', function(){
+            var myheart = {
+                age: ageInput.value,
+                month: monthsInput.value,
+                day: daysInput.value,
+                // subname: subnameInput.value,
+                name: nameInput.value,
+                comment: commentInput.value,
+            }
+            heartContents.push(myheart);
+            // myheartに入ってるものをheartContents内に入れる
+            st.store=JSON.stringify(heartContents);
+            
+            const heartContainer = document.querySelector('.container');
+            const heartdiv= document.createElement('div');
+            const heartbox= document.querySelector('.container_content_date');
+            const heartboxAge = document.querySelector('.container_content_date_age');
+            const heartboxMonth = document.querySelector('.container_content_date_month');
+            const heartboxDay = document.querySelector('.container_content_date_day');
+            const heartboxName = document.querySelector('.container_content_date_name');
+            const heartboxDetail = document.querySelector('.container_content_detail');
+            const heartboxBtn = document.querySelector('.container_content_btn');
+            const heartboxCommentBtn = document.querySelector('container_content_comment_btn');
+            const heartboxCommentHeart = document.querySelector('.heart_btn');
+            const heartboxPastComment = document.querySelector('past_comment');
+            
+        
+            const ageContent = ageInput.value;
+            const monthsContent = monthsInput.value;
+            const daysContent =  daysInput.value;
+            // const subnameContent = subnameInput.value;
+            const nameContent = nameInput.value;
+            const commentContent = commentInput.value;
+            
+            ageInput.value='';
+            monthsInput.value='';
+            daysInput.value='';
+            // subnameInput.value='';
+            nameInput.value='';
+            commentInput.value='';
+            // 入力した後にこれで空にする
+        
+            // ここで入力した要素がどの要素に入るかを記述
+            // heartboxAge.innerHTML = ageContent + '<span></span>';
+            // heartboxMonth.innerHTML = monthsContent + '<span></span>';
+            // heartboxDay.innerHTML = daysContent + '<span></span>';
+            // heartboxName.innerHTML = '名前：' + nameContent ;
+            // heartboxDetail.innerHTML = commentContent;
+            heartdiv.setAttribute('class', 'container_content_new')
+            heartboxDetail.innerHTML = ageContent + '<span></span>' + monthsContent + '<span></span>' + daysContent + '<span></span>' + '<br>' + '名前：' + '<span></span>' + nameContent + '<br>' + commentContent;
+        
+            // ここにどの要素がどの要素の子要素、親要素なのかを記述
+            // heartdiv.appendChild(heartbox);
+            heartdiv.appendChild(heartboxDetail);
+            heartdiv.appendChild(heartboxBtn);
+            // heartdiv[0].appendChild(heartboxPastComment);
+            // heartdiv.appendChild(heartboxBtn);
+            // heartbox.appendChild(heartboxAge);
+            // heartbox.appendChild(heartboxMonth);
+            // heartbox.appendChild(heartboxDay);
+            // heartbox.appendChild(heartboxName);
+            // heartboxBtn.appendChild(heartboxCommentBtn);
+            // heartboxBtn.appendChild(heartboxCommentHeart);
+            heartContainer.insertBefore(heartdiv, heartboxPastComment);
+        })
+    }
+})
+
+localStorage.clear();
 
 
 /*delete storage.store;*/
