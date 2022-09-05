@@ -1,14 +1,8 @@
 body{
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 1.2em;
-  
-  
-
 }
 main{
-  /**background: -moz-linear-gradient(top, #FFC778, #FFF);
-  background: -webkit-linear-gradient(top, #FFC778, #FFF);
-  background: linear-gradient(to bottom, #FFC778, #FFF);**/
   background: linear-gradient(white,#CCCC);
   font-family: 'Courier New', Courier, monospace;
   box-sizing: border-box;
@@ -110,8 +104,6 @@ a {
 }
 .headline{
   color: #666;
-  background-color: white;
-  padding: 3% 20%;
 }
 .headline p{
    white-space: nowrap;
@@ -156,8 +148,8 @@ dd {
 
 
 
-/**表示エリア**/
 
+/**アコーデオン表示*/
 .myinf_item{
   display: block;
   margin-left: 10%;
@@ -180,18 +172,7 @@ dd {
 .myinf_list span{
   margin: 5px;
 }
-/*@media screen and (max-width: 481px){
-  .myinf_list{
-    font-size: 0.8em;
-    padding: 10%;
-    width: 120%;
-  }
-}
 
-@media screen and (min-width:481px) and (max-width: 719px){
-  .myinf_list{
-    padding-right: 5%;
-  }*/
 .introduce_page1,.introduce_page2,.introduce_page3,.introduce_page4,.introduce_page5,.introduce_page6,.introduce_page7,.introduce_page8,.introduce_page9,.introduce_page10{
   width: 60vh;
   
@@ -208,6 +189,7 @@ dd {
 .profile_container{
   font-family: 'Courier New', Courier, monospace;
   color: black;
+  
 }
 
 /**アコーディオン＊*/
@@ -250,6 +232,7 @@ dd {
 .profile_inputContainer {
   width: 60%;
   margin: 0 auto;
+  margin-bottom: 10%;
 }
 
 .profile_data_frame {
