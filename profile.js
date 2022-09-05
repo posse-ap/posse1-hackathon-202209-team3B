@@ -455,7 +455,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ptag.setAttribute('class','myinf_item')
       litag.setAttribute('class','myinf_list')
       litag.appendChild(ptag)
-      profileBox5s.appendChild(litag)
+      profileBox5.appendChild(litag)
     }
     else if(subnameContent[0]==='は' || subnameContent[0]==='ひ' || subnameContent[0]==='ふ' ||subnameContent[0]==='へ' ||subnameContent[0]==='ほ'){
       const profileBox6=document.querySelector('.introduce_page6')
