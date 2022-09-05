@@ -194,6 +194,7 @@ dd {
 }
 
 #acMenu dt {
+  padding-top: 2%;
   display: block;
   text-align: center;
   border: black 1px solid;

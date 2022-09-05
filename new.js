@@ -19,6 +19,7 @@ const commentInput = document.querySelector('.heart_comment_input');
 const submitButton=document.querySelector('.heart_submit_button');
 
 var heartContents = [];
+var numberSum=[];
 const lcl = localStorage;
 
 var p = document.querySelectorAll('#divdiv.p[ccc="ccc1"]');
@@ -32,6 +33,7 @@ submitButton.addEventListener('click', function(){
         subname: subnameInput.value,
         name: nameInput.value,
         comment: commentInput.value,
+      
         }
     
     heartContents.push(myheart);
@@ -48,7 +50,7 @@ submitButton.addEventListener('click', function(){
     const contentContainer=document.querySelector('.container_content');**/
 
     for (i=1; i<2; i++){
-      const ageContent = ageInput.value;
+    const ageContent = ageInput.value;
     const monthsContent = monthsInput.value;
     const daysContent =  daysInput.value;
     const subnameContent = subnameInput.value;
@@ -68,7 +70,7 @@ submitButton.addEventListener('click', function(){
     nameInput.value='';
     commentInput.value='';
     
-    ptag.innerHTML=ageContent+monthsContent+daysContent+nameContent+'<br>'+ commentContent;
+    ptag.innerHTML=ageContent+monthsContent+daysContent+'<span></span>' +nameContent+'<br>'+ '<span></span>' +commentContent;
 
 
 
@@ -97,7 +99,7 @@ submitButton.addEventListener('click', function(){
    console.log(spanbtag.innerHTML)
 /**ハートボタンの動き */
     const heartButton=document.querySelector('.a');
-    var numberSum=[];
+    
     
     
     divtag.addEventListener('click',() => {
@@ -115,6 +117,9 @@ submitButton.addEventListener('click', function(){
       const number = {
         currentNumber: thisCount
       }
+      
+      myheart.number=thisCount;
+      console.log(myheart)
       numberSum.push(number);
       lcl.area = JSON.stringify(numberSum); 
       console.log(lcl.area)
@@ -171,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   heartContents=JSON.parse(home);
   console.log(heartContents)
-  
+  console.log(lcl.area)
   for (const item of heartContents){
     
     const ptag=document.createElement('p');
@@ -191,7 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
     commentInput.value='';
 
 
-    ptag.innerHTML=ageContent+monthsContent+daysContent+nameContent+'<br>'+ commentContent;
+    ptag.innerHTML=ageContent+monthsContent+daysContent+'<span></span>' +nameContent+'<br>'+ '<span></span>' +commentContent;
     ptag.setAttribute('class','ptag_inner')
 
 
@@ -201,16 +206,98 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   
+
   const json = lcl.area;
   numberSum = JSON.parse(json);
+  
+  for (const item of numberSum){
+    
+    
+      const ptag=document.createElement('p');
+      const divtag=document.createElement('div');
+      const buttontag=document.createElement('button');
+      const itag=document.createElement('i');
+      const spanatag=document.createElement('span');
+      const spanbtag=document.createElement('span');
+
+      
+      
+      ageInput.value='';
+      monthsInput.value='';
+      daysInput.value='';
+      subnameInput.value='';
+      nameInput.value='';
+      commentInput.value='';
+      
+      
+    
+    
+      divtag.innerHTML='いいね!';
+      spanbtag.innerHTML=5;
+      divtag.appendChild(spanbtag);
+      ptag.appendChild(divtag);
+      spanatag.innerHTML='favorite';
+      itag.appendChild(spanatag)
+      buttontag.appendChild(itag)
+      divtag.appendChild(buttontag);
+      ptag.appendChild(divtag)
+    
+      
+     /**名前つける */
+      ptag.setAttribute('class','ptag_inner');
+      divtag.setAttribute('class','heart_button')
+      
+      spanbtag.setAttribute('class','count_number');
+      buttontag.setAttribute('class','heart_count');
+      itag.setAttribute('class','heart_icon');
+      spanatag.setAttribute('class','material-icons')
+      const container=document.querySelector('.container');
+      container.appendChild(ptag);
+
+    
+  
+ 
+
+ 
+      const lastNumber=(Number(numberSum[(numberSum.length)-1].currentNumber))
+      spanbtag.innerHTML=lastNumber;
+
+  
+ 
+    } 
+    /*var thisCount=spanbtag.innerHTML;
+    thisCount=Number(thisCount);
+    thisCount=thisCount + 1;
+    spanbtag.innerHTML=thisCount;
+  
+    divtag.classList.add('clicked');
+    itag.classList.add('clicked');
+    
+  
+  
+    const number = {
+      currentNumber: thisCount
+    }
+    
+   
+  
+  }
+
+      
+
+  /**ptag.innerHTML=ageContent+monthsContent+daysContent+nameContent+'<br>'+ commentContent + '<div><button><i><span>favorite</span></i></button>'+'いいね'+'<span>0</span></div>';
+  ptag.setAttribute('class','ptag_inner')**/
+
+  
+
+
   
   
   /**for(const item of numberSum ){
     console.log(Number(item.currentNumber))
   }**/
-  const lastNumber=(Number(numberSum[(numberSum.length)-1].currentNumber))
-  $('.count_number').html(lastNumber);
   
+
 
 })
 

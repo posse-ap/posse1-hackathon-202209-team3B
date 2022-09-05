@@ -1,3 +1,14 @@
+body{
+  background: linear-gradient(white,#CCC);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+
 /* headerの中身をどうするか、pは使いまわししない、nは使いまわす */
 .p-header {
   align-items: center;
@@ -54,18 +65,36 @@ a {
 /* 全体 */
 .heart_container {
   font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2em;
 }
 
 /* 入力フォーム */
+/*table{
+  font-size: 1.3em;
+}*/
+.page_theme{
+  font-size: 1.8em;
+  font-weight: 700;
+  width: 50%;
+  text-align: center;
+  background: #C2D69E;;
+  margin: 5%;
+}
+.page_theme p{
+  color: white;
+}
 .date_data {
   width: 100%;
+  
 }
 
 /* 仮置き */
 .box {
   height: 100px;
 }
-
+.input_table{
+  margin-left: -5%;
+}
 .heart_inputContainer {
   width: 60%;
   margin: auto;
@@ -84,19 +113,19 @@ a {
 @media screen and (min-width: 900px) {
 
   /*ウィンドウ幅が720px以上の場合に適用*/
-  .heart_input_comment {
+  .heart_comment_input {
       width: 96%;
   }
 
   .date_data {
       display: flex;
-      margin-left: 0%;
+      margin-left: -28%;
   }
 
   .heart_name_input,
   .heart_subname_input {
       width: 95%;
-      margin-left: -50%;
+      
   }
 }
 
@@ -159,7 +188,8 @@ ul {
 }
 
 .container_content {
-  border: solid;
+  background-color: white;
+  border: solid #666;
   margin: 0 5%;
 }
 
@@ -308,6 +338,10 @@ ul {
 }
 
 /**返信エリア**/
+.comment_input{
+  width: 80%;
+  font-size: 1.2em;
+}
 .container_content_comment_box{
   text-align: center;
   display: flex;
@@ -315,6 +349,11 @@ ul {
 }
 #comment_box{
   display: none;
+}
+.reply_button{
+  
+  width: 30%;
+  height: auto;
 }
 
 
@@ -333,11 +372,13 @@ ul {
   border-bottom: solid lightgray;
   border-top: solid lightgray;
   min-height: 60px;
-  padding: 0.5em 1em;
+  font-size: 1.3em;
+  padding: 0.5em 2em;
   margin: 2em 3em;
   color: #232323;
   background: #f0f8ff;
-  border-left: solid 10px #87CEFA
+  border-left: solid 10px #87CEFA;
+  
 ;
 
 

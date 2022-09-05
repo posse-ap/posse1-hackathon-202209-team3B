@@ -77,9 +77,9 @@ submitButton.addEventListener('click', function(){
     }).join('')
     // 入力した後にこれで空にする*/
 
-    heartboxAge.innerHTML = ageContent + '年' + '<span></span>';
-    heartboxMonth.innerHTML = monthsContent + '月' + '<span></span>';
-    heartboxDay.innerHTML = daysContent + '日' + '<span></span>';
+    heartboxAge.innerHTML = ageContent +'<span></span>';
+    heartboxMonth.innerHTML = monthsContent + '<span></span>';
+    heartboxDay.innerHTML = daysContent  + '<span></span>';
     heartboxName.innerHTML = '名前：' + nameContent ;
     heartboxContent.innerHTML = commentContent;
 
@@ -158,7 +158,7 @@ replyBtn.addEventListener('click',function(){
     console.log(commentContent)
     const ptag=document.createElement('p');
     ptag.setAttribute('class','comment_ptag')
-    commentInput.value='';
+    commentInput2.value='';
 
     ptag.textContent= commentContent;
     commentResult.appendChild(ptag);
@@ -190,6 +190,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 })
 
-/*delete storage.store;*/
-/*delete keep.box*/
+/*delete storage.store;
+delete keep.box*/
 
