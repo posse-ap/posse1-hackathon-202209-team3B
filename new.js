@@ -21,6 +21,9 @@ const submitButton=document.querySelector('.heart_submit_button');
 var heartContents = [];
 const lcl = localStorage;
 
+var p = document.querySelectorAll('#divdiv.p[ccc="ccc1"]');
+    
+console.log(p);
 submitButton.addEventListener('click', function(){
     var myheart = {
         age: ageInput.value,
@@ -44,13 +47,19 @@ submitButton.addEventListener('click', function(){
     const heartboxContent = document.createElement('p');
     const contentContainer=document.querySelector('.container_content');**/
 
-    const ageContent = ageInput.value;
+    for (i=1; i<2; i++){
+      const ageContent = ageInput.value;
     const monthsContent = monthsInput.value;
     const daysContent =  daysInput.value;
     const subnameContent = subnameInput.value;
     const nameContent = nameInput.value;
     const commentContent = commentInput.value;
     const ptag=document.createElement('p');
+    const divtag=document.createElement('div');
+    const buttontag=document.createElement('button');
+    const itag=document.createElement('i');
+    const spanatag=document.createElement('span');
+    const spanbtag=document.createElement('span');
     
     ageInput.value='';
     monthsInput.value='';
@@ -58,13 +67,70 @@ submitButton.addEventListener('click', function(){
     subnameInput.value='';
     nameInput.value='';
     commentInput.value='';
-
+    
     ptag.innerHTML=ageContent+monthsContent+daysContent+nameContent+'<br>'+ commentContent;
-    ptag.setAttribute('class','ptag_inner')
+
+
+
+    divtag.innerHTML='いいね!';
+    spanbtag.innerHTML=5;
+    divtag.appendChild(spanbtag);
+    ptag.appendChild(divtag);
+    spanatag.innerHTML='favorite';
+    itag.appendChild(spanatag)
+    buttontag.appendChild(itag)
+    divtag.appendChild(buttontag);
+    ptag.appendChild(divtag)
+
+    
+   /**名前つける */
+    ptag.setAttribute('class','ptag_inner');
+    divtag.setAttribute('class','heart_button')
+    
+    spanbtag.setAttribute('class','count_number');
+    buttontag.setAttribute('class','heart_count');
+    itag.setAttribute('class','heart_icon');
+    spanatag.setAttribute('class','material-icons')
+
+   
+
+   console.log(spanbtag.innerHTML)
+/**ハートボタンの動き */
+    const heartButton=document.querySelector('.a');
+    var numberSum=[];
+    
+    
+    divtag.addEventListener('click',() => {
+  
+      var thisCount=spanbtag.innerHTML;
+      thisCount=Number(thisCount);
+      thisCount=thisCount + 1;
+      spanbtag.innerHTML=thisCount;
+    
+      divtag.classList.add('clicked');
+      itag.classList.add('clicked');
+      
+    
+    
+      const number = {
+        currentNumber: thisCount
+      }
+      numberSum.push(number);
+      lcl.area = JSON.stringify(numberSum); 
+      console.log(lcl.area)
+    
+    },{'once':true})
+
+        
+
+    /**ptag.innerHTML=ageContent+monthsContent+daysContent+nameContent+'<br>'+ commentContent + '<div><button><i><span>favorite</span></i></button>'+'いいね'+'<span>0</span></div>';
+    ptag.setAttribute('class','ptag_inner')**/
 
     const container=document.querySelector('.container');
     container.appendChild(ptag);
 
+
+  }
     /*const inputHtml=(input,inputNumber) => {
       return`<ul class="container_content_date">
       <li class="container_content_date_age">${ageContent}</li>
@@ -102,11 +168,12 @@ document.addEventListener("DOMContentLoaded", () => {
   
   const home=lcl.house;
   
+  
   heartContents=JSON.parse(home);
   console.log(heartContents)
   
   for (const item of heartContents){
-    console.log(item.age);
+    
     const ptag=document.createElement('p');
     const container=document.querySelector('.container');
 
@@ -132,6 +199,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   }
+
+  
+  const json = lcl.area;
+  numberSum = JSON.parse(json);
+  
+  
+  /**for(const item of numberSum ){
+    console.log(Number(item.currentNumber))
+  }**/
+  const lastNumber=(Number(numberSum[(numberSum.length)-1].currentNumber))
+  $('.count_number').html(lastNumber);
+  
 
 })
 
@@ -237,5 +316,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /*delete storage.store;*/
 /*delete keep.box*/
-/**delete lcl.house */
+/*delete lcl.house */
 

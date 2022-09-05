@@ -353,8 +353,28 @@ ul {
 }
 .ptag_inner{
   border: 1px solid;
+  padding: 3%;
 
+}
 
+.ptag_inner div{
+  border: 1.5px solid;
+  color: #afa9aa;
+  font-size: 18px;
+  border-radius: 20px;
+  padding: 3px 13px;
+  display: flex;
+  width: 150px;
+  gap: 5px;
+}
+.ptag_inner i{
+  font-family: 'Material Icons';
+  content: '\e87d';
+  color: red;
+  outline: none;
+}
+.ptag_inner span{
+  margin-left: 10px;
 }
 /* footer */
 .footer_copyright {
