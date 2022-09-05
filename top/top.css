@@ -118,8 +118,6 @@ a {
   background-color: 	#d9827c;
 }
 
-
-
 .headline{
   margin-left: 5%;
 }
@@ -148,7 +146,7 @@ a {
   border-top: solid 2px #eee;
 }
 
-
+/* レスポンシブ対応をここから書いとく */
 @media screen and (min-width: 900px) {
   /*ウィンドウ幅が900px以上の場合に適用*/
   .title_slogan{

@@ -1,3 +1,4 @@
+// まずアコーディオンをここで対応させた
 $(function(){
   $("#acMenu dt").on("click", function() {
     $(this).next().slideToggle();
@@ -63,7 +64,6 @@ const allspeech=[
     theme:'自ら機会を創り出し、機会によって自らを変えよ',
     box:'.speech_theme_option10'
   },
-
 ]
 
 submitButton.addEventListener('click',function(){
@@ -77,33 +77,6 @@ submitButton.addEventListener('click',function(){
   speechContents.push(mySpeech);
   st.json=JSON.stringify(speechContents);
   
-  
-  /*:if(themesInput.value === '仲間の居場所作らずして自分の居場所なし'){
-    const themeBox1=document.querySelector('.speech_theme_option1')
-    const litag=document.createElement('li');
-    const ptag=document.createElement('p');
-
-    const nameContent=nameInput.value;
-    const subnameContent=subnameInput.value;
-    const commentContent=commentInput.value;
-    const themesContent=themesInput.value;
-
-    nameInput.value='';
-    subnameInput.value='';
-    commentInput.value='';
-    themesInput.value='';
-
-    ptag.innerHTML= 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
-
-    ptag.setAttribute('class','myspeech_item')
-    litag.setAttribute('class','myspeech_list')
-    
-    litag.appendChild(ptag);
-    themeBox1.appendChild(litag)
-    
-
-  }**/
-  
   for(let i=0; i<10; i++){
     if(themesInput.value === allspeech[i].theme){
       console.log(allspeech[i].box)  
@@ -115,22 +88,15 @@ submitButton.addEventListener('click',function(){
       const subnameContent=subnameInput.value;
       const commentContent=commentInput.value;
       const themesContent=themesInput.value;
-
       nameInput.value='';
       subnameInput.value='';
       commentInput.value='';
       themesInput.value='';
-
       ptag.innerHTML= 'ふりがな:'+ '<span></span>' +subnameContent +'<br>' + '名前:' +'<span></span>'  + nameContent +'<br>' +'コメント:' + '<span></span>' +commentContent;
-
       ptag.setAttribute('class','myspeech_item')
-      litag.setAttribute('class','myspeech_list')
-      
+      litag.setAttribute('class','myspeech_list')     
       litag.appendChild(ptag);
       themeBox.appendChild(litag)
-    
-
-
     }
   }
 })
@@ -219,5 +185,4 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 // localStorage.clear();  
-//↑これのコメントを解除すれば保存されてるデータが消える
-/**delete st.store;**/
+//↑これのコメントを解除して、リロードをかければ保存されてるデータが消える

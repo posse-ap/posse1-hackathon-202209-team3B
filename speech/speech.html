@@ -6,35 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>100秒スピーチ</title>
-    <link rel="stylesheet" href="./speech.css">
-    <link rel="stylesheet" href="./noramalize.css">
+    <link rel="stylesheet" href="speech.css">
+    <link rel="stylesheet" href="normalize.css">
     <script src="./speech.js" defer></script>
     <script src="./jquery3.6.0.js" ></script>
 </head>
 
 <header class="l-header p-header">
     <div class="posselogo">
-        <img class="POSSElogo" src="./img/logo.svg" alt="POSSE">
+        <img class="POSSElogo" src="./logo.svg" alt="POSSE">
     </div>
     <nav class="p-header_nav">
         <ul class="p-header_nav_list">
             <li class="p-header_nav_item">
-                <a href="./profile.html" class="p-header_nav_item_link">PROFILE</a>
+                <a href="../introduce/profile.html" class="p-header_nav_item_link">PROFILE</a>
             </li>
             <li class="p-header_nav_item">
-                <a href="./heart.html" class="p-header_nav_item_link">想いの丈を叫ぶ</a>
+                <a href="../lengthOfThought/heart.html" class="p-header_nav_item_link">想いの丈を叫ぶ</a>
             </li>
             <li class="p-header_nav_item">
-                <a href="./speech.html" class="p-header_nav_item_link">100秒スピーチ</a>
+                <a href="../speech/speech.html" class="p-header_nav_item_link">100秒スピーチ</a>
             </li>
         </ul>
     </nav>
 </header>
 
 <main>
-
     <body>
         <div class="speech_container">
+            <div class="box"></div>
+            <div class="headline">100秒スピーチお題一覧</div>
             <div class="speech_acMenu_frame">
                 <dl id="acMenu">
                     <dt>仲間の居場所作らずして自分の居場所なし</dt>
@@ -77,15 +78,15 @@
                     <dd>
                         <div class="speech_theme_option10"></div>
                     </dd>
-
                 </dl>
             </div>
+
             <div class="speech_input">
                 <div class="box"></div>
                 <p class="speech_introduction">100秒スピーチ入力フォーム</p>
                 <!-- ここから受け取る -->
                 <form action="thanks.html">
-                    <table>
+                    <div>
                         <tr>
                             <td><label for="theme">お題</label></td>
                             <td>
@@ -103,20 +104,27 @@
                                 </select>
                             </td>
                         </tr>
-                        <tr>
-                            <td><label for="speech_subname">ふりがな</label></td>
-                            <td><input type="text" name="speech_subname_input" placeholder="やまだはなこ" class="subname_input"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="name">名前</label></td>
-                            <td><input type="text" name="speech_subname_input" placeholder="山田花子" class="name_input"></td>
-                        </tr>
-                        <td><label for="speech_comment">コメント</label></td>
-                        <td><textarea name="speech_comment_input" cols="60" rows="30" class='comment_input'></textarea ></td>
-                        </tr>
-                    </table>
-                    <div class="text_center">
-                        <input type="button" class="submit_button">
+                        <div>
+                            <tr>
+                                <td><label for="speech_subname">ふりがな</label></td>
+                                <td><input type="text" name="speech_subname_input" placeholder="やまだはなこ" class="subname_input"></td>
+                            </tr>
+                        </div>
+                        <div>
+                            <tr>
+                                <td><label for="name">名前</label></td>
+                                <td><input type="text" name="speech_subname_input" placeholder="山田花子" class="name_input"></td>
+                            </tr>
+                        </div>
+                        <div class="speech_comment_container">
+                            <tr>
+                                <td><label for="speech_comment">コメント</label></td>
+                                <td><textarea name="speech_comment_input" cols="60" rows="30" class='comment_input'></textarea ></td>
+                            </tr>
+                        </div>
+                    </div>
+                    <div class="speech_submit">
+                        <input type="button" class="submit_button" value="新規投稿">
                     </div>
                 </form>
             </div>
