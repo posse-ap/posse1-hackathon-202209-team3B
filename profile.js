@@ -2,7 +2,8 @@
 $(function(){
   $("#acMenu dt").on("click", function() {
     $(this).next().slideToggle();
-  });
+    
+  })
 });
 
 
@@ -41,7 +42,7 @@ submitButton.addEventListener('click',function(){
 
   if(subnameInput.value[0]==='あ' || subnameInput.value[0]==='い' || subnameInput.value[0]==='う' ||subnameInput.value[0]==='え' ||subnameInput.value[0]==='お'){
     const profileBox1=document.querySelector('.introduce_page1')
-    const litag=document.createElement('li');
+    const litag=document.createElement('div');
     const ptag=document.createElement('p');
     
     const nameContent=nameInput.value;

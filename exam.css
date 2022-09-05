@@ -1,15 +1,15 @@
-body{
+body {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 1.2em;
-  
-  
+  background: linear-gradient(white, #CCCC);
+
 
 }
-main{
+
+main {
   /**background: -moz-linear-gradient(top, #FFC778, #FFF);
   background: -webkit-linear-gradient(top, #FFC778, #FFF);
   background: linear-gradient(to bottom, #FFC778, #FFF);**/
-  background: linear-gradient(white,#CCCC);
+  
   font-family: 'Courier New', Courier, monospace;
   box-sizing: border-box;
   background-color: lightblue;
@@ -19,33 +19,13 @@ main{
   z-index: 100;
 }
 
-li{
+li {
   list-style: none;
   margin: 0;
 }
-@media screen and (min-width: 481px) { /*ウィンドウ幅が720px以上の場合に適用*/
-  .p-header__inner {
-    background-color: #fff;
-    flex-direction: column;
-    inset: 0;
-    opacity: 0;
-    padding: 136px 16px 40px;
-    position: fixed;
-    transition: opacity 0.4s, visibility 0.4s;
-    visibility: hidden;
-    
-  }
 
-  .p-header.is-open .p-header__inner {
-      opacity: 1;
-      visibility: visible;
-  }
-}
-@media screen and (max-width: 480px) { /*ウィンドウ幅が最大480pxまでの場合に適用*/
-  img {
-   width: 100%;
-  }
-}
+
+/* header */
 .p-header {
   align-items: center;
   background-color: #fff;
@@ -54,7 +34,6 @@ li{
 
 }
 
-/* headerのlayout(位置)を決めている */
 .l-header {
   left: 0;
   position: fixed;
@@ -62,6 +41,7 @@ li{
   top: 0;
   z-index: 1000;
 }
+
 .p-header_logo {
   width: 148px;
 }
@@ -98,34 +78,52 @@ a {
   text-decoration: none;
 }
 
+/**表示エリア**/
+
+.myinf_item {
+  display: block;
+  letter-spacing: 0.15em;
+  margin-left: 5%;
+}
+
+.myinf_list {
+  margin: 20px auto;
+  padding: 10px auto;
+  text-align: left;
+  border: 2px double #9CEC8B;
+  width: 80%;
+  background-color: white;
+}
+
+.myinf_list span {
+  margin: 5px;
+}
+
+
+
+
+/* 全体 */
+.profile_container {
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+}
 
 /*ページタイトル*/
-
-
-.profile_box{
+.profile_box {
   height: 4em;
-  
   background-color: white;
-  
 }
+
 .headline{
   color: #666;
-  background-color: white;
-  padding: 3% 20%;
-}
-.headline p{
-   white-space: nowrap;
 }
 
 /**アコーディオン＊*/
 
-#acMenu{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#acMenu {
+
   width: 80%;
-  margin: 100px auto ;
+  margin: 100px auto;
 }
 
 dd {
@@ -133,85 +131,25 @@ dd {
   margin-inline-start: 0px;
 }
 
-#acMenu dt{
-  width: 80%;
-  padding-top: 2.5%;
+#acMenu dt {
   border-radius: 5px;
   height: 30px;
   background-color: white;
-  color:#666;
+  color: #666;
 }
-#acMenu dd{
+
+#acMenu dd {
   display: none;
-  text-align:center;
-  
+  text-align: center;
+
 }
-.myprofile{
+
+.myprofile {
   border: 1px solid black;
   margin: 20px;
 
 }
-
-
-
-
-
-/**表示エリア**/
-
-.myinf_item{
-  display: block;
-  margin-left: 10%;
-  white-space: nowrap;
-
-
-  
-}
-.myinf_list{
- 
-  color: #666;
-  width: 100%;
-  margin: 20% auto;
-  
-  font-size: 1.2em;
-  text-align: left;
-  border: 2px double #9CEC8B;
-  background-color: white;
-}*/
-.myinf_list span{
-  margin: 5px;
-}
-/*@media screen and (max-width: 481px){
-  .myinf_list{
-    font-size: 0.8em;
-    padding: 10%;
-    width: 120%;
-  }
-}
-
-@media screen and (min-width:481px) and (max-width: 719px){
-  .myinf_list{
-    padding-right: 5%;
-  }*/
-.introduce_page1,.introduce_page2,.introduce_page3,.introduce_page4,.introduce_page5,.introduce_page6,.introduce_page7,.introduce_page8,.introduce_page9,.introduce_page10{
-  width: 60vh;
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-
-
-
-/* 全体 */
-.profile_container{
-  font-family: 'Courier New', Courier, monospace;
-  color: black;
-}
-
-/**アコーディオン＊*/
-.profile_acMenu_frame{
+.profile_acMenu_frame {
   margin: 0 auto;
   width: 85%;
 }
@@ -230,7 +168,7 @@ dd {
   text-align: center;
   border: #CCCC 1px solid;
   cursor: pointer;
-  background-color:  #9CEC8B;
+  background-color:  #9CEC8B
 }
 
 #acMenu dd {
@@ -286,8 +224,9 @@ img {
 .box {
   height: 100px;
 }
-.submit_message{
-  margin-top: -30px;
+
+.submit_message {
+  margin-top: -25px;
 }
 
 
@@ -297,10 +236,11 @@ img {
   textarea {
       width: 87%;
   }
+
   .headline {
-    width: 25%;
-    margin: 2em auto 0em auto;
-    font-size: 1.6em;
+      width: 25%;
+      margin: 2em auto 0em auto;
+      font-size: 1.6em;
   }
 }
 
@@ -315,10 +255,11 @@ img {
       width: auto;
       margin-left: 10px;
   }
+
   .headline {
-    width: 43%;
-    margin: 2em auto 0em auto;
-    font-size: 1.4em;
+      width: 43%;
+      margin: 2em auto 0em auto;
+      font-size: 1.4em;
   }
 }
 
@@ -337,16 +278,17 @@ img {
   .p-header_nav_item_link {
       font-size: 10px;
   }
+
   .headline {
-    width: 55%;
-    margin: 2em auto 0em auto;
-    font-size: 1.2em;
+      width: 55%;
+      margin: 2em auto 0em auto;
+      font-size: 1.2em;
   }
 }
 
 /* footer */
 
-.footer_copyright{
+.footer_copyright {
   text-align: center;
   padding-top: 30px;
   margin-bottom: 30px;
